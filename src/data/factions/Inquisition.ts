@@ -5,9 +5,10 @@ import { FactionAbility } from "../../types/FactionAbility";
 import { OperativeBase } from "../../types/OperativeBase";
 import { Weapon } from "../../types/Weapon";
 import { CarapaceArmorBase } from "../BaseEquipment";
-import { CondemnorStakeBase, NeedlePistolBase, NeedleRifleBase } from "../BaseWeapons";
-import { GenericAndImperialWeaponsList, ImperialWeaponsList } from "../ImperialWeapons";
-import { Dangerous, IgnoresCover, Indirect, NonLethal, Range, Stun, Torrent } from "../WeaponSpecialRules";
+import { CondemnorStakeBase, NeedlePistolBase, NeedleRifleBase } from "../weapons/BaseWeapons";
+import { GenericAndImperialWeaponsList } from "../weapons/ImperialWeapons";
+import { Dangerous, IgnoresCover, Indirect, NonLethal, Range, Stun, Torrent } from "../weapons/WeaponSpecialRules";
+import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "../weapons/WeaponTypes";
 
 export const NeedlePistol : Weapon = 
 {
@@ -18,7 +19,7 @@ export const NeedlePistol : Weapon =
 export const Webber : Weapon = 
 {
     name:"Webber",
-    types:["Assault"],
+    types:[Assault],
     attack:4,
     dam:1,
     ap:0,
@@ -29,7 +30,7 @@ export const Webber : Weapon =
 export const PsyberEagle : Weapon = 
 {
     name:"Psyber-eagle",
-    types:["Assault"],
+    types:[Assault],
     attack:"d6",
     dam:4,
     ap:0,
@@ -46,7 +47,7 @@ export const CondemnnorStake : Weapon =
 export const Incinerator : Weapon = 
 {
     name:"Incinerator",
-    types:["Rifle"],
+    types:[Rifle],
     attack:5,
     dam:2,
     ap:-1,
@@ -63,7 +64,7 @@ export const NeedleRifle : Weapon =
 export const DeamonWeapon : Weapon = 
 {
     name:"Deamon Weapon",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:"d6",
     ap:-2,
@@ -74,7 +75,7 @@ export const DeamonWeapon : Weapon =
 export const PhaseBlade : Weapon = 
 {
     name:"PhaseBlade",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:3,
     ap:-4,

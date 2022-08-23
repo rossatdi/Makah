@@ -4,13 +4,10 @@ import { Faction } from "../../types/Faction"
 import { FactionAbility } from "../../types/FactionAbility"
 import { OperativeBase } from "../../types/OperativeBase"
 import { Weapon } from "../../types/Weapon"
-import { BolterBase, BoltPistolBase, ChainswordBase, HeavyBolterBase, StormbolterBase } from "../BaseWeapons"
-import { GenericAndImperialWeaponsList } from "../ImperialWeapons"
-import { RapidFire, Range, Aim, Headshot } from "../WeaponSpecialRules"
-
-
-
-
+import { BolterBase, BoltPistolBase, ChainswordBase, HeavyBolterBase, StormbolterBase } from "../weapons/BaseWeapons"
+import { GenericAndImperialWeaponsList } from "../weapons/ImperialWeapons"
+import { RapidFire, Range, Aim, Headshot } from "../weapons/WeaponSpecialRules"
+import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "../weapons/WeaponTypes";
 
 export const BoltPistol : Weapon =
 {
@@ -27,7 +24,7 @@ export const Bolter : Weapon =
 export const BoltCarbine : Weapon =
 {
     name:"Bolter",
-    types:["Assault"],
+    types:[Assault],
     attack:3,
     dam:4,
     ap:0,
@@ -56,7 +53,7 @@ export const Chainsword : Weapon =
 export const MarineCombatKnife : Weapon =
 {
     name:"Marine Combat Knife",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:2,
     ap:0,
@@ -68,7 +65,7 @@ export const MarineCombatKnife : Weapon =
 export const MarineShotgun : Weapon =
 {
     name:"Machine Shotgun",
-    types:["Assault"],
+    types:[Assault],
     attack:2,
     dam:5,
     ap:0,
@@ -79,7 +76,7 @@ export const MarineShotgun : Weapon =
 export const MarineSniperRifle : Weapon =
 {
     name:"Machine Sniper Rifle",
-    types:["Heavy"],
+    types:[Heavy],
     attack:3,
     dam:4,
     ap:-1,

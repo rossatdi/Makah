@@ -1,16 +1,16 @@
 import { Stack } from "react-bootstrap";
 import { SpaceMarine, SpecialIssueAmmo } from "../../data/factions/Astartes";
 import {  CarapaceArmor, Inquisitor, PowerArmor, PsyberEagle, ServoSkull, Warrior } from "../../data/factions/Inquisition";
-import { Chainsword, InfernoPistol, LasCarbine, Laspistol, Longlas, NeedlePistol, Stormbolter, StormShield } from "../../data/ImperialWeapons";
+import { Chainsword, InfernoPistol, LasCarbine, Laspistol, Longlas, NeedlePistol, Stormbolter, StormShield } from "../../data/weapons/ImperialWeapons";
 import { ExpertMarksman, Gunfighter, Gunslinger, Killshot } from "../../data/Skills";
 import { Operative } from "../../types/Operative";
 import OperativeView from "./operative/OperativeView";
-import SkillTile from "./skillTile/SkillTile";
+import SkillTile from "../components/skillTile/SkillTile";
 import './CrewBuilder.css'
 import { hasProfiles, Weapon } from "../../types/Weapon";
 import { WeaponSpecialRule } from "../../types/WeaponSpecialRule"
 import { Veteran } from "../../data/factions/ImperialGuard";
-import { Knife } from "../../data/GenericWeapons";
+import { Knife } from "../../data/weapons/GenericWeapons";
 
 const example : Operative =
 {

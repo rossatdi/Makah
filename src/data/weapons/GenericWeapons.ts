@@ -1,10 +1,11 @@
-import { Weapon } from "../types/Weapon";
+import { Weapon } from "../../types/Weapon";
 import { Aim, Blast, Defensive, Headshot, IgnoresCover, Indirect, Range, RapidFire, Reach, Reckless, Small, SplitFire, Stun, Torrent } from "./WeaponSpecialRules";
+import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "./WeaponTypes";
 
 export const Autopistol : Weapon =
 {
     name:"Autopistol",
-    types:["Pistol"],
+    types:[Pistol],
     attack:3,
     dam:2,
     ap:0,
@@ -15,7 +16,7 @@ export const Autopistol : Weapon =
 export const Stubgun : Weapon =
 {
     name:"Stubgun",
-    types:["Pistol"],
+    types:[Pistol],
     attack:1,
     dam:4,
     ap:0,
@@ -26,7 +27,7 @@ export const Stubgun : Weapon =
 export const Autogun : Weapon =
 {
     name:"Autogun",
-    types:["Assault","Rifle"],
+    types:[Assault,Rifle],
     attack:3,
     dam:2,
     ap:0,
@@ -37,7 +38,7 @@ export const Autogun : Weapon =
 export const Shotgun : Weapon =
 {
     name:"Shotgun",
-    types:["Assault"],
+    types:[Assault],
     attack:2,
     dam:4,
     ap:0,
@@ -48,7 +49,7 @@ export const Shotgun : Weapon =
 export const Flamer : Weapon =
 {
     name:"Flamer",
-    types:["Assault"],
+    types:[Assault],
     attack:5,
     dam:2,
     ap:0,
@@ -59,7 +60,7 @@ export const Flamer : Weapon =
 export const SniperRifle : Weapon =
 {
     name:"Sniper Rifle",
-    types:["Heavy"],
+    types:[Heavy],
     attack:3,
     dam:4,
     ap:-1,
@@ -70,7 +71,7 @@ export const SniperRifle : Weapon =
 export const Autocannon : Weapon =
 {
     name:"Autocannon",
-    types:["Heavy"],
+    types:[Heavy],
     attack:4,
     dam:4,
     ap:-1,
@@ -80,7 +81,7 @@ export const Autocannon : Weapon =
 export const MissileLauncher : Weapon = 
 {
     name:"Missile Launcher",
-    types:["Heavy"],
+    types:[Heavy],
     profiles: [ 
         {
             name:"Frag",
@@ -102,7 +103,7 @@ export const MissileLauncher : Weapon =
 export const Mortar : Weapon =
 {
     name:"Mortar",
-    types:["Heavy"],
+    types:[Heavy],
     attack:3,
     dam:"d6",
     ap:0,
@@ -113,7 +114,7 @@ export const Mortar : Weapon =
 export const Knife : Weapon =
 {
     name:"Knife",
-    types:["Combat"],
+    types:[Combat],
     attack:2,
     dam:2,
     ap:0,
@@ -124,7 +125,7 @@ export const Knife : Weapon =
 export const ClawsAndTeeth : Weapon =
 {
     name:"Claws and teeth",
-    types:["Combat"],
+    types:[Combat],
     attack:4,
     dam:2,
     ap:0,
@@ -135,7 +136,7 @@ export const ClawsAndTeeth : Weapon =
 export const Sword : Weapon =
 {
     name:"Sword",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:3,
     ap:0,
@@ -146,7 +147,7 @@ export const Sword : Weapon =
 export const Axe : Weapon =
 {
     name:"Axe",
-    types:["Combat"],
+    types:[Combat],
     attack:2,
     dam:4,
     ap:0,
@@ -157,7 +158,7 @@ export const Axe : Weapon =
 export const Spear : Weapon =
 {
     name:"Spear",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:2,
     ap:0,
@@ -168,7 +169,7 @@ export const Spear : Weapon =
 export const PowerSword : Weapon =
 {
     name:"Power Sword",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:3,
     ap:-2,
@@ -179,7 +180,7 @@ export const PowerSword : Weapon =
 export const PowerAxe : Weapon =
 {
     name:"Power Axe",
-    types:["Combat"],
+    types:[Combat],
     attack:2,
     dam:4,
     ap:-2,
@@ -190,7 +191,7 @@ export const PowerAxe : Weapon =
 export const PowerMaul : Weapon =
 {
     name:"Power Maul",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:4,
     ap:-1,
@@ -201,7 +202,7 @@ export const PowerMaul : Weapon =
 export const CombatShield : Weapon =
 {
     name:"Combat Shield",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:0,
     ap:0,
@@ -212,7 +213,7 @@ export const CombatShield : Weapon =
 export const FragGrenade : Weapon =
 {
     name:"Frag Grenade",
-    types:["Grenade"],
+    types:[Grenade],
     attack:3,
     dam:"d3",
     ap:0,
@@ -223,7 +224,7 @@ export const FragGrenade : Weapon =
 export const KrakGrenade : Weapon =
 {
     name:"Krak Grenade",
-    types:["Grenade"],
+    types:[Grenade],
     attack:2,
     dam:"d3+2",
     ap:-1,
@@ -234,7 +235,7 @@ export const KrakGrenade : Weapon =
 export const StunGrenade : Weapon =
 {
     name:"Stun Grenade",
-    types:["Grenade"],
+    types:[Grenade],
     attack:2,
     dam:0,
     ap:0,

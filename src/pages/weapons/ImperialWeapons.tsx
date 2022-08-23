@@ -1,5 +1,5 @@
-import { GenericWeaponsList } from "../../data/GenericWeapons";
-import { ImperialWeaponsList } from "../../data/ImperialWeapons";
+import { GenericWeaponsList } from "../../data/weapons/GenericWeapons";
+import { ImperialWeaponsList } from "../../data/weapons/ImperialWeapons";
 import { hasProfiles, Weapon } from "../../types/Weapon";
 import { WeaponBlock } from "../components/WeaponsBlock";
 import WeaponRulePage from './WeaponSpecialRules'

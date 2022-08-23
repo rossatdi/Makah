@@ -6,10 +6,11 @@ import { Operative } from "../../types/Operative"
 import { OperativeBase } from "../../types/OperativeBase"
 import { Weapon } from "../../types/Weapon"
 import { CarapaceArmorBase, MediKitBase } from "../BaseEquipment"
-import { BolterBase, BoltPistolBase, HeavyBolterBase, HotshotLasgunBase, HotshotLaspistolBase, LasCarbineBase, LasgunBase, LaspistolBase, LonglasBase, MeltagunBase, PlasmaGunBase, PlasmaPistolBase } from "../BaseWeapons"
-import { Autocannon, MissileLauncher, Mortar } from "../GenericWeapons"
-import { Chainsword, GenericAndImperialWeaponsList, HeavyBolter } from "../ImperialWeapons"
-import { Inaccurate, Range, SplitFire } from "../WeaponSpecialRules"
+import { BolterBase, BoltPistolBase, HeavyBolterBase, HotshotLasgunBase, HotshotLaspistolBase, LasCarbineBase, LasgunBase, LaspistolBase, LonglasBase, MeltagunBase, PlasmaGunBase, PlasmaPistolBase } from "../weapons/BaseWeapons"
+import { Autocannon, MissileLauncher, Mortar } from "../weapons/GenericWeapons"
+import { Chainsword, GenericAndImperialWeaponsList, HeavyBolter } from "../weapons/ImperialWeapons"
+import { Inaccurate, Range, SplitFire } from "../weapons/WeaponSpecialRules"
+import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "../weapons/WeaponTypes";
 
 export const Guardsman : OperativeBase =
 {
@@ -163,7 +164,7 @@ export const Meltagun : Weapon = {
 
 export const RipperGun : Weapon = {
     name:"Ripper Gun",
-    types:["Assault","Combat"],
+    types:[Assault,Combat],
     profiles:[
         {
             name:"Gun",
@@ -210,7 +211,7 @@ export const Longlas : Weapon = {
 
 export const LongKnife : Weapon = {
     name: "Long Knife",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:3,
     ap:0,

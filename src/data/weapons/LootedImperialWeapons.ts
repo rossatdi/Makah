@@ -1,5 +1,5 @@
-import { CombineWeaponsLists } from "../functions/CombineWeaponsLists"
-import { Weapon } from "../types/Weapon"
+import { CombineWeaponsLists } from "../../functions/CombineWeaponsLists"
+import { Weapon } from "../../types/Weapon"
 import { ImperialWeaponsList } from "./ImperialWeapons"
 import { GenericWeaponsList } from "./GenericWeapons"
 

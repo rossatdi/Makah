@@ -1,10 +1,12 @@
-import { WeaponBase } from "../types/Weapon";
+
+import { WeaponBase } from "../../types/Weapon";
 import { Aim, Blast, Dangerous, Defensive, Headshot, IgnoresCover, NonLethal, OneUse, PsykerOnly, Range, RapidFire, Reach, RerollOneToHit, SplitFire, Torrent } from "./WeaponSpecialRules";
+import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "./WeaponTypes";
 
 export const NeedlePistolBase : WeaponBase = 
 {
     name:"Needle Pistol",
-    types:["Pistol"],
+    types:[Pistol],
     attack:2,
     dam:"d6+1",
     ap:-1,
@@ -14,7 +16,7 @@ export const NeedlePistolBase : WeaponBase =
 export const LaspistolBase : WeaponBase =
 {
     name:"Laspistol",
-    types:["Pistol"],
+    types:[Pistol],
     attack:2,
     dam:3,
     ap:0,
@@ -24,7 +26,7 @@ export const LaspistolBase : WeaponBase =
 export const BoltPistolBase : WeaponBase =
 {
     name:"Bolt Pitol",
-    types:["Pistol"],
+    types:[Pistol],
     attack:3,
     dam:4,
     ap:0,
@@ -34,7 +36,7 @@ export const BoltPistolBase : WeaponBase =
 export const HotshotLaspistolBase : WeaponBase =
 {
     name:"Hotshot Laspistol",
-    types:["Pistol"],
+    types:[Pistol],
     attack:2,
     dam:3,
     ap:-1,
@@ -44,7 +46,7 @@ export const HotshotLaspistolBase : WeaponBase =
 export const InfernoPistolBase : WeaponBase =
 {
     name:"Inferno Pistol",
-    types:["Pistol"],
+    types:[Pistol],
     attack:2,
     dam:5,
     ap:-2,
@@ -54,7 +56,7 @@ export const InfernoPistolBase : WeaponBase =
 export const PlasmaPistolBase : WeaponBase =
 {
     name:"Plasma Pistol",
-    types:["Pistol"],
+    types:[Pistol],
     attack:3,
     dam:4,
     ap:-1,
@@ -64,7 +66,7 @@ export const PlasmaPistolBase : WeaponBase =
 export const LasCarbineBase : WeaponBase =
 {
     name:"Las Carbine",
-    types:["Assault"],
+    types:[Assault],
     attack:2,
     dam:3,
     ap:0,
@@ -74,7 +76,7 @@ export const LasCarbineBase : WeaponBase =
 export const MeltagunBase : WeaponBase =
 {
     name:"Meltagun",
-    types:["Assault"],
+    types:[Assault],
     attack:2,
     dam:5,
     ap:-1,
@@ -84,7 +86,7 @@ export const MeltagunBase : WeaponBase =
 export const StormbolterBase : WeaponBase =
 {
     name:"Stormbolter",
-    types:["Assault"],
+    types:[Assault],
     attack:3,
     dam:4,
     ap:0,
@@ -94,7 +96,7 @@ export const StormbolterBase : WeaponBase =
 export const LasgunBase : WeaponBase = 
 {
     name:"Lasgun",
-    types:["Rifle"],
+    types:[Rifle],
     attack:2,
     dam:3,
     ap:0,
@@ -104,7 +106,7 @@ export const LasgunBase : WeaponBase =
 export const HotshotLasgunBase : WeaponBase = 
 {
     name:"Hotshot Lasgun",
-    types:["Rifle"],
+    types:[Rifle],
     attack:2,
     dam:3,
     ap:-1,
@@ -114,7 +116,7 @@ export const HotshotLasgunBase : WeaponBase =
 export const BolterBase : WeaponBase = 
 {
     name:"Bolter",
-    types:["Rifle"],
+    types:[Rifle],
     attack:3,
     dam:4,
     ap:0,
@@ -124,7 +126,7 @@ export const BolterBase : WeaponBase =
 export const PlasmaGunBase : WeaponBase =
 {
     name:"Plasma Gun",
-    types:["Rifle"],
+    types:[Rifle],
     attack:3,
     dam:4,
     ap:-1,
@@ -134,7 +136,7 @@ export const PlasmaGunBase : WeaponBase =
 export const LonglasBase : WeaponBase =
 {
     name:"Longlas",
-    types:["Rifle"],
+    types:[Rifle],
     attack:3,
     dam:3,
     ap:-1,
@@ -144,7 +146,7 @@ export const LonglasBase : WeaponBase =
 export const CondemnorStakeBase : WeaponBase = 
 {
     name:"Condemnnor Stake",
-    types:["Rifle"],
+    types:[Rifle],
     attack:3,
     dam:4,
     ap:-2,
@@ -155,7 +157,7 @@ export const CondemnorStakeBase : WeaponBase =
 export const NeedleRifleBase : WeaponBase = 
 {
     name:"Needle Rifle",
-    types:["Heavy"],
+    types:[Heavy],
     attack:2,
     dam:"d6+1",
     ap:-1,
@@ -165,7 +167,7 @@ export const NeedleRifleBase : WeaponBase =
 export const HeavyBolterBase : WeaponBase = 
 {
     name:"Heavy Bolter",
-    types:["Heavy"],
+    types:[Heavy],
     attack:5,
     dam:4,
     ap:0,
@@ -175,7 +177,7 @@ export const HeavyBolterBase : WeaponBase =
 export const HeavyFlamerBase : WeaponBase = 
 {
     name:"Heavy Flamer",
-    types:["Heavy"],
+    types:[Heavy],
     attack:5,
     dam:3,
     ap:-1,
@@ -185,7 +187,7 @@ export const HeavyFlamerBase : WeaponBase =
 export const ChainswordBase : WeaponBase = 
 {
     name:"Chainsword",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:4,
     ap:0,
@@ -195,7 +197,7 @@ export const ChainswordBase : WeaponBase =
 export const StormShieldBase : WeaponBase = 
 {
     name:"Storm Shield",
-    types:["Combat"],
+    types:[Combat],
     attack:4,
     dam:0,
     ap:0,
@@ -205,7 +207,7 @@ export const StormShieldBase : WeaponBase =
 export const PowerFistBase : WeaponBase = 
 {
     name:"Power Fist",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:4,
     ap:-2,
@@ -215,7 +217,7 @@ export const PowerFistBase : WeaponBase =
 export const ForceSwordBase : WeaponBase = 
 {
     name:"Force Sword",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:"d3+2",
     ap:-2,
@@ -225,7 +227,7 @@ export const ForceSwordBase : WeaponBase =
 export const ForceHalberdBase : WeaponBase = 
 {
     name:"Force Halberd",
-    types:["Combat"],
+    types:[Combat],
     attack:3,
     dam:"d3+2",
     ap:-1,

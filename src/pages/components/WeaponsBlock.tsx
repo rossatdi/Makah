@@ -35,7 +35,7 @@ export function weaponMap(weapon:Weapon){
         {weapon.profiles.map(o=>{
             return <tr>
             <td>🠺{o.name}</td>
-            <td>{weapon.types.toString()}</td>
+            <td>{weapon.types.map(o=>SkillOverlay(o))}</td>
             <td>{o.attack}</td>
             <td>{o.dam}</td>
             <td>{o.ap}</td>
@@ -47,7 +47,7 @@ export function weaponMap(weapon:Weapon){
     else{
         return <tr>
             <td>{weapon.name}</td>
-            <td>{weapon.types.toString()}</td>
+            <td>{weapon.types.map(o=>SkillOverlay(o))}</td>
             <td>{weapon.attack}</td>
             <td>{weapon.dam}</td>
             <td>{weapon.ap}</td>

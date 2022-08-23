@@ -16,6 +16,9 @@ const NavView = () => {
       <LinkContainer to="/">
         <Nav.Link>Home</Nav.Link>
       </LinkContainer>
+      <LinkContainer to="/actions">
+        <Nav.Link>Actions</Nav.Link>
+      </LinkContainer>
       <NavDropdown title="Weapons">
         <NavDropdown.Item>
           <LinkContainer to="/weapons/generic">

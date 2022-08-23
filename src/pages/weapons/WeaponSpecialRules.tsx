@@ -1,4 +1,4 @@
-import { WeaponSpecialRules } from "../../data/WeaponSpecialRules";
+import { WeaponSpecialRules } from "../../data/weapons/WeaponSpecialRules";
 
 const wsrList = WeaponSpecialRules.map(rule=><tr><td>{rule.name}</td><td>{rule.effect}</td></tr>)
 
