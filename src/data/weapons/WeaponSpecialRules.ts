@@ -20,7 +20,7 @@ export function Blast(x: Variable): WeaponSpecialRule
 {
     return {
         name:`Blast ${x}`,
-        effect:`Resolve hits against other models within ${x}\", reducing the Attack dice by 1. Each model potentially hit has the opportunity to Evade.`
+        effect:`Resolve hits against other models within ${x}", reducing the Attack dice by 1. Each model potentially hit has the opportunity to Evade.`
     }
 }
 
@@ -134,7 +134,7 @@ export function Range(x: Variable): WeaponSpecialRule
 {
     return {
         name:`Range ${x}`,
-        effect:`The range of this weapon is limited to ${x}\".`
+        effect:`The range of this weapon is limited to ${x}".`
     }
 }
 
