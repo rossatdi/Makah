@@ -8,7 +8,7 @@ import { CarapaceArmorBase } from "../BaseEquipment";
 import { CondemnorStakeBase, NeedlePistolBase, NeedleRifleBase } from "../weapons/BaseWeapons";
 import { GenericAndImperialWeaponsList } from "../weapons/ImperialWeapons";
 import { Dangerous, IgnoresCover, Indirect, NonLethal, Range, Stun, Torrent } from "../weapons/WeaponSpecialRules";
-import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "../weapons/WeaponTypes";
+import { Assault, Combat, Rifle } from "../weapons/WeaponTypes";
 
 export const NeedlePistol : Weapon = 
 {
