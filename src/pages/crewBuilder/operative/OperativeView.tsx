@@ -1,5 +1,4 @@
-import { Card, Col, Container, ListGroup, Row } from "react-bootstrap";
-import { OperativeCost } from "../../../functions/OperativeCost";
+import { Card, Container, ListGroup, Row } from "react-bootstrap";
 import { Operative } from "../../../types/Operative";
 import { Stats } from "../../../types/OperativeBase";
 import { StatModifier } from "../../../types/StatModifier";

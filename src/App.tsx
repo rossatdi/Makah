@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SkillsPage from './pages/skills/Skills'
 import GenericWeaponsPage from './pages/weapons/GenericWeapons'
 import ImperialWeaponsPage from './pages/weapons/ImperialWeapons'
@@ -8,7 +7,6 @@ import './App.css';
 import Nav from "./nav/Nav";
 import { Container } from "react-bootstrap";
 import FactionView from "./pages/factions/FactonView";
-import { Astartes } from "./data/factions/Astartes";
 import { Factions } from "./data/factions/Factions";
 import  WeaponSpecialRules  from "./pages/weapons/WeaponSpecialRules";
 import ActionsPage from './pages/actions/ActionsPage'

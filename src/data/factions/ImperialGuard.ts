@@ -2,15 +2,14 @@ import { CombineWeaponsLists } from "../../functions/CombineWeaponsLists"
 import { Equipment } from "../../types/Equipment"
 import { Faction } from "../../types/Faction"
 import { FactionAbility } from "../../types/FactionAbility"
-import { Operative } from "../../types/Operative"
 import { OperativeBase } from "../../types/OperativeBase"
 import { Weapon } from "../../types/Weapon"
 import { CarapaceArmorBase, MediKitBase } from "../BaseEquipment"
-import { BolterBase, BoltPistolBase, HeavyBolterBase, HotshotLasgunBase, HotshotLaspistolBase, LasCarbineBase, LasgunBase, LaspistolBase, LonglasBase, MeltagunBase, PlasmaGunBase, PlasmaPistolBase } from "../weapons/BaseWeapons"
+import { BolterBase, BoltPistolBase, HotshotLasgunBase, HotshotLaspistolBase, LasCarbineBase, LasgunBase, LaspistolBase, LonglasBase, MeltagunBase, PlasmaGunBase, PlasmaPistolBase } from "../weapons/BaseWeapons"
 import { Autocannon, MissileLauncher, Mortar } from "../weapons/GenericWeapons"
 import { Chainsword, GenericAndImperialWeaponsList, HeavyBolter } from "../weapons/ImperialWeapons"
-import { Inaccurate, Range, SplitFire } from "../weapons/WeaponSpecialRules"
-import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "../weapons/WeaponTypes";
+import { Inaccurate, Range } from "../weapons/WeaponSpecialRules"
+import { Assault, Combat } from "../weapons/WeaponTypes";
 
 export const Guardsman : OperativeBase =
 {

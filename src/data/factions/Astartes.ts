@@ -7,7 +7,7 @@ import { Weapon } from "../../types/Weapon"
 import { BolterBase, BoltPistolBase, ChainswordBase, HeavyBolterBase, StormbolterBase } from "../weapons/BaseWeapons"
 import { GenericAndImperialWeaponsList } from "../weapons/ImperialWeapons"
 import { RapidFire, Range, Aim, Headshot } from "../weapons/WeaponSpecialRules"
-import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "../weapons/WeaponTypes";
+import { Assault, Combat, Heavy } from "../weapons/WeaponTypes";
 
 export const BoltPistol : Weapon =
 {

@@ -1,7 +1,7 @@
 
 import { WeaponBase } from "../../types/Weapon";
-import { Aim, Blast, Dangerous, Defensive, Headshot, IgnoresCover, NonLethal, OneUse, PsykerOnly, Range, RapidFire, Reach, RerollOneToHit, SplitFire, Torrent } from "./WeaponSpecialRules";
-import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "./WeaponTypes";
+import { Aim, Dangerous, Defensive, Headshot, IgnoresCover, NonLethal, OneUse, PsykerOnly, Range, RapidFire, Reach, RerollOneToHit, SplitFire, Torrent } from "./WeaponSpecialRules";
+import { Assault, Combat, Heavy, Pistol, Rifle } from "./WeaponTypes";
 
 export const NeedlePistolBase : WeaponBase = 
 {
