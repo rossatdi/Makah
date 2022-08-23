@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Makah/static/css/main.71fecf4b.css",
+    "main.js": "/Makah/static/js/main.9ad16ee9.js",
+    "index.html": "/Makah/index.html",
+    "main.71fecf4b.css.map": "/Makah/static/css/main.71fecf4b.css.map",
+    "main.9ad16ee9.js.map": "/Makah/static/js/main.9ad16ee9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71fecf4b.css",
+    "static/js/main.9ad16ee9.js"
+  ]
+}
