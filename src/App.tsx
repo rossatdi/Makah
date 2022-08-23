@@ -13,20 +13,20 @@ import ActionsPage from './pages/actions/ActionsPage'
 
 function App() 
 {
-  const factionRoutes = Factions.map(o=>(<Route path={`/factions/${o.slug}`} element={<FactionView faction={o}/>}/>))
+  const factionRoutes = Factions.map(o=>(<Route path={`/Makah/factions/${o.slug}`} element={<FactionView faction={o}/>}/>))
 
   return (
     <BrowserRouter>
       <Nav/>
       <Container  className="p-3">
       <Routes>
-        <Route path="/" element={<div>hello</div>}/>
-        <Route path="/actions" element={<ActionsPage/>}/>
-        <Route path="/weapons/generic" element={<GenericWeaponsPage/>}/>
-        <Route path="/weapons/imperial" element={<ImperialWeaponsPage/>}/>
-        <Route path="/weapons/rules" element={<WeaponSpecialRules/>}/>
-        <Route path="/skills" element={<SkillsPage/>}/>
-        <Route path="/crew" element={<CrewPage/>}/>
+        <Route path="/Makah/" element={<div>hello</div>}/>
+        <Route path="/Makah/actions" element={<ActionsPage/>}/>
+        <Route path="/Makah/weapons/generic" element={<GenericWeaponsPage/>}/>
+        <Route path="/Makah/weapons/imperial" element={<ImperialWeaponsPage/>}/>
+        <Route path="/Makah/weapons/rules" element={<WeaponSpecialRules/>}/>
+        <Route path="/Makah/skills" element={<SkillsPage/>}/>
+        <Route path="/Makah/crew" element={<CrewPage/>}/>
         {factionRoutes}
       </Routes>
       </Container>
