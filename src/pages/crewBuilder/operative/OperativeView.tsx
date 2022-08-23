@@ -6,6 +6,7 @@ import { WeaponBlock } from "../../components/WeaponsBlock";
 import SkillTile from "../../components/skillTile/SkillTile";
 import './OperativeView.css'
 
+
 export type OperativeViewProps = {
     operative:Operative
 }

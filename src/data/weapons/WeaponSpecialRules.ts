@@ -1,7 +1,6 @@
 import { Variable } from "../../types/Variable"
 import {WeaponSpecialRule} from "../../types/WeaponSpecialRule"
 
-
 export const Aim : WeaponSpecialRule =    
 {
     name:"Aim",

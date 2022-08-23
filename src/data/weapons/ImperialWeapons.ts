@@ -3,6 +3,7 @@ import { Weapon } from "../../types/Weapon"
 import { LaspistolBase, BoltPistolBase, HotshotLaspistolBase, InfernoPistolBase, PlasmaPistolBase, NeedlePistolBase, LasgunBase, BolterBase, HotshotLasgunBase, PlasmaGunBase, LasCarbineBase, MeltagunBase, StormbolterBase, LonglasBase, CondemnorStakeBase, NeedleRifleBase, HeavyBolterBase, HeavyFlamerBase, ChainswordBase, StormShieldBase, PowerFistBase, ForceSwordBase, ForceHalberdBase } from "./BaseWeapons"
 import { GenericWeaponsList } from "./GenericWeapons"
 
+
 export const Laspistol : Weapon =
 {
     ...LaspistolBase,
