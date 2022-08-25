@@ -1,4 +1,4 @@
-import { Point } from "./Point"
+import Point from "./Point"
 import { StatModifier } from "./StatModifier"
 import { StatRequirement } from "./StatRequirement"
 
@@ -13,3 +13,5 @@ export type EquipmentBase =
 export type Equipment = EquipmentBase & {
     pt:Point
 }
+
+export default Equipment;

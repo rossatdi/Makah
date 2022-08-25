@@ -1,4 +1,4 @@
-import { Faction } from "../../types/Faction"
+import Faction from "../../types/Faction"
 import { OperativeBase } from "../../types/OperativeBase"
 
 

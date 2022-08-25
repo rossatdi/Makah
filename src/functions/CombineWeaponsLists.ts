@@ -1,4 +1,4 @@
-import { Weapon } from "../types/Weapon";
+import Weapon from "../types/Weapon";
 
 export function CombineWeaponsLists(a: Weapon[], b:Weapon[]) : Weapon[]
 {
@@ -16,3 +16,5 @@ export function CombineWeaponsLists(a: Weapon[], b:Weapon[]) : Weapon[]
     });
     return c;
 }
+
+export default CombineWeaponsLists;

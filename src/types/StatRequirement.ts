@@ -6,3 +6,4 @@ export type StatRequirement = {
     wnd?:number
     sv?:number
 }
+export default StatRequirement;

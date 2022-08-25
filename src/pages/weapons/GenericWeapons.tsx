@@ -1,4 +1,4 @@
-import { GenericWeaponsList } from "../../data/weapons/GenericWeapons";
+import GenericWeaponsList from "../../data/weapons/GenericWeapons";
 import { WeaponBlock } from "../components/WeaponsBlock";
 
 

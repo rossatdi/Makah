@@ -1,5 +1,5 @@
-import { Point } from "../types/Point";
-import { Pointed } from "../types/Pointed";
+import Point from "../types/Point";
+import Pointed from "../types/Pointed";
 
 export function SumPoints(points:Pointed[]) : Point
 {
@@ -12,3 +12,5 @@ export function SumPoints(points:Pointed[]) : Point
     });
     return sum;
 }
+
+export default SumPoints;

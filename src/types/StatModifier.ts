@@ -6,3 +6,5 @@ export type StatModifier = {
     wnd?:number
     sv?:number
 }
+
+export default StatModifier;

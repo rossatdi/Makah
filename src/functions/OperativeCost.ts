@@ -1,6 +1,6 @@
-import { Operative } from "../types/Operative";
-import { Point } from "../types/Point";
-import { Pointed } from "../types/Pointed";
+import Operative from "../types/Operative";
+import Point from "../types/Point";
+import Pointed from "../types/Pointed";
 import { SumPoints } from "./SumPoints";
 
 export function OperativeCost(operative:Operative) : Point
@@ -10,3 +10,5 @@ export function OperativeCost(operative:Operative) : Point
     if(operative.isLeader && cost!="-") cost-=10;
     return cost;
 }
+
+export default OperativeCost;

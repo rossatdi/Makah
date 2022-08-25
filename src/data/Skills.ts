@@ -1,4 +1,4 @@
-import {Skill} from "../types/Skill"
+import Skill from "../types/Skill"
 
 export const Assassin : Skill = 
 {

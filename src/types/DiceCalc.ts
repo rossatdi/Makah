@@ -7,3 +7,5 @@ export type DiceCalc =
 | `${d}${diceSize}`
 | `${number}${d}${diceSize}+${number}`
 | `${d}${diceSize}+${number}`
+
+export default DiceCalc;

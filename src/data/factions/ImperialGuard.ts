@@ -1,13 +1,12 @@
 import { CombineWeaponsLists } from "../../functions/CombineWeaponsLists"
-import { Equipment } from "../../types/Equipment"
-import { Faction } from "../../types/Faction"
-import { FactionAbility } from "../../types/FactionAbility"
+import Equipment from "../../types/Equipment"
+import Faction from "../../types/Faction"
+import FactionAbility from "../../types/FactionAbility"
 import { OperativeBase } from "../../types/OperativeBase"
 import { Weapon } from "../../types/Weapon"
 import { CarapaceArmorBase, MediKitBase } from "../BaseEquipment"
-import { BolterBase, BoltPistolBase, HotshotLasgunBase, HotshotLaspistolBase, LasCarbineBase, LasgunBase, LaspistolBase, LonglasBase, MeltagunBase, PlasmaGunBase, PlasmaPistolBase } from "../weapons/BaseWeapons"
 import { Autocannon, MissileLauncher, Mortar } from "../weapons/GenericWeapons"
-import { Chainsword, GenericAndImperialWeaponsList, HeavyBolter } from "../weapons/ImperialWeapons"
+import { Bolter, BoltPistol, Chainsword, GenericAndImperialWeaponsList, HeavyBolter, HotshotLasgun, HotshotLaspistol, LasCarbine, Lasgun, Laspistol, Meltagun, PlasmaGun, PlasmaPistol, Longlas as ImpLonglas } from "../weapons/ImperialWeapons"
 import { Inaccurate, Range } from "../weapons/WeaponSpecialRules"
 import { Assault, Combat } from "../weapons/WeaponTypes";
 
@@ -131,36 +130,6 @@ export const GravChute : Equipment =
     pt:4,
 }
 
-export const LasPistol : Weapon = {
-    ...LaspistolBase,
-    pt:0
-}
-
-export const BoltPistol : Weapon = {
-    ...BoltPistolBase,
-    pt:1,
-}
-
-export const HotshotLaspistol : Weapon = {
-    ...HotshotLaspistolBase,
-    pt:1
-}
-
-export const PlasmaPistol : Weapon = {
-    ...PlasmaPistolBase,
-    pt:5
-}
-
-export const LasCarbine : Weapon = {
-    ...LasCarbineBase,
-    pt:0
-}
-
-export const Meltagun : Weapon = {
-    ...MeltagunBase,
-    pt:5
-}
-
 export const RipperGun : Weapon = {
     name:"Ripper Gun",
     types:[Assault,Combat],
@@ -183,28 +152,8 @@ export const RipperGun : Weapon = {
     pt:3
 }
 
-export const Lasgun : Weapon = {
-    ...LasgunBase,
-    pt:0
-}
-
-export const Bolter : Weapon = {
-    ...BolterBase,
-    pt:2
-}
-
-export const HotshotLasgun : Weapon = {
-    ...HotshotLasgunBase,
-    pt:1
-}
-
-export const PlasmaGun : Weapon = {
-    ...PlasmaGunBase,
-    pt:5
-}
-
 export const Longlas : Weapon = {
-    ...LonglasBase,
+    ...ImpLonglas,
     pt:4
 }
 
@@ -220,7 +169,7 @@ export const LongKnife : Weapon = {
 
 export const GuardWeapons : Weapon[] = 
 [
-    LasPistol,
+    Laspistol,
     BoltPistol,
     HotshotLaspistol,
     PlasmaPistol,

@@ -1,31 +1,34 @@
 import { Stack } from "react-bootstrap";
-import { SpaceMarine, SpecialIssueAmmo } from "../../data/factions/Astartes";
-import {  CarapaceArmor, Inquisitor, PowerArmor, PsyberEagle, ServoSkull, Warrior } from "../../data/factions/Inquisition";
+import { Deathwatch, Inquisitor, Warrior } from "../../data/factions/inquisition/Inquisition";
 import { Chainsword, InfernoPistol, LasCarbine, Laspistol, Longlas, NeedlePistol, Stormbolter, StormShield } from "../../data/weapons/ImperialWeapons";
-import { ExpertMarksman, Gunfighter, Gunslinger, Killshot } from "../../data/Skills";
-import { Operative } from "../../types/Operative";
+import { ExpertMarksman, Gunfighter, Gunslinger } from "../../data/Skills";
+import Operative from "../../types/Operative";
 import OperativeView from "./operative/OperativeView";
 import SkillTile from "../components/skillTile/SkillTile";
 import './CrewBuilder.css'
 import { hasProfiles, Weapon } from "../../types/Weapon";
-import { WeaponSpecialRule } from "../../types/WeaponSpecialRule"
-import { Veteran } from "../../data/factions/ImperialGuard";
+import WeaponSpecialRule from "../../types/WeaponSpecialRule"
+import { CarapaceArmor, Veteran } from "../../data/factions/ImperialGuard";
 import { Knife } from "../../data/weapons/GenericWeapons";
+import { PowerArmor, ServoSkull } from "../../data/factions/inquisition/InquisitionEquipment";
+import { PsyberEagle } from "../../data/factions/inquisition/InquisitionWeapons";
 
 const example : Operative =
 {
-    ...SpaceMarine,
+    ...Deathwatch,
     isLeader:false,
+    isPsyker:false,
     name:"Geoff",
     weapons:[Knife, Stormbolter, StormShield],
-    skills:[Killshot],
-    equipment:[SpecialIssueAmmo, ServoSkull]
+    skills: [...Deathwatch.skills],
+    equipment:[...Deathwatch.equipment, ServoSkull]
 }
 
 const example2 : Operative =
 {
     ...Inquisitor,
     isLeader:true,
+    isPsyker:false,
     name:"Barry",
     weapons:[Knife, InfernoPistol, NeedlePistol],
     skills:[Gunslinger, Gunfighter],
@@ -35,6 +38,7 @@ const example2 : Operative =
 const example3 : Operative = {
     ...Veteran,
     isLeader:false,
+    isPsyker:false,
     name:"Susan",
     weapons:[Knife, PsyberEagle, Laspistol],
     equipment:[CarapaceArmor],
@@ -44,6 +48,7 @@ const example3 : Operative = {
 const example4 : Operative = {
     ...Veteran,
     isLeader:false,
+    isPsyker:false,
     name:"Lilly",
     weapons:[Knife, Longlas, Laspistol],
     equipment:[CarapaceArmor],
@@ -54,6 +59,7 @@ const example4 : Operative = {
 const example5 : Operative = {
     ...Warrior,
     isLeader:false,
+    isPsyker:false,
     name:"Jerry",
     weapons:[Chainsword, LasCarbine],
     equipment:[CarapaceArmor],

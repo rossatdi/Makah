@@ -1,5 +1,5 @@
-import { Equipment } from "./Equipment"
-import { FactionAbility } from "./FactionAbility"
+import Equipment from "./Equipment"
+import FactionAbility from "./FactionAbility"
 import { OperativeBase } from "./OperativeBase"
 import { Weapon } from "./Weapon"
 
@@ -12,3 +12,4 @@ export type Faction =
     equipment:Equipment[],
     ability:FactionAbility
 }
+export default Faction;

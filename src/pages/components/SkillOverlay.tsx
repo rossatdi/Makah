@@ -1,5 +1,5 @@
 import { OverlayTrigger, Popover } from "react-bootstrap"
-import { ISkill } from "../../types/ISkill"
+import ISkill from "../../types/ISkill"
 
 const popover = (rule:ISkill) =>
 (<Popover>

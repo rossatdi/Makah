@@ -1,9 +1,10 @@
-import { Point } from "./Point"
+import Point from "./Point"
 
 export type OperativeBase = Stats & {
     type: string
     pt:Point
 }
+export default OperativeBase;
 
 export type Stats = {
     mv:number

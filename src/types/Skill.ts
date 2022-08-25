@@ -8,3 +8,5 @@ export type Skill = {
     requirement?:StatRequirement
     pt:number
 }
+
+export default Skill;

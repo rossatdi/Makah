@@ -267,3 +267,5 @@ export const GenericWeaponsList : Weapon[] =
  KrakGrenade,
  StunGrenade
 ]
+
+export default GenericWeaponsList;
