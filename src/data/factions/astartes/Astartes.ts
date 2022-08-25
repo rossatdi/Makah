@@ -1,7 +1,7 @@
-import { CombineWeaponsLists } from "../../../functions/CombineWeaponsLists"
+import CombineWeaponsLists from "../../../functions/CombineWeaponsLists"
 import Faction from "../../../types/Faction"
 import FactionAbility from "../../../types/FactionAbility"
-import { OperativeBase } from "../../../types/OperativeBase"
+import OperativeBase from "../../../types/OperativeBase"
 import { GenericAndImperialWeaponsList } from "../../weapons/ImperialWeapons"
 import AstartesEquipmentList from "./AstartesEquipment"
 import AstartesWeaponList from "./AstartesWeapons"
@@ -55,6 +55,7 @@ export const Astartes : Faction =
 {
     name:"Adeptus Astartes",
     slug:"astartes",
+    quote:"The Adeptus Astartes are one of the most elite and feared fighting forces in the Imperium of Man. There are far too few Space Marines to form the Imperium's main military forces; instead they operate as highly mobile strike forces. While famous for their brazen shock assaults, Space Marines’ physiology and armour makes them the perfect warriors for long range patrols and infiltration work.",
     operativeTypes:[SpaceMarine,Scout,Servitor],
     weapons:CombineWeaponsLists(AstartesWeaponList,GenericAndImperialWeaponsList),
     equipment:AstartesEquipmentList,

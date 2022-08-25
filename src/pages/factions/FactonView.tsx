@@ -1,5 +1,6 @@
 import Faction from "../../types/Faction"
 import { OperativeBase } from "../../types/OperativeBase"
+import SkillTile from "../components/skillTile/SkillTile"
 
 
 export type FactionViewProps = {
@@ -37,8 +38,15 @@ const OperativesView = (operatives:OperativeBase[]) =>(<table>
 const FactionView = ({faction}:FactionViewProps) =>{
     return (<div>
         <h1>{faction.name}</h1>
+        <hr/>
+        <i>{faction.quote}</i>
+        {faction.attribution && (<><br/><i>-{faction.attribution}</i></>)}
         <h3>Operatives</h3>
         {OperativesView(faction.operativeTypes)}
+        <h3>Faction Ability</h3>
+        <SkillTile skill={faction.ability} type="facton"></SkillTile>
+        <h3>Equipment</h3>
+        {faction.equipment.map(o=><SkillTile skill={o} type="equipment"/>)}
         </div>)
 }
 

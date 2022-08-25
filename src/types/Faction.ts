@@ -7,6 +7,8 @@ export type Faction =
 {
     name:string
     slug:string
+    quote:string
+    attribution?:string
     operativeTypes:OperativeBase[]
     weapons:Weapon[],
     equipment:Equipment[],
