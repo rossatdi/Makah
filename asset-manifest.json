@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Makah/static/css/main.71fecf4b.css",
-    "main.js": "/Makah/static/js/main.04b1cee6.js",
+    "main.js": "/Makah/static/js/main.ecfde306.js",
     "index.html": "/Makah/index.html",
     "main.71fecf4b.css.map": "/Makah/static/css/main.71fecf4b.css.map",
-    "main.04b1cee6.js.map": "/Makah/static/js/main.04b1cee6.js.map"
+    "main.ecfde306.js.map": "/Makah/static/js/main.ecfde306.js.map"
   },
   "entrypoints": [
     "static/css/main.71fecf4b.css",
-    "static/js/main.04b1cee6.js"
+    "static/js/main.ecfde306.js"
   ]
 }
