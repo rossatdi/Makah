@@ -1,5 +1,6 @@
 import Weapon from "../types/Weapon";
 
+//TODO make it take an arbitrary number of lists
 export function CombineWeaponsLists(a: Weapon[], b:Weapon[]) : Weapon[]
 {
     let c = a;
