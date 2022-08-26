@@ -4,6 +4,11 @@ import './WeaponsBlock.css'
 
 
 export const WeaponBlock = (weapons : Weapon[]) => {
+    var g = weapons.sort((a,b)=>{
+        const h = a.types[0].ordering-b.types[0].ordering
+        if(h!==0) return h
+        return a.name.localeCompare(b.name);
+    })
     return (
         <table className="weaponsBlock">
             <tr>
@@ -15,7 +20,7 @@ export const WeaponBlock = (weapons : Weapon[]) => {
                 <th>Special</th>
                 <th>Points</th>
             </tr>
-            {weapons.map(weapon=> weaponMap(weapon))}
+            {g.map(weapon=> weaponMap(weapon))}
         </table>
     )
 }

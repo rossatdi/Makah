@@ -1,6 +1,7 @@
 import Faction from "../../types/Faction"
 import { OperativeBase } from "../../types/OperativeBase"
 import SkillTile from "../components/skillTile/SkillTile"
+import { WeaponBlock } from "../components/WeaponsBlock"
 
 
 export type FactionViewProps = {
@@ -47,6 +48,8 @@ const FactionView = ({faction}:FactionViewProps) =>{
         <SkillTile skill={faction.ability} type="facton"></SkillTile>
         <h3>Equipment</h3>
         {faction.equipment.map(o=><SkillTile skill={o} type="equipment"/>)}
+        <h3>Weapons</h3>
+        {WeaponBlock(faction.weapons)}
         </div>)
 }
 
