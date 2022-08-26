@@ -7,7 +7,7 @@ export function OperativeCost(operative:Operative) : Point
 {
     let pointedItems : IPointed[] = [operative,...operative.weapons,...operative.equipment,...operative.skills]
     let cost = SumPoints(pointedItems);
-    if(operative.isLeader && cost!="-") cost-=10;
+    if(operative.isLeader && cost!=="-") cost-=10;
     return cost;
 }
 
