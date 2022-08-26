@@ -6,10 +6,10 @@ import { Assault, Combat } from "../../weapons/WeaponTypes"
 
 export const RipperGun : Weapon = {
     name:"Ripper Gun",
-    types:[Assault,Combat],
     profiles:[
         {
             name:"Gun",
+            types:[Assault],
             attack:5,
             dam:3,
             ap:0,
@@ -17,6 +17,7 @@ export const RipperGun : Weapon = {
         },
         {
             name:"Knife",
+            types:[Combat],
             attack:3,
             dam:4,
             ap:0,

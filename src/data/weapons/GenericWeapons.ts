@@ -81,9 +81,9 @@ export const Autocannon : Weapon =
 export const MissileLauncher : Weapon = 
 {
     name:"Missile Launcher",
-    types:[Heavy],
     profiles: [ 
         {
+            types:[Heavy],
             name:"Frag",
             attack:3,
             dam:"d6",
@@ -91,6 +91,7 @@ export const MissileLauncher : Weapon =
             special:[Blast(2)],
         },
         {
+            types:[Heavy],
             name:"Krak",
             attack:1,
             dam:"2d6",

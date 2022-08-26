@@ -6,6 +6,7 @@ import WeaponType from "./WeaponType"
 export type Profile = 
 {
     name:string
+    types:WeaponType[]
     attack:number | DiceCalc
     dam:number | DiceCalc
     ap:number
@@ -20,26 +21,25 @@ export type WeaponModifier = {
 
 type WeaponBase = 
 {
-    name:string
     types:WeaponType[]
     attack:number | DiceCalc
     dam:number | DiceCalc
     ap:number
     special:WeaponSpecialRule[]
-    notes?:string
+
 }
 
 
 type ProfileWeaponBase =
 {
-    name:string
-    types:WeaponType[]
+
     profiles:Profile[]
-    notes?:string
 }
 
 export type Weapon = (WeaponBase | ProfileWeaponBase) & 
 {    
+    name:string
+    notes?:string
     pt:Point
     modifiers?:WeaponModifier[]
 }

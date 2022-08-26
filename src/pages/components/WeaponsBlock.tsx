@@ -5,7 +5,10 @@ import './WeaponsBlock.css'
 
 export const WeaponBlock = (weapons : Weapon[]) => {
     var g = weapons.sort((a,b)=>{
-        const h = a.types[0].ordering-b.types[0].ordering
+        
+        const aVal = hasProfiles(a) ? a.profiles[0].types[0] : a.types[0];
+        const bVal = hasProfiles(b) ? b.profiles[0].types[0] : b.types[0];
+        const h =  aVal.ordering-bVal.ordering
         if(h!==0) return h
         return a.name.localeCompare(b.name);
     })
@@ -40,7 +43,7 @@ export function weaponMap(weapon:Weapon){
         {weapon.profiles.map(o=>{
             return <tr>
             <td>🠺{o.name}</td>
-            <td>{weapon.types.map(o=>SkillOverlay(o))}</td>
+            <td>{o.types.map(o=>SkillOverlay(o))}</td>
             <td>{o.attack}</td>
             <td>{o.dam}</td>
             <td>{o.ap}</td>
