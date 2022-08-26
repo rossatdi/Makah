@@ -1,7 +1,7 @@
 import Point from "../types/Point";
-import Pointed from "../types/Pointed";
+import IPointed from "../interfaces/IPointed";
 
-export function SumPoints(points:Pointed[]) : Point
+export function SumPoints(points:IPointed[]) : Point
 {
     if(points.every(p=>p.pt==="-")) return "-";
     let sum : number = 0;

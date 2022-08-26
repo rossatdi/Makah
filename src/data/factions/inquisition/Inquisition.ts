@@ -96,7 +96,7 @@ export const Inquisition : Faction =
     name:"Forces of the Inquisition",
     slug:"inquisition",
     quote:"The Inquisition, formally called the Holy Orders of the Emperor's Inquisition, is a secret organisation that exists outside of the standard administrative hierarchy of the Imperium of Man. The Inquisition acts as the secret police force of the Imperium, hunting down any and all of the myriad threats to the stability of the God-Emperor's realm.",
-    operativeTypes:[Inquisitor,Acolyte,Warrior, Deathwatch, GreyKnightH, GreyKnightS], //todo add all imperial operative, and special ordo units
+    operativeTypes:[Inquisitor,Acolyte,Warrior, Deathwatch, GreyKnightH, GreyKnightS], //TODO add all imperial operative, and special ordo units
     weapons:CombineWeaponsLists(InquisitionWeaponsList,GenericAndImperialWeaponsList),
     equipment:InquisitionEquipment,
     ability:UnrelentingHatred

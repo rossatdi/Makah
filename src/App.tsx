@@ -4,7 +4,7 @@ import GenericWeaponsPage from './pages/weapons/GenericWeapons'
 import ImperialWeaponsPage from './pages/weapons/ImperialWeapons'
 import CrewPage from './pages/crewBuilder/CrewBuilder'
 import './App.css';
-import Nav from "./nav/Nav";
+import Nav from "./pages/components/nav/Nav";
 import { Container } from "react-bootstrap";
 import FactionView from "./pages/factions/FactonView";
 import { Factions } from "./data/factions/Factions";

@@ -8,10 +8,11 @@ import SkillTile from "../components/skillTile/SkillTile";
 import './CrewBuilder.css'
 import { hasProfiles, Weapon } from "../../types/Weapon";
 import WeaponSpecialRule from "../../types/WeaponSpecialRule"
-import { CarapaceArmor, Veteran } from "../../data/factions/ImperialGuard";
+import { Veteran } from "../../data/factions/ImperialGuard";
 import { Knife } from "../../data/weapons/GenericWeapons";
 import { PowerArmor, ServoSkull } from "../../data/factions/inquisition/InquisitionEquipment";
 import { PsyberEagle } from "../../data/factions/inquisition/InquisitionWeapons";
+import { CarapaceArmor } from './../../data/factions/inquisition/InquisitionEquipment';
 
 const example : Operative =
 {

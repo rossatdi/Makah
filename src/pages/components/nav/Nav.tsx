@@ -1,7 +1,7 @@
 import { Nav, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from 'react-router-bootstrap'
 import './Nav.css'
-import { Factions } from "../data/factions/Factions";
+import { Factions } from "../../../data/factions/Factions";
 const NavView = () => {
   const factionRoutes = Factions.map(o=>(
     <NavDropdown.Item>

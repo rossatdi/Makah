@@ -1,16 +1,12 @@
 import Point from "./Point"
-import { StatModifier } from "./StatModifier"
-import { StatRequirement } from "./StatRequirement"
+import StatModifier from "./StatModifier"
+import StatRequirement from "./StatRequirement"
 
-export type EquipmentBase = 
-{
+export type Equipment = {
     name:string
     effect:string
     modifier?:StatModifier,
     requirement?:StatRequirement
-}
-
-export type Equipment = EquipmentBase & {
     pt:Point
 }
 

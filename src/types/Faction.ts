@@ -1,7 +1,7 @@
 import Equipment from "./Equipment"
 import FactionAbility from "./FactionAbility"
-import { OperativeBase } from "./OperativeBase"
-import { Weapon } from "./Weapon"
+import OperativeBase from "./OperativeBase"
+import Weapon from "./Weapon"
 
 export type Faction = 
 {

@@ -1,6 +1,6 @@
 import Point from "./Point"
 import WeaponSpecialRule from "./WeaponSpecialRule"
-import { DiceCalc } from "./DiceCalc"
+import DiceCalc from "./DiceCalc"
 import WeaponType from "./WeaponType"
 
 export type Profile = 

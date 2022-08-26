@@ -1,12 +1,12 @@
 import { Card } from "react-bootstrap"
-import ISkill from "../../../types/ISkill"
+import ISkill from "../../../interfaces/ISkill"
 import "./SkillTile.css"
 
 const handleText = (text: string) : string[] =>{
     return text.split('•')
 }
 
-export type SkillTypeProps = 
+export interface SkillTypeProps 
 {
     skill:ISkill
     type:string

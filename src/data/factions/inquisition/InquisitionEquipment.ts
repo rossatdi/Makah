@@ -1,4 +1,4 @@
-import { CarapaceArmorBase } from "../../BaseEquipment";
+import { CarapaceArmor as CarapaceArmorBase } from "../../BaseEquipment";
 import Equipment from "../../../types/Equipment";
 
 export const ServoSkull: Equipment =

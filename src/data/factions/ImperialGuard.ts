@@ -4,7 +4,7 @@ import Faction from "../../types/Faction"
 import FactionAbility from "../../types/FactionAbility"
 import { OperativeBase } from "../../types/OperativeBase"
 import { Weapon } from "../../types/Weapon"
-import { CarapaceArmorBase, MediKitBase } from "../BaseEquipment"
+import { CarapaceArmor, MediKit } from "../BaseEquipment"
 import { Autocannon, MissileLauncher, Mortar } from "../weapons/GenericWeapons"
 import { Bolter, BoltPistol, Chainsword, GenericAndImperialWeaponsList, HeavyBolter, HotshotLasgun, HotshotLaspistol, LasCarbine, Lasgun, Laspistol, Meltagun, PlasmaGun, PlasmaPistol, Longlas as ImpLonglas } from "../weapons/ImperialWeapons"
 import { Inaccurate, Range } from "../weapons/WeaponSpecialRules"
@@ -89,12 +89,6 @@ export const Orders : FactionAbility =
     effect:"Once per game, immediately before rolling to see who goes first, you can activate an Order. This can have one of the following effects: • Get back in the fight! Remove all Evade tokens from friendly Operatives. • First rank fire, second rank fire! Rapid fire Las weapons do not suffer the -1 penalty for a second Shoot action. • Move, move, move! All Operatives can make a second Move action."
 }
 
-export const MediKit : Equipment = 
-{
-    ...MediKitBase,
-    pt:4
-}
-
 export const VoxRelay : Equipment = 
 {
     name:"Vox Relay",
@@ -114,12 +108,6 @@ export const CamoCloak : Equipment =
 {
     name:"Camo Cloak",
     effect:"Re-roll 1s when making Evade rolls.",
-    pt:3
-}
-
-export const CarapaceArmor : Equipment = 
-{
-    ...CarapaceArmorBase,
     pt:3
 }
 
