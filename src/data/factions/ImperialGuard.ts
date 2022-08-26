@@ -48,7 +48,7 @@ export const Scion : OperativeBase =
 
 export const Officer : OperativeBase =
 {
-    type:"Guardsman",
+    type:"Officer",
     mv:6,
     ws:3,
     bs:3,
