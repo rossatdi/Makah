@@ -1,5 +1,5 @@
 import { Card } from "react-bootstrap"
-import ISkill from "../../../interfaces/ISkill"
+import IGlossaryItem from "../../../interfaces/IGlossaryItem"
 import "./SkillTile.css"
 
 const handleText = (text: string) : string[] =>{
@@ -8,7 +8,7 @@ const handleText = (text: string) : string[] =>{
 
 export interface SkillTypeProps 
 {
-    skill:ISkill
+    skill:IGlossaryItem
     type:string
 }
 

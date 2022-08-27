@@ -1,5 +1,4 @@
 import { Stack } from "react-bootstrap";
-import { Deathwatch, Inquisitor, Warrior } from "../../data/factions/inquisition/Inquisition";
 import { Chainsword, InfernoPistol, LasCarbine, Laspistol, Longlas, NeedlePistol, Stormbolter, StormShield } from "../../data/weapons/ImperialWeapons";
 import { ExpertMarksman, Gunfighter, Gunslinger } from "../../data/Skills";
 import Operative from "../../types/Operative";
@@ -8,11 +7,12 @@ import SkillTile from "../components/skillTile/SkillTile";
 import './CrewBuilder.css'
 import { hasProfiles, Weapon } from "../../types/Weapon";
 import WeaponSpecialRule from "../../types/WeaponSpecialRule"
-import { Veteran } from "../../data/factions/imperialGuard/ImperialGuard";
 import { Knife } from "../../data/weapons/GenericWeapons";
 import { PowerArmor, ServoSkull } from "../../data/factions/inquisition/InquisitionEquipment";
 import { PsyberEagle } from "../../data/factions/inquisition/InquisitionWeapons";
 import { CarapaceArmor } from './../../data/factions/inquisition/InquisitionEquipment';
+import { Deathwatch, Inquisitor, Warrior } from "../../data/factions/inquisition/InquisitionOperatives";
+import { Veteran } from "../../data/factions/imperialGuard/ImperialGuardOperative";
 
 const example : Operative =
 {

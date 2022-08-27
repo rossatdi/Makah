@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SkillsPage from './pages/skills/Skills'
+import GlossaryPage from './pages/glossary/GlossaryView'
 import GenericWeaponsPage from './pages/weapons/GenericWeapons'
 import ImperialWeaponsPage from './pages/weapons/ImperialWeapons'
 import CrewPage from './pages/crewBuilder/CrewBuilder'
@@ -26,6 +27,7 @@ function App()
         <Route path="/Makah/weapons/imperial" element={<ImperialWeaponsPage/>}/>
         <Route path="/Makah/weapons/rules" element={<WeaponSpecialRules/>}/>
         <Route path="/Makah/skills" element={<SkillsPage/>}/>
+        <Route path="/Makah/glossary" element={<GlossaryPage/>}/>
         <Route path="/Makah/crew" element={<CrewPage/>}/>
         {factionRoutes}
       </Routes>

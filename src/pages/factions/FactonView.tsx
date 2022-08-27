@@ -44,6 +44,7 @@ const FactionView = ({faction}:FactionViewProps) =>{
         {faction.attribution && (<><br/><i>-{faction.attribution}</i></>)}
         <h3>Operatives</h3>
         {OperativesView(faction.operativeTypes)}
+        {faction.operativeNotes && <ul>{faction.operativeNotes.map(o=><li>{o}</li>)}</ul>}
         <h3>Faction Ability</h3>
         <SkillTile skill={faction.ability} type="facton"></SkillTile>
         <h3>Equipment</h3>

@@ -10,6 +10,7 @@ export type Faction =
     quote:string
     attribution?:string
     operativeTypes:OperativeBase[]
+    operativeNotes?:string[]
     weapons:Weapon[],
     equipment:Equipment[],
     ability:FactionAbility

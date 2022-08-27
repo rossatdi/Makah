@@ -1,5 +1,5 @@
 import { hasProfiles, Weapon } from "../../types/Weapon"
-import  SkillOverlay  from "./SkillOverlay"
+import  GlossaryOverlay  from "./GlossaryOverlay"
 import './WeaponsBlock.css'
 
 
@@ -43,11 +43,11 @@ export function weaponMap(weapon:Weapon){
         {weapon.profiles.map(o=>{
             return <tr>
             <td>🠺{o.name}</td>
-            <td>{o.types.map(o=>SkillOverlay(o))}</td>
+            <td>{o.types.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
             <td>{o.attack}</td>
             <td>{o.dam}</td>
             <td>{o.ap}</td>
-            <td>{o.special.map(o=>SkillOverlay(o))}</td>
+            <td>{o.special.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
         </tr>
         })}
         </>
@@ -55,11 +55,11 @@ export function weaponMap(weapon:Weapon){
     else{
         return <tr>
             <td>{weapon.name}</td>
-            <td>{weapon.types.map(o=>SkillOverlay(o))}</td>
+            <td>{weapon.types.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
             <td>{weapon.attack}</td>
             <td>{weapon.dam}</td>
             <td>{weapon.ap}</td>
-            <td>{weapon.special.map(o=>SkillOverlay(o))}</td>
+            <td>{weapon.special.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
             <td>{weapon.pt}</td>
         </tr>
     }
