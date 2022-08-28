@@ -1,4 +1,4 @@
-import { Nav, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import './Nav.css'
 import { Factions } from "../../../data/factions/Factions";
 import { NavLink  } from "react-router-dom";

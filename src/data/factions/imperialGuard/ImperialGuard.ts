@@ -1,10 +1,11 @@
-import CombineWeaponsLists from "../../../functions/CombineWeaponsLists"
 import Faction from "../../../types/Faction"
 import FactionAbility from "../../../types/FactionAbility"
-import { GenericAndImperialWeaponsList } from "../../weapons/ImperialWeapons"
 import ImperialGuardEquipment from "./ImperialGuardEquipment"
 import ImperialGuardOperatives from "./ImperialGuardOperative"
 import ImperialGuardWeapons from "./ImperialGuardWeapons"
+import GenericWeaponsList from './../../weapons/GenericWeapons';
+import ImperialWeaponsList from './../../weapons/ImperialWeapons';
+import onlyUnique from "../../../functions/OnlyUnique"
 
 const Name : string = "Imperial Guard"
 
@@ -22,7 +23,7 @@ export const ImperialGuard : Faction =
     attribution:"Staff Sergeant Vermak, 12th Cadian Shock Regiment",
     operativeTypes:ImperialGuardOperatives,
     operativeNotes:["Your Leader must be an Officer"],
-    weapons:CombineWeaponsLists(ImperialGuardWeapons,GenericAndImperialWeaponsList),
+    weapons:[...ImperialGuardWeapons,...GenericWeaponsList,...ImperialWeaponsList].filter(onlyUnique),
     equipment:ImperialGuardEquipment,
     ability:Orders
 }
