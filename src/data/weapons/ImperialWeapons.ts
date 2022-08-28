@@ -1,292 +1,422 @@
-import CombineWeaponsLists from "../../functions/CombineWeaponsLists"
-import Weapon from "../../types/Weapon"
-import GenericWeaponsList from "./GenericWeapons"
-import { Aim, Dangerous, Defensive, Headshot, IgnoresCover, NonLethal, OneUse, PsykerOnly, Range, RapidFire, Reach, RerollOneToHit, SplitFire, Torrent } from "./WeaponSpecialRules"
-import { Assault, Combat, Heavy, Pistol, Rifle } from "./WeaponTypes"
+import CombineWeaponsLists from "../../functions/CombineWeaponsLists";
+import Weapon from "../../types/Weapon";
+import WeaponSource from "../../types/WeaponSource";
+import GenericWeaponsList from "./GenericWeapons";
+import {
+  Aim,
+  Dangerous,
+  Defensive,
+  Headshot,
+  IgnoresCover,
+  NonLethal,
+  OneUse,
+  PsykerOnly,
+  Range,
+  RapidFire,
+  Reach,
+  RerollOneToHit,
+  SplitFire,
+  Torrent,
+} from "./WeaponSpecialRules";
+import { Assault, Combat, Heavy, Pistol, Rifle } from "./WeaponTypes";
 
+const source: WeaponSource = "Imperial";
 
-export const Laspistol : Weapon =
-{
-    name:"Laspistol",
-    types:[Pistol],
-    attack:2,
-    dam:3,
-    ap:0,
-    special:[Range(6)],
-    pt:0,
-}
+export const Laspistol: Weapon = {
+  name: "Laspistol",
+  profiles: [
+    {
+      types: [Pistol],
+      attack: 2,
+      dam: 3,
+      ap: 0,
+      special: [Range(6)],
+    },
+  ],
+  pt: 0,
+  source: source,
+};
 
-export const BoltPistol : Weapon =
-{
-    name:"Bolt Pitol",
-    types:[Pistol],
-    attack:3,
-    dam:4,
-    ap:0,
-    special:[Range(6), RapidFire],
-    pt:1,
-}
+export const BoltPistol: Weapon = {
+  name: "Bolt Pitol",
+  profiles: [
+    {
+      types: [Pistol],
+      attack: 3,
+      dam: 4,
+      ap: 0,
+      special: [Range(6), RapidFire],
+    },
+  ],
+  pt: 1,
+  source: source,
+};
 
-export const HotshotLaspistol : Weapon =
-{
+export const HotshotLaspistol: Weapon = {
+  name: "Hotshot Laspistol",
+  profiles: [
+    {
+      types: [Pistol],
+      attack: 2,
+      dam: 3,
+      ap: -1,
+      special: [Range(6)],
+    },
+  ],
 
-    name:"Hotshot Laspistol",
-    types:[Pistol],
-    attack:2,
-    dam:3,
-    ap:-1,
-    special:[Range(6)],
-    pt:1,
-}
+  pt: 1,
+  source: source,
+};
 
-export const InfernoPistol : Weapon =
-{
-    name:"Inferno Pistol",
-    types:[Pistol],
-    attack:2,
-    dam:5,
-    ap:-2,
-    special:[Range(4)],
-    pt:4,
-}
+export const InfernoPistol: Weapon = {
+  name: "Inferno Pistol",
+  profiles: [
+    {
+      types: [Pistol],
+      attack: 2,
+      dam: 5,
+      ap: -2,
+      special: [Range(4)],
+    },
+  ],
 
-export const PlasmaPistol : Weapon =
-{
-    name:"Plasma Pistol",
-    types:[Pistol],
-    attack:3,
-    dam:4,
-    ap:-1,
-    special:[Range(6), Dangerous],
-    pt:5,
-}
+  pt: 4,
+  source: source,
+};
 
-export const NeedlePistol : Weapon = 
-{
-    name:"Needle Pistol",
-    types:[Pistol],
-    attack:2,
-    dam:"d6+1",
-    ap:-1,
-    special:[NonLethal,Range(8)],
-    pt:3,
-}
+export const PlasmaPistol: Weapon = {
+  name: "Plasma Pistol",
+  profiles: [
+    {
+      types: [Pistol],
+      attack: 3,
+      dam: 4,
+      ap: -1,
+      special: [Range(6), Dangerous],
+    },
+  ],
 
-export const LasCarbine : Weapon =
-{
-    name:"Las Carbine",
-    types:[Assault],
-    attack:2,
-    dam:3,
-    ap:0,
-    special:[],
-    pt:0,
-}
+  pt: 5,
+  source: source,
+};
 
-export const Meltagun : Weapon =
-{
-    name:"Meltagun",
-    types:[Assault],
-    attack:2,
-    dam:5,
-    ap:-1,
-    special:[Range(8)],
-    pt:5,
-}
+export const NeedlePistol: Weapon = {
+  name: "Needle Pistol",
+  profiles: [
+    {
+      types: [Pistol],
+      attack: 2,
+      dam: "d6+1",
+      ap: -1,
+      special: [NonLethal, Range(8)],
+    },
+  ],
 
-export const Stormbolter : Weapon =
-{
-    name:"Stormbolter",
-    types:[Assault],
-    attack:3,
-    dam:4,
-    ap:0,
-    special:[RerollOneToHit ,RapidFire],
-    pt:3,
-}
+  pt: 3,
+  source: source,
+};
 
-export const Lasgun : Weapon =
-{
-    name:"Lasgun",
-    types:[Rifle],
-    attack:2,
-    dam:3,
-    ap:0,
-    special:[RapidFire],
-    pt:0,
-}
+export const LasCarbine: Weapon = {
+  name: "Las Carbine",
+  profiles: [
+    {
+      types: [Assault],
+      attack: 2,
+      dam: 3,
+      ap: 0,
+      special: [],
+    },
+  ],
 
-export const Bolter : Weapon =
-{
-    name:"Bolter",
-    types:[Rifle],
-    attack:3,
-    dam:4,
-    ap:0,
-    special:[RapidFire],
-    pt:2,
-}
+  pt: 0,
+  source: source,
+};
 
-export const HotshotLasgun : Weapon =
-{
-    name:"Hotshot Lasgun",
-    types:[Rifle],
-    attack:2,
-    dam:3,
-    ap:-1,
-    special:[],
-    pt:1,
-}
+export const Meltagun: Weapon = {
+  name: "Meltagun",
+  profiles: [
+    {
+      types: [Assault],
+      attack: 2,
+      dam: 5,
+      ap: -1,
+      special: [Range(8)],
+    },
+  ],
 
-export const PlasmaGun : Weapon =
-{
-    name:"Plasma Gun",
-    types:[Rifle],
-    attack:3,
-    dam:4,
-    ap:-1,
-    special:[Dangerous],
-    pt:7
-}
+  pt: 5,
+  source: source,
+};
 
-export const Longlas : Weapon =
-{
-    name:"Longlas",
-    types:[Rifle],
-    attack:3,
-    dam:3,
-    ap:-1,
-    special:[Headshot],
-    pt:5
-}
+export const Stormbolter: Weapon = {
+  name: "Stormbolter",
+  profiles: [
+    {
+      types: [Assault],
+      attack: 3,
+      dam: 4,
+      ap: 0,
+      special: [RerollOneToHit, RapidFire],
+    },
+  ],
 
-export const CondemnorStake : Weapon =
-{
-    name:"Condemnnor Stake",
-    types:[Rifle],
-    attack:3,
-    dam:4,
-    ap:-2,
-    special:[OneUse],
-    notes:"Added to a Bolter, which must also be paid for.",
-    pt:1
-}
+  pt: 3,
+  source: source,
+};
 
-export const NeedleRifle : Weapon =
-{
-    name:"Needle Rifle",
-    types:[Heavy],
-    attack:2,
-    dam:"d6+1",
-    ap:-1,
-    special:[NonLethal,Aim],
-    pt:5
-}
+export const Lasgun: Weapon = {
+  name: "Lasgun",
+  profiles: [
+    {
+      types: [Rifle],
+      attack: 2,
+      dam: 3,
+      ap: 0,
+      special: [RapidFire],
+    },
+  ],
 
-export const HeavyBolter : Weapon =
-{
-    name:"Heavy Bolter",
-    types:[Heavy],
-    attack:5,
-    dam:4,
-    ap:0,
-    special:[SplitFire,RapidFire],
-    pt:8
-}
+  pt: 0,
+  source: source,
+};
 
-export const HeavyFlamer : Weapon =
-{
-    name:"Heavy Flamer",
-    types:[Heavy],
-    attack:5,
-    dam:3,
-    ap:-1,
-    special:[IgnoresCover,Torrent],
-    pt:8
-}
+export const Bolter: Weapon = {
+  name: "Bolter",
+  profiles: [
+    {
+      types: [Rifle],
+      attack: 3,
+      dam: 4,
+      ap: 0,
+      special: [RapidFire],
+    },
+  ],
 
-export const Chainsword : Weapon =
-{
-    name:"Chainsword",
-    types:[Combat],
-    attack:3,
-    dam:4,
-    ap:0,
-    special:[],
-    pt:2
-}
+  pt: 2,
+  source: source,
+};
 
-export const StormShield : Weapon = 
-{
-    name:"Storm Shield",
-    types:[Combat],
-    attack:4,
-    dam:0,
-    ap:0,
-    special:[Defensive],
-    pt:5
-}
+export const HotshotLasgun: Weapon = {
+  name: "Hotshot Lasgun",
+  profiles: [
+    {
+      types: [Rifle],
+      attack: 2,
+      dam: 3,
+      ap: -1,
+      special: [],
+    },
+  ],
 
-export const PowerFist : Weapon =
-{
-    name:"Power Fist",
-    types:[Combat],
-    attack:3,
-    dam:4,
-    ap:-2,
-    special:[],
-    pt:8
-}
+  pt: 1,
+  source: source,
+};
 
-export const ForceSword : Weapon =
-{
-    name:"Force Sword",
-    types:[Combat],
-    attack:3,
-    dam:"d3+2",
-    ap:-2,
-    special:[PsykerOnly],
-    pt:4
-}
+export const PlasmaGun: Weapon = {
+  name: "Plasma Gun",
+  profiles: [
+    {
+      types: [Rifle],
+      attack: 3,
+      dam: 4,
+      ap: -1,
+      special: [Dangerous],
+    },
+  ],
 
-export const ForceHalberd : Weapon = 
-{
-    name:"Force Halberd",
-    types:[Combat],
-    attack:3,
-    dam:"d3+2",
-    ap:-1,
-    special:[PsykerOnly, Reach],
-    pt:4
-}
+  pt: 7,
+  source: source,
+};
 
-export const ImperialWeaponsList : Weapon[] =
-[
-    Laspistol,
-    BoltPistol,
-    HotshotLaspistol,
-    InfernoPistol,
-    PlasmaPistol,
-    NeedlePistol,
-    LasCarbine,
-    Meltagun,
-    Stormbolter,
-    Lasgun,
-    Bolter,
-    HotshotLasgun,
-    PlasmaGun,
-    Longlas,
-    CondemnorStake,
-    NeedleRifle,
-    HeavyBolter,
-    HeavyFlamer,
-    Chainsword,
-    StormShield,
-    PowerFist,
-    ForceSword,
-    ForceHalberd
-]
+export const Longlas: Weapon = {
+  name: "Longlas",
+  profiles: [
+    {
+      types: [Rifle],
+      attack: 3,
+      dam: 3,
+      ap: -1,
+      special: [Headshot],
+    },
+  ],
+
+  pt: 5,
+  source: source,
+};
+
+export const CondemnorStake: Weapon = {
+  name: "Condemnnor Stake",
+  profiles: [
+    {
+      types: [Rifle],
+      attack: 3,
+      dam: 4,
+      ap: -2,
+      special: [OneUse],
+    },
+  ],
+
+  notes: "Added to a Bolter, which must also be paid for.",
+  pt: 1,
+  source: source,
+};
+
+export const NeedleRifle: Weapon = {
+  name: "Needle Rifle",
+  profiles: [
+    {
+      types: [Heavy],
+      attack: 2,
+      dam: "d6+1",
+      ap: -1,
+      special: [NonLethal, Aim],
+    },
+  ],
+
+  pt: 5,
+  source: source,
+};
+
+export const HeavyBolter: Weapon = {
+  name: "Heavy Bolter",
+  profiles: [
+    {
+      types: [Heavy],
+      attack: 5,
+      dam: 4,
+      ap: 0,
+      special: [SplitFire, RapidFire],
+    },
+  ],
+
+  pt: 8,
+  source: source,
+};
+
+export const HeavyFlamer: Weapon = {
+  name: "Heavy Flamer",
+  profiles: [
+    {
+      types: [Heavy],
+      attack: 5,
+      dam: 3,
+      ap: -1,
+      special: [IgnoresCover, Torrent],
+    },
+  ],
+
+  pt: 8,
+  source: source,
+};
+
+export const Chainsword: Weapon = {
+  name: "Chainsword",
+  profiles: [
+    {
+      types: [Combat],
+      attack: 3,
+      dam: 4,
+      ap: 0,
+      special: [],
+    },
+  ],
+
+  pt: 2,
+  source: source,
+};
+
+export const StormShield: Weapon = {
+  name: "Storm Shield",
+  profiles: [
+    {
+      types: [Combat],
+      attack: 4,
+      dam: 0,
+      ap: 0,
+      special: [Defensive],
+    },
+  ],
+
+  pt: 5,
+  source: source,
+};
+
+export const PowerFist: Weapon = {
+  name: "Power Fist",
+  profiles: [
+    {
+      types: [Combat],
+      attack: 3,
+      dam: 4,
+      ap: -2,
+      special: [],
+    },
+  ],
+
+  pt: 8,
+  source: source,
+};
+
+export const ForceSword: Weapon = {
+  name: "Force Sword",
+  profiles: [
+    {
+      types: [Combat],
+      attack: 3,
+      dam: "d3+2",
+      ap: -2,
+      special: [PsykerOnly],
+    },
+  ],
+
+  pt: 4,
+  source: source,
+};
+
+export const ForceHalberd: Weapon = {
+  name: "Force Halberd",
+  profiles: [
+    {
+      types: [Combat],
+      attack: 3,
+      dam: "d3+2",
+      ap: -1,
+      special: [PsykerOnly, Reach],
+    },
+  ],
+
+  pt: 4,
+  source: source,
+};
+
+export const ImperialWeaponsList: Weapon[] = [
+  Laspistol,
+  BoltPistol,
+  HotshotLaspistol,
+  InfernoPistol,
+  PlasmaPistol,
+  NeedlePistol,
+  LasCarbine,
+  Meltagun,
+  Stormbolter,
+  Lasgun,
+  Bolter,
+  HotshotLasgun,
+  PlasmaGun,
+  Longlas,
+  CondemnorStake,
+  NeedleRifle,
+  HeavyBolter,
+  HeavyFlamer,
+  Chainsword,
+  StormShield,
+  PowerFist,
+  ForceSword,
+  ForceHalberd,
+];
 export default ImperialWeaponsList;
 
-
-export const GenericAndImperialWeaponsList : Weapon[] = CombineWeaponsLists(ImperialWeaponsList, GenericWeaponsList)
+export const GenericAndImperialWeaponsList: Weapon[] = CombineWeaponsLists(
+  ImperialWeaponsList,
+  GenericWeaponsList
+);

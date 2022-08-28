@@ -5,7 +5,7 @@ import Operative from "../../types/Operative";
 import OperativeView from "./operative/OperativeView";
 import SkillTile from "../components/skillTile/SkillTile";
 import './CrewBuilder.css'
-import { hasProfiles, Weapon } from "../../types/Weapon";
+import Weapon from "../../types/Weapon";
 import WeaponSpecialRule from "../../types/WeaponSpecialRule"
 import { Knife } from "../../data/weapons/GenericWeapons";
 import { PowerArmor, ServoSkull } from "../../data/factions/inquisition/InquisitionEquipment";
@@ -73,12 +73,7 @@ const operatives :Operative[] = [
 
 const extractWeaponSkills = (weapon:Weapon) : WeaponSpecialRule[] =>
 {
-    if(hasProfiles(weapon)){
         return weapon.profiles.flatMap(o=>o.special);
-    }
-    else{
-        return weapon.special;
-    }
 } 
 
 const CrewBuilderView = () => {
