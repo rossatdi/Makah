@@ -11,6 +11,7 @@ import FactionView from "./pages/factions/FactonView";
 import { Factions } from "./data/factions/Factions";
 import  WeaponSpecialRules  from "./pages/weapons/WeaponSpecialRules";
 import ActionsPage from './pages/actions/ActionsPage'
+import IntroductionPage from "./pages/introduction/IntroductionPage";
 
 function App() 
 {
@@ -21,7 +22,7 @@ function App()
       <Nav/>
       <Container  className="p-3">
       <Routes>
-        <Route path="/Makah/" element={<div>hello</div>}/>
+        <Route path="/Makah/" element={<div><IntroductionPage/></div>}/>
         <Route path="/Makah/actions" element={<ActionsPage/>}/>
         <Route path="/Makah/weapons/generic" element={<GenericWeaponsPage/>}/>
         <Route path="/Makah/weapons/imperial" element={<ImperialWeaponsPage/>}/>
