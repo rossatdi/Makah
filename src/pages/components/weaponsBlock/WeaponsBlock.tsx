@@ -2,6 +2,8 @@ import Weapon from "../../../types/Weapon"
 import  GlossaryOverlay  from "./../GlossaryOverlay"
 import './WeaponsBlock.css'
 import {useState} from "react";
+import compare from "../../../functions/CaseIndifferentStringCompare";
+
 function clamp(val:number, min:number, max:number): number {
     return val > max ? max : val < min ? min : val;
 }
@@ -17,8 +19,6 @@ export const weaponSorting  = (a:Weapon, b:Weapon) : number => {
 
 
 export const weaponFilter = (a:Weapon, s:string) : boolean => {
-    const compare = (a:string, b:string) : boolean => a.toLowerCase().includes(b.toLowerCase())
-    
     let ret : boolean = false;
     
     if(compare(a.name,s)) ret = true;
@@ -41,10 +41,10 @@ export const weaponFilter = (a:Weapon, s:string) : boolean => {
 }
 
 
-export function weaponMap(weapon:Weapon, index:number){
+export function weaponMap(weapon:Weapon, index:number, bold:boolean){
     if(weapon.profiles.length>1)
     {
-        return <><tr className={weapon.source} key={index}>
+        return <><tr className={bold ? "bold" : ""} key={index}>
             <td>{weapon.name}</td>
             <td></td>
             <td></td>
@@ -55,32 +55,32 @@ export function weaponMap(weapon:Weapon, index:number){
             <td rowSpan={3}>{weapon.source}</td>
         </tr>
         {weapon.profiles.map((o,i)=>{
-            return <tr className={weapon.source} key={index+"-"+i}>
+            return <tr className={bold ? "bold" : ""} key={index+"-"+i}>
             <td>🠺{o.name}</td>
-            <td>{o.types.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
+            <td>{o.types.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
             <td>{o.attack}</td>
             <td>{o.dam}</td>
             <td>{o.ap}</td>
-            <td>{o.special.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
+            <td>{o.special.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
         </tr>
         })}
         </>
     }
     else{
-        return <tr className={weapon.source} key={index}>
+        return <tr className={bold ? "bold" : ""} key={index}>
             <td>{weapon.name}</td>
-            <td>{weapon.profiles[0].types.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
+            <td>{weapon.profiles[0].types.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
             <td>{weapon.profiles[0].attack}</td>
             <td>{weapon.profiles[0].dam}</td>
             <td>{weapon.profiles[0].ap}</td>
-            <td>{weapon.profiles[0].special.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
+            <td>{weapon.profiles[0].special.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
             <td>{weapon.pt}</td>
             <td>{weapon.source}</td>
         </tr>
     }
 }
 
-export const WeaponBlock = (weapons : Weapon[]) => {
+export const WeaponBlock = (weapons : Weapon[], source:string) => {
     const [query, setFilter] = useState("")
     var g = weapons.filter(w=>weaponFilter(w,query)).sort(weaponSorting)
     return (
@@ -100,7 +100,7 @@ export const WeaponBlock = (weapons : Weapon[]) => {
                 </tr>
                 </thead>
                 <tbody>
-                    {g.map((weapon, index)=> weaponMap(weapon, index))}
+                    {g.map((weapon, index)=> weaponMap(weapon, index, weapon.source === source))}
                 </tbody>
             </table>
         </div>

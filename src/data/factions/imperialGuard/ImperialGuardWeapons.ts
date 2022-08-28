@@ -1,10 +1,9 @@
 import Weapon from "../../../types/Weapon";
-import WeaponSource from "../../../types/WeaponSource";
 import { Longlas as ImpLonglas } from "../../weapons/ImperialWeapons";
 import { Inaccurate, Range } from "../../weapons/WeaponSpecialRules";
 import { Assault, Combat } from "../../weapons/WeaponTypes";
 
-const source: WeaponSource = "Faction";
+export const source : string = "Imperial Guard"
 
 export const RipperGun: Weapon = {
   name: "Ripper Gun",
@@ -51,5 +50,5 @@ export const LongKnife: Weapon = {
   source: source,
 };
 
-export const GuardWeapons: Weapon[] = [RipperGun, Longlas, LongKnife];
-export default GuardWeapons;
+export const ImperialGuardWeapons: Weapon[] = [RipperGun, Longlas, LongKnife];
+export default ImperialGuardWeapons;

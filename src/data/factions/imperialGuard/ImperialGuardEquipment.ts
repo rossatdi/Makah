@@ -31,7 +31,7 @@ export const GravChute : Equipment =
     pt:4,
 }
 
-export const GuardEquipment : Equipment[] =
+export const ImperialGuardEquipment : Equipment[] =
 [
     MediKit, 
     VoxRelay, 
@@ -40,4 +40,4 @@ export const GuardEquipment : Equipment[] =
     CarapaceArmor,
     GravChute
 ]
-export default GuardEquipment;
+export default ImperialGuardEquipment;

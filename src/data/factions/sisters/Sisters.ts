@@ -6,6 +6,7 @@ import SistersEquipmentList from "./SistersEquipment";
 import SistersOperatives from './SistersOperatives';
 import SistersWeapons from './SistersWeapons';
 
+const Name : string = "Sisters of Battle"
 
 export const ShieldOfFaith : FactionAbility = 
 {
@@ -15,7 +16,7 @@ export const ShieldOfFaith : FactionAbility =
 
 export const SistersOfBattle : Faction =
 {
-    name:"Sisters Of  Battle",
+    name:Name,
     slug:"sisters",
     quote:"The Adepta Sororitas, colloquially called the \"Sisterhood,\" whose military arm is also known as the Sisters of Battle, are an all-female division of the Imperium of Man's state church known as the Ecclesiarchy. The Sisterhood's Orders Militant serve as the Ecclesiarchy's armed forces, mercilessly rooting out spiritual corruption and heresy within Humanity and every organisation of the Adeptus Terra.",
     operativeTypes:SistersOperatives,

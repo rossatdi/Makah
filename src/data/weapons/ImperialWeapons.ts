@@ -1,6 +1,5 @@
 import CombineWeaponsLists from "../../functions/CombineWeaponsLists";
 import Weapon from "../../types/Weapon";
-import WeaponSource from "../../types/WeaponSource";
 import GenericWeaponsList from "./GenericWeapons";
 import {
   Aim,
@@ -20,7 +19,7 @@ import {
 } from "./WeaponSpecialRules";
 import { Assault, Combat, Heavy, Pistol, Rifle } from "./WeaponTypes";
 
-const source: WeaponSource = "Imperial";
+const source: string = "Imperial";
 
 export const Laspistol: Weapon = {
   name: "Laspistol",

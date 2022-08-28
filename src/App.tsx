@@ -12,10 +12,11 @@ import { Factions } from "./data/factions/Factions";
 import  WeaponSpecialRules  from "./pages/weapons/WeaponSpecialRules";
 import ActionsPage from './pages/actions/ActionsPage'
 import IntroductionPage from "./pages/introduction/IntroductionPage";
+import AllWeaponsPage from './pages/weapons/AllWeapons';
 
 function App() 
 {
-  const factionRoutes = Factions.map(o=>(<Route path={`/Makah/factions/${o.slug}`} element={<FactionView faction={o}/>}/>))
+  const factionRoutes = Factions.map((o,i)=>(<Route key={i}  path={`/Makah/factions/${o.slug}`} element={<FactionView faction={o}/>}/>))
 
   return (
     <BrowserRouter>
@@ -24,6 +25,7 @@ function App()
       <Routes>
         <Route path="/Makah/" element={<div><IntroductionPage/></div>}/>
         <Route path="/Makah/actions" element={<ActionsPage/>}/>
+        <Route path="/Makah/weapons/all" element={<AllWeaponsPage/>}/>
         <Route path="/Makah/weapons/generic" element={<GenericWeaponsPage/>}/>
         <Route path="/Makah/weapons/imperial" element={<ImperialWeaponsPage/>}/>
         <Route path="/Makah/weapons/rules" element={<WeaponSpecialRules/>}/>
