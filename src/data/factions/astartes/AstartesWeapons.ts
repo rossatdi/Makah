@@ -1,5 +1,4 @@
 import Weapon from "../../../types/Weapon";
-import WeaponSource from "../../../types/WeaponSource";
 import {
   RapidFire,
   Aim,
@@ -8,7 +7,8 @@ import {
 } from "../../weapons/WeaponSpecialRules";
 import { Assault, Combat, Heavy } from "../../weapons/WeaponTypes";
 
-const source: WeaponSource = "Faction";
+const source : string = "Adeptus Astartes"
+
 
 export const BoltCarbine: Weapon = {
   name: "Bolt Carbine",

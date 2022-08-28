@@ -6,6 +6,8 @@ import InquisitionEquipment from "./InquisitionEquipment";
 import ImperialOperatatives from "./InquisitionOperatives";
 import InquisitionWeaponsList from "./InquisitionWeapons";
 
+const Name : string = "Forces of the Inquisition"
+
 export const UnrelentingHatred : FactionAbility =
 {
     name: "Unrelenting Hatred",
@@ -14,7 +16,7 @@ export const UnrelentingHatred : FactionAbility =
 
 export const Inquisition : Faction =
 {
-    name:"Forces of the Inquisition",
+    name:Name,
     slug:"inquisition",
     quote:"The Inquisition, formally called the Holy Orders of the Emperor's Inquisition, is a secret organisation that exists outside of the standard administrative hierarchy of the Imperium of Man. The Inquisition acts as the secret police force of the Imperium, hunting down any and all of the myriad threats to the stability of the God-Emperor's realm.",
     operativeTypes:ImperialOperatatives, 

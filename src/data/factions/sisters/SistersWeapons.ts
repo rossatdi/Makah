@@ -1,5 +1,4 @@
 import Weapon from "../../../types/Weapon";
-import WeaponSource from "../../../types/WeaponSource";
 import {
   PlasmaPistol as BasePlasmaPistol,
   Stormbolter as BaseStormbolter,
@@ -15,7 +14,7 @@ import {
   Defensive,
 } from "./../../weapons/WeaponSpecialRules";
 
-const source: WeaponSource = "Faction";
+const source : string = "Sisters of Battle"
 
 export const HandFlamer: Weapon = {
   name: "Hand Flamer",

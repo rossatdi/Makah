@@ -62,7 +62,7 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
         <SkillTile key={o.name} skill={o} type="equipment" />
       ))}
       <h3>Weapons</h3>
-      {WeaponBlock(faction.weapons)}
+      {WeaponBlock(faction.weapons, faction.name)}
     </div>
   );
 };

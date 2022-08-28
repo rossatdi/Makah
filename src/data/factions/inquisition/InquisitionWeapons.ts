@@ -1,5 +1,4 @@
 import Weapon from "../../../types/Weapon";
-import WeaponSource from "../../../types/WeaponSource";
 import {
   NeedlePistol as ImpNeedlePistol,
   NeedleRifle as ImpNeedleRifle,
@@ -15,11 +14,12 @@ import {
 } from "../../weapons/WeaponSpecialRules";
 import { Assault, Combat, Rifle } from "../../weapons/WeaponTypes";
 
-const source: WeaponSource = "Faction";
+const source : string = "Forces of the Inquisition"
 
 export const NeedlePistol: Weapon = {
   ...ImpNeedlePistol,
   pt: 2,
+  source: source,
 };
 
 export const Webber: Weapon = {
@@ -65,7 +65,6 @@ export const Incinerator: Weapon = {
       special: [IgnoresCover, Torrent],
     },
   ],
-
   pt: 8,
   source: source,
 };
