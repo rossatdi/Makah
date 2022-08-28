@@ -2,7 +2,7 @@ import { Card, Container, ListGroup, Row } from "react-bootstrap";
 import Operative from "../../../types/Operative";
 import { Stats } from "../../../types/OperativeBase";
 import { StatModifier } from "../../../types/StatModifier";
-import { WeaponBlock } from "../../components/WeaponsBlock";
+import WeaponBlock from "../../components/weaponsBlock/WeaponsBlock";
 import SkillTile from "../../components/skillTile/SkillTile";
 import './OperativeView.css'
 

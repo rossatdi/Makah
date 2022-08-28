@@ -1,5 +1,5 @@
 import ImperialWeaponsList from "../../data/weapons/ImperialWeapons";
-import { WeaponBlock } from "../components/WeaponsBlock";
+import WeaponBlock from "../components/weaponsBlock/WeaponsBlock";
 
 const ImperialWeapons = () => <div>
         <h1>IMPERIAL WEAPONS</h1>
