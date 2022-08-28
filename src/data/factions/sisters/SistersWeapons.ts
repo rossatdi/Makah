@@ -45,7 +45,7 @@ export const Stormbolter: Weapon = {
 
 export const HeavyFlamer: Weapon = {
   ...BaseHeavyFlamer,
-  pt: 2,
+  pt: 7,
   source: source,
 };
 

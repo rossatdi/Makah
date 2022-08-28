@@ -1,6 +1,4 @@
-import CombineWeaponsLists from "../../functions/CombineWeaponsLists";
 import Weapon from "../../types/Weapon";
-import GenericWeaponsList from "./GenericWeapons";
 import {
   Aim,
   Dangerous,
@@ -388,7 +386,7 @@ export const ForceHalberd: Weapon = {
   source: source,
 };
 
-export const ImperialWeaponsList: Weapon[] = [
+const ImperialWeaponsList: Weapon[] = [
   Laspistol,
   BoltPistol,
   HotshotLaspistol,
@@ -414,8 +412,3 @@ export const ImperialWeaponsList: Weapon[] = [
   ForceHalberd,
 ];
 export default ImperialWeaponsList;
-
-export const GenericAndImperialWeaponsList: Weapon[] = CombineWeaponsLists(
-  ImperialWeaponsList,
-  GenericWeaponsList
-);
