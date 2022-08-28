@@ -11,7 +11,7 @@ import { Assault, Combat, Heavy } from "../../weapons/WeaponTypes";
 const source: WeaponSource = "Faction";
 
 export const BoltCarbine: Weapon = {
-  name: "Bolter",
+  name: "Bolt Carbine",
   profiles: [
     {
       types: [Assault],
@@ -42,7 +42,7 @@ export const MarineCombatKnife: Weapon = {
 };
 
 export const MarineShotgun: Weapon = {
-  name: "Machine Shotgun",
+  name: "Marine Shotgun",
   profiles: [
     {
       types: [Assault],
@@ -57,7 +57,7 @@ export const MarineShotgun: Weapon = {
 };
 
 export const MarineSniperRifle: Weapon = {
-  name: "Machine Sniper Rifle",
+  name: "Marine Sniper Rifle",
   profiles: [
     {
       types: [Heavy],
