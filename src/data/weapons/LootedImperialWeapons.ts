@@ -10,7 +10,7 @@ function MakeLootedImperialWeaponsList() : Weapon[]
         if(pt !== "-"){
             pt +=1 
         }
-        return {...w, pt:pt, name: "Looted "+w.name}
+        return {...w, pt:pt, name: "Looted "+w.name, source:"Looted"}
     })
 }
 

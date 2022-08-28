@@ -16,7 +16,7 @@ const SkillTile = ({skill, type}:SkillTypeProps) => {
     return (<Card className={`skillTile ${type}`}>
         <Card.Body>
             <Card.Title>{skill.name}</Card.Title>
-            {handleText(skill.effect).map(o=><Card.Text>{o}</Card.Text>)}
+            {handleText(skill.effect).map((o,i)=><Card.Text key={i}>{o}</Card.Text>)}
         </Card.Body>
     </Card>)
 

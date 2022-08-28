@@ -1,6 +1,5 @@
 import GenericWeaponsList from "../../data/weapons/GenericWeapons";
-import { WeaponBlock } from "../components/WeaponsBlock";
-
+import WeaponBlock from "../components/weaponsBlock/WeaponsBlock";
 
 const genericWeapons = () => <div>
         <h1>GENERIC WEAPONS</h1>

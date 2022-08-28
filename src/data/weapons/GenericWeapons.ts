@@ -1,4 +1,5 @@
-import { Weapon } from "../../types/Weapon";
+import Weapon from "../../types/Weapon";
+import WeaponSource from "../../types/WeaponSource";
 import {
   Aim,
   Blast,
@@ -17,7 +18,7 @@ import {
 } from "./WeaponSpecialRules";
 import { Assault, Combat, Grenade, Heavy, Pistol, Rifle } from "./WeaponTypes";
 
-const source: string = "Generic";
+const source: WeaponSource = "Generic";
 
 export const Autopistol: Weapon = {
   name: "Autopistol",
