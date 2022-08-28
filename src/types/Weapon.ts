@@ -3,10 +3,10 @@ import WeaponSpecialRule from "./WeaponSpecialRule"
 import DiceCalc from "./DiceCalc"
 import WeaponType from "./WeaponType"
 
-export type Profile = 
+export type WeaponProfile = 
 {
-    name:string
-    types:WeaponType[]
+    name?:string
+    types:[WeaponType, ...WeaponType[]]
     attack:number | DiceCalc
     dam:number | DiceCalc
     ap:number
@@ -19,32 +19,14 @@ export type WeaponModifier = {
     ap?:number
 }
 
-type WeaponBase = 
-{
-    types:WeaponType[]
-    attack:number | DiceCalc
-    dam:number | DiceCalc
-    ap:number
-    special:WeaponSpecialRule[]
-
-}
-
-
-type ProfileWeaponBase =
-{
-
-    profiles:Profile[]
-}
-
-export type Weapon = (WeaponBase | ProfileWeaponBase) & 
+export type Weapon = 
 {    
     name:string
+    profiles: [WeaponProfile,...WeaponProfile[]]
     notes?:string
     pt:Point
     modifiers?:WeaponModifier[]
-}
-export function hasProfiles(value: WeaponBase | ProfileWeaponBase): value is ProfileWeaponBase {
-    return value.hasOwnProperty('profiles');
+    source:string
 }
 
 export default Weapon;

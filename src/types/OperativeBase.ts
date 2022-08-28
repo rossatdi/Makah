@@ -3,6 +3,7 @@ import Point from "./Point"
 export type OperativeBase = Stats & {
     type: string
     pt:Point
+    notes?:string[]
 }
 export default OperativeBase;
 

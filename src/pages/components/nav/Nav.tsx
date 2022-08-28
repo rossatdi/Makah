@@ -42,6 +42,10 @@ const NavView = () => {
       <NavDropdown title="Factions">
         {factionRoutes}
       </NavDropdown>
+      <LinkContainer to="/Makah/glossary">
+        <Nav.Link>Glossary</Nav.Link>
+      </LinkContainer>
+      
       <LinkContainer to="/Makah/crew">
         <Nav.Link>Crew</Nav.Link>
       </LinkContainer>

@@ -1,13 +1,13 @@
-import { hasProfiles, Weapon } from "../../types/Weapon"
-import  SkillOverlay  from "./SkillOverlay"
+import Weapon from "../../types/Weapon"
+import  GlossaryOverlay  from "./GlossaryOverlay"
 import './WeaponsBlock.css'
 
 
 export const WeaponBlock = (weapons : Weapon[]) => {
     var g = weapons.sort((a,b)=>{
         
-        const aVal = hasProfiles(a) ? a.profiles[0].types[0] : a.types[0];
-        const bVal = hasProfiles(b) ? b.profiles[0].types[0] : b.types[0];
+        const aVal = a.profiles[0].types[0];
+        const bVal = b.profiles[0].types[0];
         const h =  aVal.ordering-bVal.ordering
         if(h!==0) return h
         return a.name.localeCompare(b.name);
@@ -29,7 +29,7 @@ export const WeaponBlock = (weapons : Weapon[]) => {
 }
 
 export function weaponMap(weapon:Weapon){
-    if(hasProfiles(weapon))
+    if(weapon.profiles.length>1)
     {
         return <><tr>
             <td>{weapon.name}</td>
@@ -43,11 +43,11 @@ export function weaponMap(weapon:Weapon){
         {weapon.profiles.map(o=>{
             return <tr>
             <td>🠺{o.name}</td>
-            <td>{o.types.map(o=>SkillOverlay(o))}</td>
+            <td>{o.types.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
             <td>{o.attack}</td>
             <td>{o.dam}</td>
             <td>{o.ap}</td>
-            <td>{o.special.map(o=>SkillOverlay(o))}</td>
+            <td>{o.special.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
         </tr>
         })}
         </>
@@ -55,11 +55,11 @@ export function weaponMap(weapon:Weapon){
     else{
         return <tr>
             <td>{weapon.name}</td>
-            <td>{weapon.types.map(o=>SkillOverlay(o))}</td>
-            <td>{weapon.attack}</td>
-            <td>{weapon.dam}</td>
-            <td>{weapon.ap}</td>
-            <td>{weapon.special.map(o=>SkillOverlay(o))}</td>
+            <td>{weapon.profiles[0].types.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
+            <td>{weapon.profiles[0].attack}</td>
+            <td>{weapon.profiles[0].dam}</td>
+            <td>{weapon.profiles[0].ap}</td>
+            <td>{weapon.profiles[0].special.map(o=>GlossaryOverlay({ skill:o, item:<p className="skillName">{o.name}</p>}))}</td>
             <td>{weapon.pt}</td>
         </tr>
     }
