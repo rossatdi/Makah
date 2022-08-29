@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import SkillsPage from './pages/skills/Skills'
 import GlossaryPage from './pages/glossary/GlossaryView'
 import GenericWeaponsPage from './pages/weapons/GenericWeapons'
@@ -19,11 +19,11 @@ function App()
   const factionRoutes = Factions.map((o,i)=>(<Route key={i}  path={`/factions/${o.slug}`} element={<FactionView faction={o}/>}/>))
 
   return (
-    <BrowserRouter basename="/Makah">
+    <HashRouter basename="/">
       <Nav/>
       <Container  className="p-3">
       <Routes>
-        <Route path="/" element={<div><IntroductionPage/></div>}/>
+        <Route path="/" element={<IntroductionPage/>}/>
         <Route path="/actions" element={<ActionsPage/>}/>
         <Route path="/weapons/all" element={<AllWeaponsPage/>}/>
         <Route path="/weapons/generic" element={<GenericWeaponsPage/>}/>
@@ -35,7 +35,7 @@ function App()
         {factionRoutes}
       </Routes>
       </Container>
-  </BrowserRouter>
+  </HashRouter>
   );
 }
 
