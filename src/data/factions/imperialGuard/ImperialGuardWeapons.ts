@@ -27,6 +27,7 @@ export const RipperGun: Weapon = {
   ],
   pt: 3,
   source: source,
+  notes:"Ogryns only."
 };
 
 export const Longlas: Weapon = {

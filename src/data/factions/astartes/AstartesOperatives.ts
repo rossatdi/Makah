@@ -34,7 +34,8 @@ export const Servitor : OperativeBase =
     act:2,
     wnd:8,
     sv:6,
-    pt:7
+    pt:7,
+    notes:"Servitors have the Limited special rule."
 }
 
 export const AstartesOperatives : OperativeBase[] =
