@@ -85,12 +85,12 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean){
     }
 }
 
-export const WeaponBlock = (weapons : Weapon[], source:string, hideFilter:boolean = false) => {
+export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolean = true) => {
     const [query, setFilter] = useState("")
     var g = weapons.filter(w=>weaponFilter(w,query)).sort(weaponSorting)
     return (
         <div className="weaponsBlock">
-            {hideFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
+            {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
             <table>
                 <thead>
                 <tr>
