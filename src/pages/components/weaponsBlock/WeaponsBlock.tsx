@@ -92,13 +92,13 @@ export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolea
     return (
         <div className="weaponsBlock">
             {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
-            <Table striped>
+            <Table striped responsive>
                 <thead>
                 <tr>
                     <th>Name</th>
                     <th>Type</th>
-                    <th>Attack</th>
-                    <th>Dam</th>
+                    <th>A</th>
+                    <th>D</th>
                     <th>AP</th>
                     <th>Special</th>
                     <th>Points</th>

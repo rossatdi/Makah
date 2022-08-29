@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Table } from "react-bootstrap";
+import { Container, Table } from "react-bootstrap";
 import GlossaryTerms from "../../data/GlossaryTerms";
 import { Skills } from "../../data/Skills";
 import onlyUnique from './../../functions/OnlyUnique';
@@ -9,7 +9,7 @@ import { compare } from "../../functions/CaseIndifferentStringCompare";
 import { Factions } from './../../data/factions/Factions';
 import { IGlossaryItem } from './../../interfaces/IGlossaryItem';
 import Point from "../../types/Point";
-
+import './GlossaryView.css'
 
 type GlossaryListItem  = IGlossaryItem & {
   type:string
@@ -42,10 +42,10 @@ export const filterFn = (a:GlossaryListItem, str:string) : boolean => {
 
 export const Page = () => {
   const [query, setFilter] = useState("")
-  return (<div>
+  return (<Container className="glossary">
     <h1>Glossary</h1>
-    <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>
-      <Table striped>
+    <input className="filter" placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>
+      <Table striped responsive>
         <thead>
           <tr>
             <th>Name</th>
@@ -68,6 +68,6 @@ export const Page = () => {
               </tr>)}  
         </tbody>
       </Table>
-      </div>)}
+      </Container>)}
 
 export default Page 

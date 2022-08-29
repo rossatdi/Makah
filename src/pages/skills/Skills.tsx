@@ -18,7 +18,7 @@ const page = () => (
       purchased by any faction. You may wish to interpret the skills as a piece
       of equipment or skill that’s more relevant to your faction.
     </p>
-    <Table striped>
+    <Table striped responsive>
       <thead>
         <tr>
           <th>Skill</th>
