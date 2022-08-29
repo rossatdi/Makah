@@ -91,7 +91,7 @@ export const ArchoFlails: Weapon = {
     },
   ],
   pt: 2,
-  notes: "Many obnly be taken by Archo-flagellants",
+  notes: "Many only be taken by Archo-flagellants",
   source: source,
 };
 
