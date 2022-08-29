@@ -60,12 +60,9 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
     <div>
       <h1>{faction.name}</h1>
       <hr />
-      <i>{faction.quote}</i>
+      {faction.quote.split("\n").map(o=><p className="quote">{o}</p>)}
       {faction.attribution && (
-        <>
-          <br />
           <i>-{faction.attribution}</i>
-        </>
       )}
       <h3>Operatives</h3>
       {OperativesView(faction.operativeTypes)}

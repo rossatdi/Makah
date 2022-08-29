@@ -4,3 +4,7 @@ ul {
 li {
     text-align: left;
 }
+
+.quote { 
+    margin: 0;
+ }

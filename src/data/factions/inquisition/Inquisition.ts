@@ -19,7 +19,7 @@ export const Inquisition : Faction =
 {
     name:Name,
     slug:"inquisition",
-    quote:"The Inquisition, formally called the Holy Orders of the Emperor's Inquisition, is a secret organisation that exists outside of the standard administrative hierarchy of the Imperium of Man. The Inquisition acts as the secret police force of the Imperium, hunting down any and all of the myriad threats to the stability of the God-Emperor's realm.",
+    quote:"The Inquisition, formally called the Holy Orders of the Emperor's Inquisition, is a secret organisation that exists outside of the standard administrative hierarchy of the Imperium of Man.\n\nThe Inquisition acts as the secret police force of the Imperium, hunting down any and all of the myriad threats to the stability of the God-Emperor's realm.",
     operativeTypes:ImperialOperatatives, 
     operativeNotes:["Your Leader must be an Inquisitor","You must pick an Ordo for your faction."],
     weapons:[...InquisitionWeaponsList, ...GenericWeaponsList,...ImperialWeaponsList].filter(onlyUnique),

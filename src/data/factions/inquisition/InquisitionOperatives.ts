@@ -5,7 +5,6 @@ import { Bolter, ForceHalberd, ForceSword } from "../../weapons/ImperialWeapons"
 import { SpecialIssueAmmo } from "../astartes/AstartesEquipment"
 import { SpaceMarine } from "../astartes/AstartesOperatives"
 import { Stormbolter } from "../sisters/SistersWeapons"
-import { ServoSkull } from "./InquisitionEquipment"
 
 
 export const Inquisitor : OperativeBase =
@@ -51,7 +50,7 @@ export const Deathwatch : Operative =
     type:"Deathwatch Veteren",
     weapons:[Bolter],
     skills:[Killshot],
-    equipment:[SpecialIssueAmmo, ServoSkull],
+    equipment:[SpecialIssueAmmo],
     isLeader:false,
     isPsyker:false,
     pt:46
