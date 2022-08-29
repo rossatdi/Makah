@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Makah/static/css/main.3b240ec7.css",
-    "main.js": "/Makah/static/js/main.27bebd6b.js",
+    "main.css": "/Makah/static/css/main.bc206b9d.css",
+    "main.js": "/Makah/static/js/main.86c941f4.js",
     "static/media/MakahLogo.svg": "/Makah/static/media/MakahLogo.072eca501e547b24275fc9d420f2aca9.svg",
     "index.html": "/Makah/index.html",
-    "main.3b240ec7.css.map": "/Makah/static/css/main.3b240ec7.css.map",
-    "main.27bebd6b.js.map": "/Makah/static/js/main.27bebd6b.js.map"
+    "main.bc206b9d.css.map": "/Makah/static/css/main.bc206b9d.css.map",
+    "main.86c941f4.js.map": "/Makah/static/js/main.86c941f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b240ec7.css",
-    "static/js/main.27bebd6b.js"
+    "static/css/main.bc206b9d.css",
+    "static/js/main.86c941f4.js"
   ]
 }
