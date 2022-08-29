@@ -1,4 +1,5 @@
 import Equipment from "../../../types/Equipment"
+import { CamoCloak } from "../../BaseEquipment"
 
 
 export const SpecialIssueAmmo : Equipment =
@@ -27,13 +28,6 @@ export const FirstCompanyHonours : Equipment =
     name:"1st Company Honours",
     effect: "Re-roll one dice when fighting or fighting back.",
     pt:4
-}
-
-export const CamoCloak : Equipment = 
-{
-    name:"Camo Cloak",
-    effect: "Re-roll 1s when making Evade rolls.",
-    pt:3
 }
 
 export const AstartesEquipmentList : Equipment[] =

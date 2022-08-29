@@ -1,5 +1,6 @@
 import Faction from "../../types/Faction";
 import { Astartes } from "./astartes/Astartes";
+import { Craftworld } from "./craftworld/Craftworld";
 import { ImperialGuard } from "./imperialGuard/ImperialGuard";
 import { Inquisition } from "./inquisition/Inquisition";
 import { Mechanicus } from "./mechanicus/Mechanicus";
@@ -13,7 +14,8 @@ export const Factions : Faction[] =
     ImperialGuard,
     SistersOfBattle,
     Mechanicus,
-    Orks
+    Orks,
+    Craftworld
 ]
 
 export default Factions;

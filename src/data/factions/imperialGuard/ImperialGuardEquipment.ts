@@ -1,5 +1,5 @@
 import Equipment from "../../../types/Equipment"
-import { CarapaceArmor, MediKit } from "../../BaseEquipment"
+import { CamoCloak, CarapaceArmor, MediKit } from "../../BaseEquipment"
 
 
 export const VoxRelay : Equipment = 
@@ -17,12 +17,6 @@ export const Commissar : Equipment =
     modifier:{sv:1}
 }
 
-export const CamoCloak : Equipment = 
-{
-    name:"Camo Cloak",
-    effect:"Re-roll 1s when making Evade rolls.",
-    pt:3
-}
 
 export const GravChute : Equipment = 
 {
