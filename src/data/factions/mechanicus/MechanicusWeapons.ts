@@ -1,4 +1,3 @@
-import { createExportDefault } from "typescript";
 import Weapon from "../../../types/Weapon";
 import { Aim, Arc, Blast, Dangerous, Headshot, IgnoresCover, Irradiate, Range, Reckless, Stun } from "../../weapons/WeaponSpecialRules";
 import { Assault, Heavy, Pistol, Rifle, Combat } from "../../weapons/WeaponTypes";
