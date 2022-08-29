@@ -9,14 +9,14 @@ export type WeaponProfile =
     types:[WeaponType, ...WeaponType[]]
     attack:number | DiceCalc
     dam:number | DiceCalc
-    ap:number
+    ap:number| DiceCalc
     special:WeaponSpecialRule[]
 }
 
 export type WeaponModifier = {
     attack?:number | DiceCalc
     dam?:number | DiceCalc
-    ap?:number
+    ap?:number| DiceCalc
 }
 
 export type Weapon = 
