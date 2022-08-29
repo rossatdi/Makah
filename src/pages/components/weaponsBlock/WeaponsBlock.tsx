@@ -5,6 +5,8 @@ import {useState} from "react";
 import compare from "../../../functions/CaseIndifferentStringCompare";
 import { Table } from "react-bootstrap";
 
+
+
 function clamp(val:number, min:number, max:number): number {
     return val > max ? max : val < min ? min : val;
 }
@@ -42,16 +44,19 @@ export const weaponFilter = (a:Weapon, str:string) : boolean => {
         })
         return ret;
     })
-    
-
 }
 
 
-export function weaponMap(weapon:Weapon, index:number, bold:boolean){
+export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(str: string) => note){
+    let name = weapon.name;
+    if(weapon.notes) {
+        const n  = addNote(weapon.notes);
+        name = name +" " + n.icon
+    }
     if(weapon.profiles.length>1)
     {
         return <><tr className={bold ? "bold" : ""} key={index}>
-            <td>{weapon.name}</td>
+            <td>{name}</td>
             <td></td>
             <td></td>
             <td></td>
@@ -74,7 +79,7 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean){
     }
     else{
         return <tr className={bold ? "bold" : ""} key={index}>
-            <td>{weapon.name}</td>
+            <td>{name}</td>
             <td>{weapon.profiles[0].types.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
             <td>{weapon.profiles[0].attack}</td>
             <td>{weapon.profiles[0].dam}</td>
@@ -86,9 +91,18 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean){
     }
 }
 
+const icons : string[] = ["*", "†", "‡", "§", "Δ", "◊", "⧫", "ϟ", "Λ"];
+type note = { icon:string, text:string};
 export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolean = true) => {
+
+    const noteMap : note[] = []
     const [query, setFilter] = useState("")
-    var g = weapons.filter(w=>weaponFilter(w,query)).sort(weaponSorting)
+    const addNote = (str :string) => { 
+        const icon = icons.shift() ?? "";
+        const note : note = {icon:icon, text:str}
+        noteMap.push(note)
+        return note}
+    var filteredWeapons = weapons.filter(w=>weaponFilter(w,query)).sort(weaponSorting)
     return (
         <div className="weaponsBlock">
             {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
@@ -97,8 +111,8 @@ export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolea
                 <tr>
                     <th>Name</th>
                     <th>Type</th>
-                    <th>A</th>
-                    <th>D</th>
+                    <th>Atk</th>
+                    <th>Dam</th>
                     <th>AP</th>
                     <th>Special</th>
                     <th>Points</th>
@@ -106,9 +120,12 @@ export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolea
                 </tr>
                 </thead>
                 <tbody>
-                    {g.map((weapon, index)=> weaponMap(weapon, index, weapon.source === source))}
+                    {filteredWeapons.map((weapon, index)=> weaponMap(weapon, index, weapon.source === source, addNote))}
                 </tbody>
             </Table>
+            <ul>
+                {noteMap.map(o=><li>{`${o.icon} - ${o.text}`}</li>)}
+            </ul>
         </div>
     )
 }
