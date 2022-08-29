@@ -3,6 +3,7 @@ import  GlossaryOverlay  from "./../GlossaryOverlay"
 import './WeaponsBlock.css'
 import {useState} from "react";
 import compare from "../../../functions/CaseIndifferentStringCompare";
+import { Table } from "react-bootstrap";
 
 function clamp(val:number, min:number, max:number): number {
     return val > max ? max : val < min ? min : val;
@@ -91,7 +92,7 @@ export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolea
     return (
         <div className="weaponsBlock">
             {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
-            <table>
+            <Table striped>
                 <thead>
                 <tr>
                     <th>Name</th>
@@ -107,7 +108,7 @@ export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolea
                 <tbody>
                     {g.map((weapon, index)=> weaponMap(weapon, index, weapon.source === source))}
                 </tbody>
-            </table>
+            </Table>
         </div>
     )
 }

@@ -2,9 +2,10 @@ import Faction from "../../types/Faction";
 import { OperativeBase } from "../../types/OperativeBase";
 import SkillTile from "../components/skillTile/SkillTile";
 import WeaponBlock from "../components/weaponsBlock/WeaponsBlock";
+import { Table } from 'react-bootstrap';
 
 const OperativesView = (operatives: OperativeBase[]) => (
-  <table>
+  <Table striped>
     <thead>
     <tr>
       <th>Type</th>
@@ -31,7 +32,7 @@ const OperativesView = (operatives: OperativeBase[]) => (
       </tr>
     ))}
     </tbody>
-  </table>
+  </Table>
 );
 
 const FactionView = ({ faction }: {faction: Faction; }) => {
