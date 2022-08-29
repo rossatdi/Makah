@@ -91,10 +91,9 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(st
     }
 }
 
-const icons : string[] = ["*", "†", "‡", "§", "Δ", "◊", "⧫", "ϟ", "Λ"];
 type note = { icon:string, text:string};
 export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolean = true) => {
-
+    const icons : string[] = ["*", "†", "‡", "§", "Δ", "◊", "⧫", "ϟ", "Λ"];
     const noteMap : note[] = []
     const [query, setFilter] = useState("")
     const addNote = (str :string) => { 
