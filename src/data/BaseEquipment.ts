@@ -16,6 +16,14 @@ export const MediKit: Equipment =
     pt:4
 }
 
+export const CamoCloak : Equipment = 
+{
+    name:"Camo Cloak",
+    effect:"Re-roll 1s when making Evade rolls.",
+    pt:3
+}
+
+
 export const ServoSkull: Equipment =
 {
     name:"Servo Skull",
