@@ -8,11 +8,12 @@ import './CrewBuilder.css'
 import Weapon from "../../types/Weapon";
 import WeaponSpecialRule from "../../types/WeaponSpecialRule"
 import { Knife } from "../../data/weapons/GenericWeapons";
-import { PowerArmor, ServoSkull } from "../../data/factions/inquisition/InquisitionEquipment";
+import { PowerArmor } from "../../data/factions/inquisition/InquisitionEquipment";
 import { PsyberEagle } from "../../data/factions/inquisition/InquisitionWeapons";
 import { CarapaceArmor } from './../../data/factions/inquisition/InquisitionEquipment';
 import { Deathwatch, Inquisitor, Warrior } from "../../data/factions/inquisition/InquisitionOperatives";
 import { Veteran } from "../../data/factions/imperialGuard/ImperialGuardOperative";
+import { ServoSkull } from "../../data/BaseEquipment";
 
 const example : Operative =
 {

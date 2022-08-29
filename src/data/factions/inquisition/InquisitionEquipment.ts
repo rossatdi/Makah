@@ -1,17 +1,10 @@
-import { CarapaceArmor as CarapaceArmorBase } from "../../BaseEquipment";
+import { CarapaceArmor as CarapaceArmorBase, ServoSkull, MIU as MIUBase } from "../../BaseEquipment";
 import Equipment from "../../../types/Equipment";
 
-export const ServoSkull: Equipment =
-{
-    name:"Servo Skull",
-    effect:"When Shooting a target with a Evade token roll a dice, on a 4+ they cannot Evade.",
-    pt:4
-}
 
 export const MIU: Equipment =
 {
-    name:"MIU",
-    effect:"Add to one pistol or assault weapon. That weapon can be fired as an additional Shoot action at Bs 5+ that neither costs actions or stops the Operative carrying out a normal Shoot. The weapon can be fired normally instead.",
+    ...MIUBase,
     pt:4
 }
 

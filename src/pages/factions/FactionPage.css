@@ -1,0 +1,10 @@
+ul {
+    list-style-type: none;
+   }
+li {
+    text-align: left;
+}
+
+.quote { 
+    margin: 0;
+ }

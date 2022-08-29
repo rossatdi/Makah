@@ -7,7 +7,7 @@ import CrewPage from './pages/crewBuilder/CrewBuilder'
 import './App.css';
 import Nav from "./pages/components/nav/Nav";
 import { Container } from "react-bootstrap";
-import FactionView from "./pages/factions/FactonView";
+import FactionView from "./pages/factions/FactonPage";
 import { Factions } from "./data/factions/Factions";
 import  WeaponSpecialRules  from "./pages/weapons/WeaponSpecialRules";
 import ActionsPage from './pages/actions/ActionsPage'

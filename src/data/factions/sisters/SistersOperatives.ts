@@ -47,7 +47,7 @@ export const ArcoFlagellant : OperativeBase =
     wnd:10,
     sv:5,
     pt:15,
-    notes:["Arco-flagellants are Limited."]
+    notes:"Arco-flagellants are Limited."
 }
 
 export const Repentia : OperativeBase =
@@ -60,7 +60,7 @@ export const Repentia : OperativeBase =
     wnd:8,
     sv:6,
     pt:13,
-    notes:["Repentia have Relentless"]
+    notes:"Repentia have Relentless"
 }
 
 export const SistersOperatives : OperativeBase[] =

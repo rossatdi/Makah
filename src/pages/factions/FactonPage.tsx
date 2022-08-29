@@ -3,8 +3,18 @@ import { OperativeBase } from "../../types/OperativeBase";
 import SkillTile from "../components/skillTile/SkillTile";
 import WeaponBlock from "../components/weaponsBlock/WeaponsBlock";
 import { Table } from 'react-bootstrap';
+import Note from "../../types/Note";
+import './FactionPage.css'
 
-const OperativesView = (operatives: OperativeBase[]) => (
+const OperativesView = (operatives: OperativeBase[]) => {
+  const icons : string[] = ["*", "†", "‡", "§", "Δ", "◊", "⧫", "ϟ", "Λ"];
+  const noteMap : Note[] = []
+  const addNote = (str :string) => { 
+      const icon = icons.shift() ?? "";
+      const note : Note = {icon:icon, text:str}
+      noteMap.push(note)
+      return note}
+  return (<div>
   <Table striped>
     <thead>
     <tr>
@@ -19,9 +29,15 @@ const OperativesView = (operatives: OperativeBase[]) => (
     </tr>
     </thead>
     <tbody>
-    {operatives.map((o,i) => (
+    {operatives.map((o,i) => {
+      let type = o.type;
+      if(o.notes) {
+        const n  = addNote(o.notes);
+        type = type +" " + n.icon
+    }
+      return (
       <tr key={i}>
-        <td>{o.type}</td>
+        <td>{type}</td>
         <td>{o.mv}"</td>
         <td>{o.ws}+</td>
         <td>{o.bs}+</td>
@@ -30,22 +46,23 @@ const OperativesView = (operatives: OperativeBase[]) => (
         <td>{o.sv}+</td>
         <td>{o.pt}</td>
       </tr>
-    ))}
+    )})}
     </tbody>
   </Table>
-);
+  <ul>
+    {noteMap.map(o=><li>{`${o.icon} - ${o.text}`}</li>)}
+  </ul>
+  </div>
+)};
 
 const FactionView = ({ faction }: {faction: Faction; }) => {
   return (
     <div>
       <h1>{faction.name}</h1>
       <hr />
-      <i>{faction.quote}</i>
+      {faction.quote.split("\n").map(o=><p className="quote">{o}</p>)}
       {faction.attribution && (
-        <>
-          <br />
           <i>-{faction.attribution}</i>
-        </>
       )}
       <h3>Operatives</h3>
       {OperativesView(faction.operativeTypes)}

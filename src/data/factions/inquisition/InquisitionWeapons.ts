@@ -33,7 +33,6 @@ export const Webber: Weapon = {
       special: [Stun, NonLethal, Range(6)],
     },
   ],
-
   pt: 1,
   source: source,
 };
@@ -49,7 +48,6 @@ export const PsyberEagle: Weapon = {
       special: [Indirect],
     },
   ],
-
   pt: 3,
   source: source,
 };
@@ -86,7 +84,6 @@ export const DeamonWeapon: Weapon = {
       special: [Dangerous],
     },
   ],
-
   pt: 5,
   source: source,
 };
@@ -102,7 +99,6 @@ export const PhaseBlade: Weapon = {
       special: [],
     },
   ],
-
   pt: 6,
   source: source,
 };

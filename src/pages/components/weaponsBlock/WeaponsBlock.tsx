@@ -4,6 +4,7 @@ import './WeaponsBlock.css'
 import {useState} from "react";
 import compare from "../../../functions/CaseIndifferentStringCompare";
 import { Table } from "react-bootstrap";
+import Note from "../../../types/Note";
 
 
 
@@ -47,7 +48,7 @@ export const weaponFilter = (a:Weapon, str:string) : boolean => {
 }
 
 
-export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(str: string) => note){
+export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(str: string) => Note){
     let name = weapon.name;
     if(weapon.notes) {
         const n  = addNote(weapon.notes);
@@ -91,14 +92,13 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(st
     }
 }
 
-type note = { icon:string, text:string};
 export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolean = true) => {
     const icons : string[] = ["*", "†", "‡", "§", "Δ", "◊", "⧫", "ϟ", "Λ"];
-    const noteMap : note[] = []
+    const noteMap : Note[] = []
     const [query, setFilter] = useState("")
     const addNote = (str :string) => { 
         const icon = icons.shift() ?? "";
-        const note : note = {icon:icon, text:str}
+        const note : Note = {icon:icon, text:str}
         noteMap.push(note)
         return note}
     var filteredWeapons = weapons.filter(w=>weaponFilter(w,query)).sort(weaponSorting)
