@@ -1,5 +1,4 @@
 import Weapon from "../../../types/Weapon";
-import { Flamer } from "../../weapons/GenericWeapons";
 import { Aim, Blast, Headshot, IgnoresCover, Range, Rending, SplitFire, Torrent } from "../../weapons/WeaponSpecialRules";
 import { Assault, Heavy, Pistol, Combat, Grenade } from "../../weapons/WeaponTypes";
 
