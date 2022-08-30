@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Makah/static/css/main.69dd99f0.css",
-    "main.js": "/Makah/static/js/main.2f33f00d.js",
-    "static/media/Astartes.svg": "/Makah/static/media/Astartes.6190879120eb290bdd6730c2cca59df8.svg",
-    "static/media/Deldar.svg": "/Makah/static/media/Deldar.72a5003da09ea9c0fba5bb823814d746.svg",
-    "static/media/Mechanicus.svg": "/Makah/static/media/Mechanicus.fe0ee09184e8a15510f1f75c3bbe920f.svg",
-    "static/media/Guard.svg": "/Makah/static/media/Guard.0b960ac14141ce18d331dbc1fb65a711.svg",
-    "static/media/Inquisition.svg": "/Makah/static/media/Inquisition.fa97221369a9f9da9ddf6191ee8e16f1.svg",
-    "static/media/Sisters.svg": "/Makah/static/media/Sisters.f89c344c4656e21a1d68b602b602aa43.svg",
-    "static/media/Craftworld.svg": "/Makah/static/media/Craftworld.51f31662eec3070bd2e7d6c2b08141a1.svg",
-    "static/media/Orks.svg": "/Makah/static/media/Orks.ffa6c09ee663429491ca4fadfd9b4b07.svg",
-    "static/media/MakahLogo.svg": "/Makah/static/media/MakahLogo.072eca501e547b24275fc9d420f2aca9.svg",
+    "main.css": "/Makah/static/css/main.b706cb63.css",
+    "main.js": "/Makah/static/js/main.b1db5f8b.js",
+    "static/media/Astartes.svg": "/Makah/static/media/Astartes.d19bdc4d024e6821137365c35f60cb81.svg",
+    "static/media/Deldar.svg": "/Makah/static/media/Deldar.6b7f6f22514e2575130d1047090301ce.svg",
+    "static/media/Mechanicus.svg": "/Makah/static/media/Mechanicus.b71ce9e0f33d4f071539f8cd5bfe3632.svg",
+    "static/media/Guard.svg": "/Makah/static/media/Guard.747ade40cbb2cd98f5e033c6e9d3acf8.svg",
+    "static/media/Inquisition.svg": "/Makah/static/media/Inquisition.e6efab9d1f68d0367973c74e53890769.svg",
+    "static/media/Sisters.svg": "/Makah/static/media/Sisters.b972c93da9cc8941eb77a39f1ab47a9c.svg",
+    "static/media/Craftworld.svg": "/Makah/static/media/Craftworld.1b5970c803fe8c4a3610fd59623dc985.svg",
+    "static/media/Orks.svg": "/Makah/static/media/Orks.e6e2518f3212ca13d160ecdf56f9b5e1.svg",
+    "static/media/MakahLogo.svg": "/Makah/static/media/MakahLogo.bbe38d77c5f0c6942ddb67ad48159782.svg",
     "index.html": "/Makah/index.html",
-    "main.69dd99f0.css.map": "/Makah/static/css/main.69dd99f0.css.map",
-    "main.2f33f00d.js.map": "/Makah/static/js/main.2f33f00d.js.map"
+    "main.b706cb63.css.map": "/Makah/static/css/main.b706cb63.css.map",
+    "main.b1db5f8b.js.map": "/Makah/static/js/main.b1db5f8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.69dd99f0.css",
-    "static/js/main.2f33f00d.js"
+    "static/css/main.b706cb63.css",
+    "static/js/main.b1db5f8b.js"
   ]
 }
