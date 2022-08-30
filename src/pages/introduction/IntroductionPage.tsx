@@ -1,3 +1,5 @@
+import './IntroductionPage.css'
+
 const page = () => <div>
     <h1>INTRODUCTION</h1>
     <hr/>
@@ -22,6 +24,7 @@ const page = () => <div>
     I am (clearly!) not a professional games developer. This is very much a work in progress. If you pick this up and either play
     it or just have helpful suggestions, I’d always love to hear them. You can email me at rossatdi@gmail.com. Put Makah in the
     subject line so I know to actually read it.</p>
+    <div className='blurredImg'/>
     </div>
 
 
