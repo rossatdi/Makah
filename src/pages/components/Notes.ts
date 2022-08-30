@@ -1,0 +1,1 @@
+export const NoteIcons : string[] = ["*", "†", "‡", "§", "Δ", "◊", "⧫", "ϟ", "Λ"];
