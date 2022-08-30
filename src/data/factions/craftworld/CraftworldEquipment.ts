@@ -57,7 +57,7 @@ export const AspectArmour : Equipment =
     name:"Aspect armour",
     effect:"points: Improve a 4+ save to a 3+.",
     pt:4,
-    requirement:{sv:3},
+    requirement:{sv:4},
     modifier:{sv:1}
 }
 

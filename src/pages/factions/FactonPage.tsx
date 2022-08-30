@@ -5,15 +5,19 @@ import WeaponBlock from "../components/weaponsBlock/WeaponsBlock";
 import { Table } from 'react-bootstrap';
 import Note from "../../types/Note";
 import './FactionPage.css'
+import { NoteIcons } from "../components/Notes";
 
 const OperativesView = (operatives: OperativeBase[]) => {
-  const icons : string[] = ["*", "†", "‡", "§", "Δ", "◊", "⧫", "ϟ", "Λ"];
+  const icons = [...NoteIcons]
   const noteMap : Note[] = []
   const addNote = (str :string) => { 
-      const icon = icons.shift() ?? "";
-      const note : Note = {icon:icon, text:str}
-      noteMap.push(note)
-      return note}
+    let note = noteMap.find(o=>o.text === str)
+    if(!note){
+        const icon = icons.shift() ?? "";
+        note = {icon:icon, text:str}
+        noteMap.push(note)
+    }
+    return note}
   return (<div>
   <Table striped>
     <thead>
@@ -50,7 +54,7 @@ const OperativesView = (operatives: OperativeBase[]) => {
     </tbody>
   </Table>
   <ul>
-    {noteMap.map(o=><li>{`${o.icon} - ${o.text}`}</li>)}
+    {noteMap.map(o=><li>{`${o.icon} ${o.text}`}</li>)}
   </ul>
   </div>
 )};
