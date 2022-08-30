@@ -61,7 +61,7 @@ const OperativesView = (operatives: OperativeBase[]) => {
 
 const FactionView = ({ faction }: {faction: Faction; }) => {
   return (
-    <div>
+    <div className="factionView" style={{ backgroundImage:`url(${faction.icon})`}}>
       <h1>{faction.name}</h1>
       <hr />
       {faction.quote.split("\n").map(o=><p className="quote">{o}</p>)}

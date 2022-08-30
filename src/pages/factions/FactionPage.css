@@ -8,3 +8,10 @@ li {
 .quote { 
     margin: 0;
  }
+
+ .factionView {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+ }

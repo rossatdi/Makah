@@ -7,6 +7,9 @@ import GenericWeaponsList from './../../weapons/GenericWeapons';
 import ImperialWeaponsList from './../../weapons/ImperialWeapons';
 import onlyUnique from './../../../functions/OnlyUnique';
 
+import icon from '../../../Images/factionIcons/Astartes.svg'
+
+
 const Name : string = "Adeptus Astartes"
 
 export const BolterDiscipline :FactionAbility =
@@ -19,6 +22,7 @@ export const Astartes : Faction =
 {
     name:Name,
     slug:"astartes",
+    icon: icon,
     quote:"The Adeptus Astartes are one of the most elite and feared fighting forces in the Imperium of Man. There are far too few Space Marines to form the Imperium's main military forces; instead they operate as highly mobile strike forces.\nWhile famous for their brazen shock assaults, Space Marines’ physiology and armour makes them the perfect warriors for long range patrols and infiltration work.",
     operativeTypes:AstartesOperatives,
     weapons:[...AstartesWeaponList, ...GenericWeaponsList, ...ImperialWeaponsList].filter(onlyUnique),
