@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Makah/static/css/main.1790a4f9.css",
-    "main.js": "/Makah/static/js/main.f090f4c1.js",
+    "main.css": "/Makah/static/css/main.69dd99f0.css",
+    "main.js": "/Makah/static/js/main.2f33f00d.js",
     "static/media/Astartes.svg": "/Makah/static/media/Astartes.6190879120eb290bdd6730c2cca59df8.svg",
     "static/media/Deldar.svg": "/Makah/static/media/Deldar.72a5003da09ea9c0fba5bb823814d746.svg",
     "static/media/Mechanicus.svg": "/Makah/static/media/Mechanicus.fe0ee09184e8a15510f1f75c3bbe920f.svg",
@@ -12,11 +12,11 @@
     "static/media/Orks.svg": "/Makah/static/media/Orks.ffa6c09ee663429491ca4fadfd9b4b07.svg",
     "static/media/MakahLogo.svg": "/Makah/static/media/MakahLogo.072eca501e547b24275fc9d420f2aca9.svg",
     "index.html": "/Makah/index.html",
-    "main.1790a4f9.css.map": "/Makah/static/css/main.1790a4f9.css.map",
-    "main.f090f4c1.js.map": "/Makah/static/js/main.f090f4c1.js.map"
+    "main.69dd99f0.css.map": "/Makah/static/css/main.69dd99f0.css.map",
+    "main.2f33f00d.js.map": "/Makah/static/js/main.2f33f00d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1790a4f9.css",
-    "static/js/main.f090f4c1.js"
+    "static/css/main.69dd99f0.css",
+    "static/js/main.2f33f00d.js"
   ]
 }
