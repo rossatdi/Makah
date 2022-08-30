@@ -6,6 +6,8 @@ import CraftworldOperatives from "./CraftworldOperatives";
 import CraftWorldWeapons from "./CraftworldWeapons";
 import CraftworldEquipment from "./CraftworldEquipment";
 
+import icon from '../../../Images/factionIcons/Craftworld.svg'
+
 const Name : string = "Craftworld Eldar"
 
 export const Bladestorm:FactionAbility =
@@ -18,6 +20,7 @@ export const Craftworld : Faction =
 {
     name:Name,
     slug:"craftworld",
+    icon:icon,
     quote:"The Aeldari Empire was without equal, and they counted themselves masters of the stars. But over ten millennia ago, the Aeldari's overweening pride and their fall into hedonistic practices led to a cataclysm that all but eradicated their kind and led to the birth of the Chaos God Slaanesh.",
     operativeTypes:CraftworldOperatives,
     weapons:[...CraftWorldWeapons, ...GenericWeaponsList].filter(onlyUnique),
