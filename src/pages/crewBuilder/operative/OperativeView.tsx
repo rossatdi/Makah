@@ -60,7 +60,7 @@ return (
                 </Row>
                 <Row>
                     <table><tr><th>Weapons</th></tr></table>
-                    {WeaponBlock(operative.weapons, "")}
+                    {WeaponBlock(operative.weapons, "",false)}
                 </Row>
             </Container>
                 <ListGroup variant="flush">
