@@ -9,7 +9,7 @@ const NavView = () => {
     <NavDropdown.Item key={i}>
       <Nav.Link eventKey="1" as={NavLink} to={`/factions/${o.slug}`}>
         <div className="factionLink">
-         {o.name}<o.icon />
+         {o.name}<o.icon className={o.slug}/>
         </div>
       </Nav.Link>
     </NavDropdown.Item>
