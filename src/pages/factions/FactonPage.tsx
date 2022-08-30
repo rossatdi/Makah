@@ -2,7 +2,7 @@ import Faction from "../../types/Faction";
 import { OperativeBase } from "../../types/OperativeBase";
 import SkillTile from "../components/skillTile/SkillTile";
 import WeaponBlock from "../components/weaponsBlock/WeaponsBlock";
-import { Table } from 'react-bootstrap';
+import { Col, Container, Row, Table } from 'react-bootstrap';
 import Note from "../../types/Note";
 import './FactionPage.css'
 import { NoteIcons } from "../components/Notes";
@@ -80,9 +80,13 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
       <h3>Faction Ability</h3>
       <SkillTile skill={faction.ability} type="facton"></SkillTile>
       <h3>Equipment</h3>
-      {faction.equipment.map((o) => (
-        <SkillTile key={o.name} skill={o} type="equipment" />
-      ))}
+      <Container>
+        <Row>
+          {faction.equipment.map((o) => (
+            <Col xs={12} md={6} lg={4}><SkillTile key={o.name} skill={o} type="equipment" /></Col>))}
+      </Row>
+      </Container>
+
       <h3>Weapons</h3>
       {WeaponBlock(faction.weapons, faction.name, true)}
     </div>
