@@ -7,7 +7,8 @@ import MechanicusEquipmentList from "./MechanicusEquipment"
 import MechanicusOperatives from "./MechanicusOperatives"
 import MechanicusWeapons from "./MechanicusWeapons"
 
-import icon from '../../../Images/factionIcons/Mechanicus.svg'
+import { ReactComponent as icon} from '../../../Images/factionIcons/Mechanicus.svg'
+import background from '../../../Images/factionIcons/Mechanicus.svg'
 
 const Name : string = "Adeptus Mechanicus"
 
@@ -21,7 +22,8 @@ export const Mechanicus : Faction =
 {
     name:Name,
     slug:"mechanicus",
-    icon:icon,
+    icon: icon,
+    background:background,
     quote:"\"There is no truth in flesh, only betrayal.\"\n\"There is no strength in flesh, only weakness.\"\n\"There is no constancy in flesh, only decay.\"\n\"There is no certainty in flesh but death.\"",
     attribution:"Credo Omnissiah",
     operativeTypes:MechanicusOperatives, 

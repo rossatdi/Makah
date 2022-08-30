@@ -7,7 +7,8 @@ export type Faction =
 {
     name:string
     slug:string
-    icon?:any
+    icon:any
+    background:any
     quote:string
     attribution?:string
     operativeTypes:OperativeBase[]

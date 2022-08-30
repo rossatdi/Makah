@@ -8,7 +8,9 @@ const NavView = () => {
   const factionRoutes = Factions.map((o, i) => (
     <NavDropdown.Item key={i}>
       <Nav.Link eventKey="1" as={NavLink} to={`/factions/${o.slug}`}>
-        {o.name}
+        <div className="factionLink">
+         {o.name}<o.icon />
+        </div>
       </Nav.Link>
     </NavDropdown.Item>
   ));
