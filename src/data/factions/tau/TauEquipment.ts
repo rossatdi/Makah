@@ -10,7 +10,7 @@ export const IntegratedMissionAI : Equipment =
 export const ShieldDrone : Equipment = 
 {
     name:"Shield Drone",
-    effect:"points: Gain a 4+ Save that cannot be modified by AP. When a friendly operative within 3\" is targeted by a Shooting attack you may force yourself to be the target instead, but you may not evade. If choosing this option you immediately move to within 1\" of the original target.",
+    effect:"Gain a 4+ Save that cannot be modified by AP. When a friendly operative within 3\" is targeted by a Shooting attack you may force yourself to be the target instead, but you may not evade. If choosing this option you immediately move to within 1\" of the original target.",
     pt:5
 }
 
@@ -38,7 +38,7 @@ export const StabilisationSystem : Equipment =
 export const BondingKnife : Equipment = 
 {
     name:"Bonding Knife",
-    effect:"points: If this Operative is within 3\" of another friendly Operative with a Bonding Knife when they start their activation, they do not lose an Action fordiscarding a Evade token on a 4+.",
+    effect:"If this Operative is within 3\" of another friendly Operative with a Bonding Knife when they start their activation, they do not lose an Action fordiscarding a Evade token on a 4+.",
     pt:2
 }
 
