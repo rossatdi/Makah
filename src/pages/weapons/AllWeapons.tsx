@@ -10,7 +10,6 @@ const weapons: Weapon[] =
 [...Factions.flatMap(o=>o.weapons)].filter(onlyUnique);
 
 const allWeapons = () => {
-  console.log(weapons);
   return (<div>
     <h1>WEAPONS</h1>
     <h5><Link to="/weapons/rules">Special Rules</Link></h5>
