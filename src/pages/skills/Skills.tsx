@@ -1,4 +1,4 @@
-import { Skills } from "../../data/Skills";
+import Skills from "../../data/Skills";
 import { TileProps } from "../components/tile/Tile";
 import TileDisplay from "../components/tileDisplay/TileDisplay";
 
