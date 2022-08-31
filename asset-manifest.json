@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Makah/static/css/main.0a5aa4e1.css",
-    "main.js": "/Makah/static/js/main.d6ffcfe5.js",
+    "main.js": "/Makah/static/js/main.88abc81e.js",
     "static/media/Astartes.svg": "/Makah/static/media/Astartes.eff54f68f6354e7c622557d6c56074c2.svg",
     "static/media/Deldar.svg": "/Makah/static/media/Deldar.710243500e50333a3ec46e720367b7df.svg",
     "static/media/Mechanicus.svg": "/Makah/static/media/Mechanicus.a81f5427fe275bd3df7840f4e6989946.svg",
@@ -14,10 +14,10 @@
     "static/media/Tau.svg": "/Makah/static/media/Tau.7f3f88fea5a7eb36326832fc11ad69d2.svg",
     "index.html": "/Makah/index.html",
     "main.0a5aa4e1.css.map": "/Makah/static/css/main.0a5aa4e1.css.map",
-    "main.d6ffcfe5.js.map": "/Makah/static/js/main.d6ffcfe5.js.map"
+    "main.88abc81e.js.map": "/Makah/static/js/main.88abc81e.js.map"
   },
   "entrypoints": [
     "static/css/main.0a5aa4e1.css",
-    "static/js/main.d6ffcfe5.js"
+    "static/js/main.88abc81e.js"
   ]
 }
