@@ -82,7 +82,7 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
         </ul>
       )}
       <h3>Faction Ability</h3>
-      <Tile skill={faction.ability} type="facton"></Tile>
+      <Tile skill={faction.ability}></Tile>
       <h3>Equipment</h3>
       <TileDisplay items={faction.equipment.map(o=> {return{skill:o}})} showFilter={false}></TileDisplay>
       <h3>Weapons</h3>
