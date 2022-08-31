@@ -8,9 +8,9 @@ export const MIU: Equipment =
     pt:4
 }
 
-export const CombatStimms: Equipment =
+export const CombatStims: Equipment =
 {
-    name:"CombatStimms",
+    name:"Combat Stims",
     effect:"Operative can use when activating. Gain 1 action and take d3-1 Damage.",
     pt:5
 }
@@ -25,7 +25,7 @@ export const ArtificerWeapon: Equipment =
 export const RefactorField: Equipment =
 {
     name:"Refactor Field",
-    effect:"points: Ignore the first -1AP of a weapon.",
+    effect:"Ignore the first -1AP of a weapon.",
     pt:5
 }
 
@@ -42,6 +42,6 @@ export const CarapaceArmor: Equipment =
 {...CarapaceArmorBase, pt:2} 
 
 export const InquisitionEquipment : Equipment[] =
-[ServoSkull,MIU,CombatStimms,ArtificerWeapon,RefactorField,PowerArmor,CarapaceArmor]
+[ServoSkull,MIU,CombatStims,ArtificerWeapon,RefactorField,PowerArmor,CarapaceArmor]
 
 export default InquisitionEquipment;

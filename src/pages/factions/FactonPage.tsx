@@ -1,11 +1,12 @@
 import Faction from "../../types/Faction";
 import { OperativeBase } from "../../types/OperativeBase";
-import SkillTile from "../components/skillTile/SkillTile";
+import Tile from "../components/tile/Tile";
 import WeaponBlock from "../components/weaponsBlock/WeaponsBlock";
-import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import Note from "../../types/Note";
 import './FactionPage.css'
 import { NoteIcons } from "../components/Notes";
+import TileDisplay from "../components/tileDisplay/TileDisplay";
 
 const OperativesView = (operatives: OperativeBase[]) => {
   const icons = [...NoteIcons]
@@ -78,15 +79,9 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
         </ul>
       )}
       <h3>Faction Ability</h3>
-      <SkillTile skill={faction.ability} type="facton"></SkillTile>
+      <Tile skill={faction.ability} type="facton"></Tile>
       <h3>Equipment</h3>
-      <Container>
-        <Row>
-          {faction.equipment.map((o) => (
-            <Col xs={12} md={6} lg={4}><SkillTile key={o.name} skill={o} type="equipment" /></Col>))}
-      </Row>
-      </Container>
-
+      <TileDisplay items={faction.equipment.map(o=> {return{skill:o}})} showFilter={false}></TileDisplay>
       <h3>Weapons</h3>
       {WeaponBlock(faction.weapons, faction.name, true)}
     </div>

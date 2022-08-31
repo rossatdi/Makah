@@ -1,10 +1,10 @@
 import { Actions } from "../../data/Actions"
-import SkillTile from "../components/skillTile/SkillTile"
+import Tile from "../components/tile/Tile"
 
 export const page = () =>{
     return(<div>
         <h1>Actions</h1>
-        {Actions.map(o=><SkillTile skill={o} type={"action"}/>)}
+        {Actions.map(o=><Tile skill={o} type={"action"}/>)}
     </div>) 
 }
 

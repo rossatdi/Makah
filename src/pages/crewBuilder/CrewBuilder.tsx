@@ -3,7 +3,7 @@ import { Chainsword, InfernoPistol, LasCarbine, Laspistol, Longlas, NeedlePistol
 import { ExpertMarksman, Gunfighter, Gunslinger } from "../../data/Skills";
 import Operative from "../../types/Operative";
 import OperativeView from "./operative/OperativeView";
-import SkillTile from "../components/skillTile/SkillTile";
+import Tile from "../components/tile/Tile";
 import './CrewBuilder.css'
 import Weapon from "../../types/Weapon";
 import WeaponSpecialRule from "../../types/WeaponSpecialRule"
@@ -83,7 +83,7 @@ const CrewBuilderView = () => {
         <Stack>
             {operatives.map(o=><OperativeView operative={o}  />)}
             <h4>Weapon Rules</h4>
-            {operatives.flatMap(o=>o.weapons.flatMap(p=>extractWeaponSkills(p))).filter((v,i,a)=>a.indexOf(v)===i).sort((a,b)=>(a.name>b.name ?1:-1)).map(o=><SkillTile skill={o} type="wsr"/>)}
+            {operatives.flatMap(o=>o.weapons.flatMap(p=>extractWeaponSkills(p))).filter((v,i,a)=>a.indexOf(v)===i).sort((a,b)=>(a.name>b.name ?1:-1)).map(o=><Tile skill={o} type="wsr"/>)}
         </Stack>
     )
 }
