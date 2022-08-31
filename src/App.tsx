@@ -13,6 +13,7 @@ import  WeaponSpecialRules  from "./pages/weapons/WeaponSpecialRules";
 import ActionsPage from './pages/actions/ActionsPage'
 import IntroductionPage from "./pages/introduction/IntroductionPage";
 import AllWeaponsPage from './pages/weapons/AllWeapons';
+import EquipmentPage from "./pages/equipment/EquipmentPage";
 
 function App() 
 {
@@ -30,6 +31,7 @@ function App()
         <Route path="/weapons/imperial" element={<ImperialWeaponsPage/>}/>
         <Route path="/weapons/rules" element={<WeaponSpecialRules/>}/>
         <Route path="/skills" element={<SkillsPage/>}/>
+        <Route path="/equipment" element={<EquipmentPage/>}/>
         <Route path="/glossary" element={<GlossaryPage/>}/>
         <Route path="/crew" element={<CrewPage/>}/>
         {factionRoutes}

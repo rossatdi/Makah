@@ -3,7 +3,7 @@ import Operative from "../../../types/Operative";
 import { Stats } from "../../../types/OperativeBase";
 import { StatModifier } from "../../../types/StatModifier";
 import WeaponBlock from "../../components/weaponsBlock/WeaponsBlock";
-import SkillTile from "../../components/skillTile/SkillTile";
+import Tile from "../../components/tile/Tile";
 import './OperativeView.css'
 
 
@@ -64,8 +64,8 @@ return (
                 </Row>
             </Container>
                 <ListGroup variant="flush">
-                    {operative.skills.map(o=><SkillTile skill={o} type="skill"/>)}
-                    {operative.equipment.map(o=><SkillTile skill={o} type="equipment"/>)}
+                    {operative.skills.map(o=><Tile skill={o} type="skill"/>)}
+                    {operative.equipment.map(o=><Tile skill={o} type="equipment"/>)}
                 </ListGroup>
         </Card.Body>
     </Card>
