@@ -7,6 +7,7 @@ import { Inquisition } from "./inquisition/Inquisition";
 import { Mechanicus } from "./mechanicus/Mechanicus";
 import { Orks } from "./orks/Orks";
 import { SistersOfBattle } from "./sisters/Sisters";
+import { Tau } from "./tau/Tau";
 
 export const Factions : Faction[] =
 [
@@ -17,7 +18,8 @@ export const Factions : Faction[] =
     Mechanicus,
     Orks,
     Craftworld,
-    Deldar
+    Deldar,
+    Tau
 ]
 
 export default Factions;
