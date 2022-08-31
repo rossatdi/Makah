@@ -36,7 +36,7 @@ const WeaponTile = ({weapon, type, background, faction}:WeaponTileProps) => {
                             <Col>{o.ap}</Col>
                         </Row>
                         <Row>
-                            {o.special.map((p,j)=>GlossaryOverlay({ skill:p, item:<Col key={j}>{p.name}</Col>}))}
+                            {o.special.sort((a,b)=>a.name.localeCompare(b.name)).map((p,j)=>GlossaryOverlay({ skill:p, item:<Col key={j}>{p.name}</Col>}))}
                         </Row>
                         </>
                         )}

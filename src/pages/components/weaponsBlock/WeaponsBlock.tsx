@@ -99,7 +99,7 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(st
             <td>{weapon.profiles[0].attack}</td>
             <td>{weapon.profiles[0].dam}</td>
             <td>{weapon.profiles[0].ap}</td>
-            <td>{weapon.profiles[0].special.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
+            <td>{weapon.profiles[0].special.sort((a,b)=>a.name.localeCompare(b.name)).map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
             <td>{weapon.pt}</td>
             <td>{weapon.source}</td>
         </tr>
@@ -120,7 +120,7 @@ export default WeaponBlock
 
 export const WeaponTileGrid = ({items, showFilter}:{items:WeaponTileProps[], showFilter:boolean}) => {
     const [query, setFilter] = useState("")
-    const filtered = items.filter(o=>weaponTileFilter(o,query))
+    const filtered = items.filter(o=>weaponTileFilter(o,query)).sort(weaponSorting)
     return(
       <Container>
       {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
@@ -143,7 +143,7 @@ export const WeaponTileGrid = ({items, showFilter}:{items:WeaponTileProps[], sho
             noteMap.push(note)
         }
         return note}
-    const filtered = items.filter(o=>weaponTileFilter(o,query))
+    const filtered = items.filter(o=>weaponTileFilter(o,query)).sort(weaponSorting)
     return(
       <Container>
             {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
