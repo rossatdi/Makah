@@ -3,25 +3,38 @@ import  GlossaryOverlay  from "./../GlossaryOverlay"
 import './WeaponsBlock.css'
 import {useState} from "react";
 import compare from "../../../functions/CaseIndifferentStringCompare";
-import { Table } from "react-bootstrap";
+import { Col, Row, Table, Container } from "react-bootstrap";
 import Note from "../../../types/Note";
 import { NoteIcons } from "../Notes";
-
+import WeaponTile, { WeaponTileProps } from "../weaponTIle/WeaponTile";
+import useScreenSize from '../../../hooks/UseScreenSize'
+import ScreenSize from '../../../types/ScreenSize'
 
 
 function clamp(val:number, min:number, max:number): number {
     return val > max ? max : val < min ? min : val;
 }
 
-export const weaponSorting  = (a:Weapon, b:Weapon) : number => {
+export const weaponSorting  = (a:WeaponTileProps, b:WeaponTileProps) : number => {
         
-    const aVal = a.profiles[0].types[0];
-    const bVal = b.profiles[0].types[0];
+    const aVal = a.weapon.profiles[0].types[0];
+    const bVal = b.weapon.profiles[0].types[0];
     const h = clamp(aVal.ordering-bVal.ordering, -1,1)
     if(h!==0) return h
-    return a.name.localeCompare(b.name);
+    return a.weapon.name.localeCompare(b.weapon.name);
 }
 
+export const weaponTileFilter = (a:WeaponTileProps, str:string) : boolean => {
+    return str.split(",").every(s=>{
+        s=s.trim()
+        let ret : boolean = false;
+    
+        if(weaponFilter(a.weapon,s)) ret = true
+        if(a.type && compare(a.type,s)) ret = true;
+        if(a.faction && compare(a.faction,s)) ret = true;
+        return ret;
+    })
+  }
 
 export const weaponFilter = (a:Weapon, str:string) : boolean => {
     return str.split(",").every(s=>{
@@ -93,7 +106,32 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(st
     }
 }
 
-export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolean = true) => {
+export const WeaponBlock = ({items, showFilter, source}:{items:WeaponTileProps[], showFilter:boolean, source:string}) => {
+        const size = useScreenSize();
+        return (<div>
+            {size < ScreenSize.lg &&<WeaponTileGrid items={items} showFilter={showFilter}/>}
+            {size >= ScreenSize.lg &&<WeaponTable items={items} showFilter={showFilter} source={source}/>}
+            </div>)
+      
+}
+
+export default WeaponBlock
+
+
+export const WeaponTileGrid = ({items, showFilter}:{items:WeaponTileProps[], showFilter:boolean}) => {
+    const [query, setFilter] = useState("")
+    const filtered = items.filter(o=>weaponTileFilter(o,query))
+    return(
+      <Container>
+      {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
+      <Row>
+        {filtered.map((o) => (
+          <Col xs={12} md={6} lg={4}><WeaponTile key={o.weapon.name} weapon={o.weapon} background={o.background} type={o.type} /></Col>))}
+      </Row>
+      </Container>)
+  }
+
+  export const WeaponTable = ({items, showFilter, source}:{items:WeaponTileProps[], showFilter:boolean, source:string}) => {
     const icons = [...NoteIcons]
     const noteMap : Note[] = []
     const [query, setFilter] = useState("")
@@ -105,9 +143,9 @@ export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolea
             noteMap.push(note)
         }
         return note}
-    var filteredWeapons = weapons.filter(w=>weaponFilter(w,query)).sort(weaponSorting)
-    return (
-        <div className="weaponsBlock">
+    const filtered = items.filter(o=>weaponTileFilter(o,query))
+    return(
+      <Container>
             {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
             <Table striped responsive>
                 <thead>
@@ -123,14 +161,11 @@ export const WeaponBlock = (weapons : Weapon[], source:string, showFilter:boolea
                 </tr>
                 </thead>
                 <tbody>
-                    {filteredWeapons.map((weapon, index)=> weaponMap(weapon, index, weapon.source === source, addNote))}
+                    {filtered.map((x, index)=> weaponMap(x.weapon, index, x.weapon.source === source, addNote))}
                 </tbody>
             </Table>
             <ul>
                 {noteMap.map(o=><li>{`${o.icon} ${o.text}`}</li>)}
             </ul>
-        </div>
-    )
-}
-
-export default WeaponBlock
+      </Container>)
+  }

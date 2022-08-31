@@ -1,0 +1,32 @@
+.tile {
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1) !important; 
+    align-self : stretch;
+}
+
+.tileHeader {
+    display: grid;
+    font-weight: bold;
+}
+
+.tileHeader > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    justify-self:center;
+  }
+
+.pt {
+    justify-self: right;
+}
+
+.type {
+    justify-self: left;
+}
+
+
+.body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
