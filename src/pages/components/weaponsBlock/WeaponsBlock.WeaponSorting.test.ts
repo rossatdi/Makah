@@ -1,11 +1,11 @@
 
 import { Pistol, Assault, Rifle, Heavy, Combat, Grenade } from '../../../data/weapons/WeaponTypes';
-import Weapon from '../../../types/Weapon';
 import WeaponType from '../../../types/WeaponType';
 import { weaponSorting } from './WeaponsBlock';
+import { WeaponTileProps } from './../weaponTIle/WeaponTile';
 
-const makeWeapon = (type:WeaponType, name:string) : Weapon  =>{
-    return {
+const makeWeapon = (type:WeaponType, name:string) : WeaponTileProps  =>{
+    return { weapon: {
         name: name,
         profiles: [
             {
@@ -18,7 +18,7 @@ const makeWeapon = (type:WeaponType, name:string) : Weapon  =>{
         ],
         pt: 0,
         source: "",
-    }
+    }}
 } 
 
 describe('testing weaponSorting', () => {

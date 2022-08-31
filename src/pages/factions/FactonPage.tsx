@@ -7,6 +7,7 @@ import Note from "../../types/Note";
 import './FactionPage.css'
 import { NoteIcons } from "../components/Notes";
 import TileDisplay from "../components/tileDisplay/TileDisplay";
+import { WeaponTileProps } from "../components/weaponTIle/WeaponTile";
 
 const OperativesView = (operatives: OperativeBase[]) => {
   const icons = [...NoteIcons]
@@ -61,6 +62,8 @@ const OperativesView = (operatives: OperativeBase[]) => {
 )};
 
 const FactionView = ({ faction }: {faction: Faction; }) => {
+  const weapons :WeaponTileProps[] = faction.weapons.map(o=>({weapon:o}))
+
   return (
     <div className="factionView" style={{ backgroundImage:`url(${faction.background})`}}>
       <h1>{faction.name}</h1>
@@ -83,7 +86,7 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
       <h3>Equipment</h3>
       <TileDisplay items={faction.equipment.map(o=> {return{skill:o}})} showFilter={false}></TileDisplay>
       <h3>Weapons</h3>
-      {WeaponBlock(faction.weapons, faction.name, true)}
+      <WeaponBlock items={weapons} showFilter={true} source={faction.name}/>
     </div>
   );
 };

@@ -14,7 +14,7 @@ export interface TileProps
     faction?:string
 }
 
-const Tile = ({skill, type, background}:TileProps) => {
+const Tile = ({skill, type, background, faction}:TileProps) => {
     return (<Card className={`tile ${type}`}>
             <Card.Header>
                 <div className="tileHeader">

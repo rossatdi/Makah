@@ -1,19 +1,27 @@
 import onlyUnique from "../../functions/OnlyUnique";
-import Weapon from "../../types/Weapon";
 import WeaponBlock from "../components/weaponsBlock/WeaponsBlock";
 import { Factions } from './../../data/factions/Factions';
 import { Link  } from "react-router-dom";
 
 import './AllWeapons.css';
+import { WeaponTileProps } from './../components/weaponTIle/WeaponTile';
 
-const weapons: Weapon[] = 
-[...Factions.flatMap(o=>o.weapons)].filter(onlyUnique);
+const weapons: WeaponTileProps[] = 
+[...Factions.flatMap(o=>o.weapons)]
+.filter(onlyUnique)
+.map(p=>{
+  const collection = Factions.filter(o=>o.name===p.source);
+  const single = collection.length === 0 ? null : collection[0];
+  return {weapon:p, source:"", background:single ? single.background : "none", faction:single ? single.name : ""}
+}
+  );
 
 const allWeapons = () => {
   return (<div>
     <h1>WEAPONS</h1>
     <h5><Link to="/weapons/rules">Special Rules</Link></h5>
-    {WeaponBlock(weapons, "")}
+    <WeaponBlock items={weapons} showFilter={true} source={""}/>
+
   </div>
 )};
 

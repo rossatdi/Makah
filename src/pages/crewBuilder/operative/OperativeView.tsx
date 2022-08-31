@@ -5,6 +5,7 @@ import { StatModifier } from "../../../types/StatModifier";
 import WeaponBlock from "../../components/weaponsBlock/WeaponsBlock";
 import Tile from "../../components/tile/Tile";
 import './OperativeView.css'
+import { WeaponTileProps } from "../../components/weaponTIle/WeaponTile";
 
 
 export type OperativeViewProps = {
@@ -32,6 +33,8 @@ const OperativeView = ({operative} : OperativeViewProps) =>{
     let modifiers = [...operative.equipment.map(o=>o.modifier), ...operative.skills.map(o=>o.modifier)].filter((o): o is StatModifier => !!o)
     if(operative.isLeader) modifiers.push(leader)
     const finalStats = finalizeStats(operative,modifiers);
+    const weapons :WeaponTileProps[] = operative.weapons.map(o=>({weapon:o}))
+
 return (
     <Card  className="operativeView">
         <Card.Title>{operative.name}{operative.isLeader && " - Leader"}</Card.Title>
@@ -60,7 +63,7 @@ return (
                 </Row>
                 <Row>
                     <table><tr><th>Weapons</th></tr></table>
-                    {WeaponBlock(operative.weapons, "",false)}
+                    <WeaponBlock items={weapons} showFilter={false} source={""}/>
                 </Row>
             </Container>
                 <ListGroup variant="flush">
