@@ -7,16 +7,16 @@ export type WeaponProfile =
 {
     name?:string
     types:[WeaponType, ...WeaponType[]]
-    attack:number | DiceCalc
-    dam:number | DiceCalc
-    ap:number| DiceCalc
+    attack:0|1|2|3|4|5|6 | DiceCalc
+    dam:0|1|2|3|4|5|6  | DiceCalc
+    ap:0|-1|-2|-3|-4|-5|-6 | `-${DiceCalc}`
     special:WeaponSpecialRule[]
 }
 
 export type WeaponModifier = {
-    attack?:number | DiceCalc
-    dam?:number | DiceCalc
-    ap?:number| DiceCalc
+    attack?:0|1|2|3|4|5|6 | DiceCalc
+    dam?:0|1|2|3|4|5|6  | DiceCalc
+    ap?:0|-1|-2|-3|-4|-5|-6 | `-${DiceCalc}`
 }
 
 export type Weapon = 

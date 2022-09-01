@@ -11,4 +11,5 @@ TODO khorne\
 TODO nurgle\
 TODO slaanesh\
 TODO tzeench\
+TODO limit operative values\
 TODO crew builder\
