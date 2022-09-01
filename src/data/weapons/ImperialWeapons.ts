@@ -7,7 +7,7 @@ import {
   IgnoresCover,
   NonLethal,
   OneUse,
-  PsykerOnly,
+  Only,
   Range,
   RapidFire,
   Reach,
@@ -362,7 +362,7 @@ export const ForceSword: Weapon = {
       attack: 3,
       dam: "d3+2",
       ap: -2,
-      special: [PsykerOnly],
+      special: [Only('Psykers')],
     },
   ],
 
@@ -378,7 +378,7 @@ export const ForceHalberd: Weapon = {
       attack: 3,
       dam: "d3+2",
       ap: -1,
-      special: [PsykerOnly, Reach],
+      special: [Only('Psykers'), Reach],
     },
   ],
 

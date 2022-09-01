@@ -1,5 +1,5 @@
 import Weapon from "../../../types/Weapon";
-import { Aim, Blast, Headshot, IgnoresCover, Range, Rending, SplitFire, Torrent } from "../../weapons/WeaponSpecialRules";
+import { Aim, Blast, Headshot, IgnoresCover, Only, Range, Rending, SplitFire, Torrent } from "../../weapons/WeaponSpecialRules";
 import { Assault, Heavy, Pistol, Combat, Grenade } from "../../weapons/WeaponTypes";
 
 const source: string = "Craftworld Eldar";
@@ -223,12 +223,11 @@ export const ShurikenPistol: Weapon = {
         attack: 3,
         dam: "D3+2",
         ap: -1,
-        special: [],
+        special: [Only('Psykers')],
       },
     ],
     pt: 3,
     source: source,
-    notes:"Psyker Only"
   };
 
 

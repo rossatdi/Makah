@@ -5,11 +5,10 @@ TODO inquisition ordo details\
 TODO psychic powers for all factions\
 TODO tyranids\
 TODO genestealer cult\
-TODO necrons\
 TODO chaos cult\
 TODO khorne\
 TODO nurgle\
 TODO slaanesh\
 TODO tzeench\
-TODO limit operative values\
+TODO limit operative stats to appropiate values\
 TODO crew builder\

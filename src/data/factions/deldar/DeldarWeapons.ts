@@ -1,5 +1,5 @@
 import Weapon from "../../../types/Weapon";
-import { Arc, Blast, Brutal, IgnoresCover, Poison, Range, SplitFire, Stun, Torrent } from "../../weapons/WeaponSpecialRules";
+import { Arc, Blast, Brutal, IgnoresCover, Only, Poison, Range, SplitFire, Stun, Torrent } from "../../weapons/WeaponSpecialRules";
 import { Assault, Heavy, Pistol, Rifle,Combat } from "../../weapons/WeaponTypes";
 
 const source: string = "Dark Eldar";
@@ -237,12 +237,11 @@ export const SplinterPistol: Weapon = {
         attack: 4,
         dam: 3,
         ap: -2,
-        special: [Brutal(1)],
+        special: [Brutal(1), Only('Incubi')],
       },
     ],
     pt: 8,
     source: source,
-    notes:"Incubi only"
   };
 
   const DeldarWeapons : Weapon[]=

@@ -1,6 +1,6 @@
 import Weapon from "../../../types/Weapon";
 import { Longlas as ImpLonglas } from "../../weapons/ImperialWeapons";
-import { Inaccurate, Range } from "../../weapons/WeaponSpecialRules";
+import { Inaccurate, Only, Range } from "../../weapons/WeaponSpecialRules";
 import { Assault, Combat } from "../../weapons/WeaponTypes";
 
 export const source : string = "Imperial Guard"
@@ -14,7 +14,7 @@ export const RipperGun: Weapon = {
       attack: 5,
       dam: 3,
       ap: 0,
-      special: [Range(8), Inaccurate],
+      special: [Range(8), Inaccurate, Only('Ogryns')],
     },
     {
       name: "Knife",
@@ -22,12 +22,11 @@ export const RipperGun: Weapon = {
       attack: 3,
       dam: 4,
       ap: 0,
-      special: [],
+      special: [Only('Ogryns')],
     },
   ],
   pt: 3,
   source: source,
-  notes:"Ogryns only."
 };
 
 export const Longlas: Weapon = {

@@ -4,6 +4,7 @@ import {
   Aim,
   Headshot,
   Range,
+  Only,
 } from "../../weapons/WeaponSpecialRules";
 import { Assault, Combat, Heavy } from "../../weapons/WeaponTypes";
 
@@ -33,11 +34,10 @@ export const MarineCombatKnife: Weapon = {
       attack: 3,
       dam: 2,
       ap: 0,
-      special: [],
+      special: [Only('Space Marines and Scouts')],
     },
   ],
   pt: 2,
-  notes: "Space Marines and Scouts only.",
   source: source,
 };
 
