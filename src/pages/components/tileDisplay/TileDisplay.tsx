@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Container, Row, Col, Table } from 'react-bootstrap'
 import compare from '../../../functions/CaseIndifferentStringCompare'
+import { getKey } from '../../../functions/keys'
 import useScreenSize from '../../../hooks/UseScreenSize'
 import ScreenSize from '../../../types/ScreenSize'
 import Tile, { TileProps } from '../tile/Tile'
@@ -28,7 +29,7 @@ export const TileGrid = ({items, showFilter}:{items:TileProps[], showFilter:bool
     {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
     <Row>
       {filtered.map((o) => (
-        <Col xs={12} md={6} lg={4}><Tile key={o.skill.name} skill={o.skill} background={o.background} type={o.type} /></Col>))}
+        <Col key={getKey()}  xs={12} md={6} lg={4}><Tile key={o.skill.name} skill={o.skill} background={o.background} type={o.type} /></Col>))}
     </Row>
     </Container>)
 }
@@ -42,9 +43,9 @@ export const TileTable = ({items, showFilter}:{items:TileProps[], showFilter:boo
   return(
     <>
     {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
-    <Table striped responsive>
-      <thead>
-        <tr>
+    <Table striped responsive key={getKey()} >
+      <thead key={getKey()} >
+        <tr key={getKey()} >
           <th>Skill</th>
           <th>Effect</th>
           <th>Points</th>
@@ -53,7 +54,7 @@ export const TileTable = ({items, showFilter}:{items:TileProps[], showFilter:boo
         </tr>
       </thead>
       <tbody>
-        {filtered.map(o=><tr>
+        {filtered.map(o=><tr key={getKey()} >
         <td>{o.skill.name}</td>
         <td>{o.skill.effect}</td>
         <td>{o.skill.pt}</td>

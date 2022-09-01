@@ -8,6 +8,7 @@ import './FactionPage.css'
 import { NoteIcons } from "../components/Notes";
 import TileDisplay from "../components/tileDisplay/TileDisplay";
 import { WeaponTileProps } from "../components/weaponTIle/WeaponTile";
+import { getKey } from "../../functions/keys";
 
 const OperativesView = (operatives: OperativeBase[]) => {
   const icons = [...NoteIcons]
@@ -23,7 +24,7 @@ const OperativesView = (operatives: OperativeBase[]) => {
   return (<div>
   <Table striped>
     <thead>
-    <tr>
+    <tr key={getKey()} >
       <th>Type</th>
       <th>Mv</th>
       <th>Ws</th>
@@ -42,7 +43,7 @@ const OperativesView = (operatives: OperativeBase[]) => {
         type = type +" " + n.icon
     }
       return (
-      <tr key={i}>
+      <tr key={getKey()} >
         <td>{type}</td>
         <td>{o.mv}"</td>
         <td>{o.ws}+</td>
@@ -56,7 +57,7 @@ const OperativesView = (operatives: OperativeBase[]) => {
     </tbody>
   </Table>
   <ul>
-    {noteMap.map(o=><li>{`${o.icon} ${o.text}`}</li>)}
+    {noteMap.map(o=><li key={getKey()} >{`${o.icon} ${o.text}`}</li>)}
   </ul>
   </div>
 )};
@@ -68,7 +69,7 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
     <div className="factionView" style={{ backgroundImage:`url(${faction.background})`}}>
       <h1>{faction.name}</h1>
       <hr />
-      {faction.quote.split("\n").map(o=><p className="quote">{o}</p>)}
+      {faction.quote.split("\n").map(o=><p key={getKey()} className="quote">{o}</p>)}
       {faction.attribution && (
           <i>-{faction.attribution}</i>
       )}
@@ -77,7 +78,7 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
       {faction.operativeNotes && (
         <ul>
           {faction.operativeNotes.map((o) => (
-            <li>{o}</li>
+            <li key={getKey()} >{o}</li>
           ))}
         </ul>
       )}

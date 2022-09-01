@@ -1,7 +1,7 @@
 import Weapon from "../../../types/Weapon"
 import  GlossaryOverlay  from "./../GlossaryOverlay"
 import './WeaponsBlock.css'
-import {useState} from "react";
+import React, {useState} from "react";
 import compare from "../../../functions/CaseIndifferentStringCompare";
 import { Col, Row, Table, Container } from "react-bootstrap";
 import Note from "../../../types/Note";
@@ -9,7 +9,7 @@ import { NoteIcons } from "../Notes";
 import WeaponTile, { WeaponTileProps } from "../weaponTIle/WeaponTile";
 import useScreenSize from '../../../hooks/UseScreenSize'
 import ScreenSize from '../../../types/ScreenSize'
-
+import {getKey} from '../../../functions/keys'
 
 function clamp(val:number, min:number, max:number): number {
     return val > max ? max : val < min ? min : val;
@@ -70,7 +70,7 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(st
     }
     if(weapon.profiles.length>1)
     {
-        return <><tr className={bold ? "bold" : ""} key={index}>
+        return <React.Fragment key={getKey()} ><tr key={getKey()}   className={bold ? "bold" : ""} >
             <td>{name}</td>
             <td></td>
             <td></td>
@@ -81,7 +81,7 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(st
             <td rowSpan={3}>{weapon.source}</td>
         </tr>
         {weapon.profiles.map((o,i)=>{
-            return <tr className={bold ? "bold" : ""} key={index+"-"+i}>
+            return <tr key={getKey()}  className={bold ? "bold" : ""}>
             <td>🠺{o.name}</td>
             <td>{o.types.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
             <td>{o.attack}</td>
@@ -90,10 +90,10 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(st
             <td>{o.special.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
         </tr>
         })}
-        </>
+        </React.Fragment>
     }
     else{
-        return <tr className={bold ? "bold" : ""} key={index}>
+        return <tr key={getKey()}  className={bold ? "bold" : ""}>
             <td>{name}</td>
             <td>{weapon.profiles[0].types.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={j} className="skillName">{p.name}</p>}))}</td>
             <td>{weapon.profiles[0].attack}</td>
@@ -126,7 +126,7 @@ export const WeaponTileGrid = ({items, showFilter}:{items:WeaponTileProps[], sho
       {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
       <Row>
         {filtered.map((o) => (
-          <Col xs={12} md={6} lg={4}><WeaponTile key={o.weapon.name} weapon={o.weapon} background={o.background} type={o.type} /></Col>))}
+          <Col key={getKey()} xs={12} md={6} lg={4}><WeaponTile key={o.weapon.name} weapon={o.weapon} background={o.background} type={o.type} /></Col>))}
       </Row>
       </Container>)
   }
@@ -147,9 +147,9 @@ export const WeaponTileGrid = ({items, showFilter}:{items:WeaponTileProps[], sho
     return(
       <Container>
             {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
-            <Table striped responsive>
-                <thead>
-                <tr>
+            <Table striped responsive key={getKey()} >
+                <thead key={getKey()} >
+                <tr key={getKey()} >
                     <th>Name</th>
                     <th>Type</th>
                     <th>Atk</th>
@@ -165,7 +165,7 @@ export const WeaponTileGrid = ({items, showFilter}:{items:WeaponTileProps[], sho
                 </tbody>
             </Table>
             <ul>
-                {noteMap.map(o=><li>{`${o.icon} ${o.text}`}</li>)}
+                {noteMap.map(o=><li key={getKey()} >{`${o.icon} ${o.text}`}</li>)}
             </ul>
       </Container>)
   }

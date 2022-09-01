@@ -131,7 +131,7 @@ export const Slugga: Weapon = {
         types: [Assault],
         attack: 3,
         dam: 3,
-        ap: "D3",
+        ap: "-D3",
         special: [Dangerous, Inaccurate, MoreDakka],
       },
     ],
