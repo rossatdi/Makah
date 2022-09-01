@@ -26,7 +26,7 @@ export const Dodge : Equipment =
 export const SoulTrap : Equipment = 
 {
     name:"Soul trap",
-    effect:"Operatives within 3” make injury Rolls at -1.",
+    effect:"Operatives within 3\" make injury Rolls at -1.",
     pt:2
 }
 
