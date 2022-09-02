@@ -1,4 +1,5 @@
 import OperativeBase from "../../../types/OperativeBase";
+import { Limited } from './../../CommonNotes';
 
 export const Servitor : OperativeBase =
 {
@@ -10,7 +11,7 @@ export const Servitor : OperativeBase =
     wnd:8,
     sv:6,
     pt:7,
-    notes:"Servitors have the Limited special rule."
+    notes:Limited
 }
 
 export const CombatServitor : OperativeBase =
@@ -23,7 +24,7 @@ export const CombatServitor : OperativeBase =
     wnd:8,
     sv:6,
     pt:8,
-    notes:"CombatServitor have the Limited special rule."
+    notes:Limited
 }
 
 export const SupportServitor : OperativeBase =
@@ -36,7 +37,7 @@ export const SupportServitor : OperativeBase =
     wnd:8,
     sv:4,
     pt:14,
-    notes:"Support Servitors have the Limited special rule."
+    notes:Limited
 }
 
 export const LargeServitor : OperativeBase =
@@ -49,7 +50,7 @@ export const LargeServitor : OperativeBase =
     wnd:14,
     sv:4,
     pt:28,
-    notes:"Large Servitors have the Limited special rule."
+    notes:Limited
 }
 
 export const Skitarii : OperativeBase =
