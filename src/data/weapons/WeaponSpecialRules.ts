@@ -116,6 +116,14 @@ export const OneUse : WeaponSpecialRule =
     effect:"This Weapon can be used once per mission."
 }
 
+export function Only(x: string): WeaponSpecialRule  
+{
+    return {
+        name:`${x} Only`,
+        effect:`This weapon may only be taken by ${x}`
+    }
+}
+
 export function Poison(x: Variable): WeaponSpecialRule  
 {
     return {

@@ -12,6 +12,7 @@ import {
   Reckless,
   Stun,
   Defensive,
+  Only,
 } from "./../../weapons/WeaponSpecialRules";
 
 const source : string = "Sisters of Battle"
@@ -87,11 +88,10 @@ export const ArchoFlails: Weapon = {
       attack: 5,
       dam: 2,
       ap: -1,
-      special: [Reckless],
+      special: [Reckless, Only('Archo-flagellants')],
     },
   ],
   pt: 2,
-  notes: "Many only be taken by Archo-flagellants",
   source: source,
 };
 

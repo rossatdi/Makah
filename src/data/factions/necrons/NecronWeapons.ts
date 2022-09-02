@@ -1,5 +1,5 @@
 import Weapon from "../../../types/Weapon";
-import { Aim, Arc, Defensive, Gauss, Headshot, Range, Reckless } from "../../weapons/WeaponSpecialRules";
+import { Aim, Arc, Defensive, Gauss, Headshot, Only, Range, Reckless } from "../../weapons/WeaponSpecialRules";
 import { Assault, Combat, Heavy, Pistol, Rifle } from "../../weapons/WeaponTypes";
 
 const source : string = "Necron"
@@ -251,11 +251,10 @@ export const EnmiticDisintegrator: Weapon = {
         attack: 5,
         dam: 3,
         ap: -1,
-        special: [Reckless],
+        special: [Reckless, Only('Flayed Ones')],
       },
     ],
     pt: 4,
-    notes:"Flayed Ones only.",
     source: source,
   };
 

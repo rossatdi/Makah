@@ -1,6 +1,6 @@
 import Weapon from "../../../types/Weapon";
 import { Assault, Heavy, Pistol, Rifle, Combat } from "../../weapons/WeaponTypes";
-import { Aim, Headshot, Inaccurate, Indirect, Markerlight, Range, SplitFire } from "../../weapons/WeaponSpecialRules";
+import { Aim, Headshot, Inaccurate, Indirect, Markerlight, Only, Range, SplitFire } from "../../weapons/WeaponSpecialRules";
 import {  } from "../../Actions";
 
 export const source : string = "Tau"
@@ -119,7 +119,7 @@ export const PulsePistol: Weapon = {
         attack: 3,
         dam: 3,
         ap: 0,
-        special: [],
+        special: [Only('Kroot')],
       },
       {
         name:"Knife",
@@ -127,12 +127,11 @@ export const PulsePistol: Weapon = {
         attack: 3,
         dam: 3,
         ap: -1,
-        special: [],
+        special: [Only('Kroot')],
       }
     ],
     pt: 2,
     source: source,
-    notes:"Kroot only"
   };
 
   export const RailRifle: Weapon = {
