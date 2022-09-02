@@ -57,7 +57,6 @@ export const TileTable = ({items, showFilter}:{items:TileProps[], showFilter:boo
         {filtered.map(o=><tr key={getKey()} >
         <td>{o.skill.name}</td>
         <td>{o.skill.effect}</td>
-        <td>{o.skill.pt}</td>
         {showType && <td>{o.type}</td>}
         {showFactions && <td>{o.faction}</td>}
         </tr>)}

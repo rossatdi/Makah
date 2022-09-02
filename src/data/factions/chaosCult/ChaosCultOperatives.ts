@@ -1,4 +1,5 @@
 import OperativeBase from "../../../types/OperativeBase"
+import { Limited } from "../../CommonNotes"
 
 export const Cultist : OperativeBase =
 {
@@ -22,7 +23,20 @@ export const Mutant : OperativeBase =
     wnd:8,
     sv:6,
     pt:12,
-    notes:"Mutants are Limited"
+    notes:Limited
+}
+
+export const Spawn : OperativeBase =
+{
+    type:"Spawn",
+    mv:"D6+3",
+    ws:4,
+    bs:6,
+    act:2,
+    wnd:10,
+    sv:5,
+    pt:15,
+    notes:Limited
 }
 
 export const Beast : OperativeBase =
@@ -35,7 +49,7 @@ export const Beast : OperativeBase =
     wnd:6,
     sv:6,
     pt:8,
-    notes:"Beasts are Limited"
+    notes:Limited
 }
 
 export const ChaosMarine : OperativeBase =

@@ -29,8 +29,8 @@ const IntroductionPage = () => {
         so. A tough game you lose narrowly is more fun than one where you curb stomp your opponent, and that’s the principle
         I’ve tried to use in the game design and that I hope people approach it.</p>
         <h4>DEVELOPMENT</h4>
-        <p>Joe, Jack, Paul, Sam and James – you know who you are. Thank you for all the input and suggestions.
-        I am (clearly!) not a professional games developer. This is very much a work in progress. If you pick this up and either play
+        <p>Joe, Jack, Paul, Sam and James – you know who you are. Thank you for all the input and suggestions.</p>
+        <p>I am (clearly!) not a professional games developer. This is very much a work in progress. If you pick this up and either play
         it or just have helpful suggestions, I’d always love to hear them. You can email me at rossatdi@gmail.com. Put Makah in the
         subject line so I know to actually read it.</p>
         <div className='blurredImg'/>

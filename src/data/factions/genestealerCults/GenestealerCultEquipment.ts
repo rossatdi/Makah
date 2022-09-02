@@ -3,7 +3,7 @@ import Equipment from "../../../types/Equipment";
 export const Locus : Equipment = 
 {
     name:"Locus",
-    effect:"Limit 2, Neophyte Only, Improve Ws to 3+, gain Bodyguard and this Operative’s Save is not modified by AP.",
+    effect:"Limit 2, Neophyte Only, Improve Ws to 3+, gain Bodyguard and Save is not modified by AP.",
     pt:7
 }
 
@@ -24,7 +24,7 @@ export const Sanctus : Equipment =
 export const Saboteur : Equipment = 
 {
     name:"Saboteur",
-    effect:"Limit 1, Neophyte Only, Improve Bs to 3+. Immediately before deploying this model, secretly write down three pieces of terrain. As an action, this character can ‘detonate’ one of the marked pieces of terrain. Pick a point on that terrain, all Operatives within 3” suffer a Shooting hit dealing d6 Damage at -1 AP. Operatives can take an Evade token and make Evade saves. Once a location has been detonated, the same one cannot be chosen again.",
+    effect:"Limit 1, Neophyte Only, Improve Bs to 3+. Immediately before deploying this model, secretly write down three pieces of terrain. As an action, this character can ‘detonate’ one of the marked pieces of terrain once each. Pick a point on that terrain, all Operatives within 3” suffer a Shooting hit dealing d6 Damage at -1 AP. Operatives can take an Evade token and make Evade saves.",
     pt:10
 }
 

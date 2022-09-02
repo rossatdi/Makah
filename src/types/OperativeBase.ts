@@ -1,3 +1,4 @@
+import DiceCalc from "./DiceCalc"
 import Point from "./Point"
 
 export type OperativeBase = Stats & {
@@ -8,7 +9,7 @@ export type OperativeBase = Stats & {
 export default OperativeBase;
 
 export type Stats = {
-    mv:number
+    mv:number | DiceCalc
     ws:number
     bs:number
     act:number

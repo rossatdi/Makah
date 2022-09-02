@@ -5,6 +5,7 @@ import { Bolter, ForceHalberd, ForceSword } from "../../weapons/ImperialWeapons"
 import { SpecialIssueAmmo } from "../astartes/AstartesEquipment"
 import { SpaceMarine } from "../astartes/AstartesOperatives"
 import { Stormbolter } from "../sisters/SistersWeapons"
+import { Limited } from './../../CommonNotes';
 
 
 export const Inquisitor : OperativeBase =
@@ -17,6 +18,19 @@ export const Inquisitor : OperativeBase =
     wnd:9,
     sv:4,
     pt:30
+}
+
+export const Hound : OperativeBase =
+{
+    type:"Hound",
+    mv:8,
+    ws:3,
+    bs:6,
+    act:2,
+    wnd:6,
+    sv:6,
+    pt:8,
+    notes:Limited
 }
 
 export const Acolyte : OperativeBase =

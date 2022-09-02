@@ -5,7 +5,7 @@ import { CamoCloak } from "../../BaseEquipment"
 export const SpecialIssueAmmo : Equipment =
 {
     name:"Special Issue Ammo",
-    effect:"After the target of a Shooting attack from a Bolt weapon has chosen to Evade or not, you may choose of the following bonuses: • Dragon fire – The attack gains Ignore Cover • Vengeance – The attack gains -1 AP and R8\". • Kraken – The attack gains +1 Damage.",
+    effect:"After the target of a Shooting attack from a Bolt weapon has chosen to Evade or not, you may choose of the following bonuses: • Dragon fire – The attack gains Ignore Cover • Vengeance – The attack gains -1 AP and R8\" (Bolt Pistols reduced to R4” instead).. • Kraken – The attack gains +1 Damage.",
     pt:5
 }
 

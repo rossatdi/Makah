@@ -79,7 +79,7 @@ export const ReaperChainCannon: Weapon = {
         attack: 3,
         dam: 2,
         ap: 0,
-        special: [Only('Chaos Marines and Possessed')],
+        special: [Only('Marines')],
       },
     ],
     pt: 2,
