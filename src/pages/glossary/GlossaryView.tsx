@@ -10,7 +10,7 @@ import { TileProps } from "../components/tile/Tile";
 import TileDisplay from "../components/tileDisplay/TileDisplay";
 import { Helmet } from "react-helmet";
 
-const factionAbilities: TileProps[] = [...Factions.map(o=> ({skill:o.ability, background:o.background, type:"Faction Ability", faction:o.name}))]
+const factionAbilities: TileProps[] = [...Factions.flatMap(o=> o.ability.map(p=>({skill:p, background:o.background, type:"Faction Ability", faction:o.name})) )]
 const factionEquipment: TileProps[] = [...Factions.flatMap(o=>o.equipment.map(p=> ({skill:p, background:o.background, type:"Equipment", faction:o.name})))]
 const wsr: TileProps[] = [...WeaponSpecialRules.map(o=>({skill:o,type:"Weapon Special Rule"}))]
 const skill: TileProps[] = [...Skills.map(o=>({skill:o,type:"Skill"}))]

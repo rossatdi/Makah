@@ -7,7 +7,7 @@ export type WeaponProfile =
 {
     name?:string
     types:[WeaponType, ...WeaponType[]]
-    attack:0|1|2|3|4|5|6 | DiceCalc
+    attack:0|1|2|3|4|5|6|7|8 | DiceCalc
     dam:0|1|2|3|4|5|6  | DiceCalc
     ap:0|-1|-2|-3|-4|-5|-6 | `-${DiceCalc}`
     special:WeaponSpecialRule[]

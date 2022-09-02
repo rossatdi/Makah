@@ -10,6 +10,7 @@ import { Necrons } from "./necrons/Necrons";
 import { Orks } from "./orks/Orks";
 import { SistersOfBattle } from "./sisters/Sisters";
 import { Tau } from "./tau/Tau";
+import { ChaosCult } from "./chaosCult/ChaosCult";
 
 export const Factions : Faction[] =
 [
@@ -23,7 +24,8 @@ export const Factions : Faction[] =
     Deldar,
     Tau,
     Necrons, 
-    GenestealerCults
+    GenestealerCults,
+    ChaosCult
 ]
 
 export default Factions;

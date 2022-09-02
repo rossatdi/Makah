@@ -28,6 +28,6 @@ export const Inquisition : Faction =
     operativeNotes:["Your Leader must be an Inquisitor","You must pick an Ordo for your faction."],
     weapons:[...InquisitionWeaponsList, ...GenericWeaponsList,...ImperialWeaponsList].filter(onlyUnique),
     equipment:InquisitionEquipment,
-    ability:UnrelentingHatred
+    ability:[UnrelentingHatred]
 }
 

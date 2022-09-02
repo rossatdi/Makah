@@ -30,5 +30,5 @@ export const Mechanicus : Faction =
     operativeNotes:["Your Leader must be an Inquisitor","You must pick an Ordo for your faction."],
     weapons:[...MechanicusWeapons, ...GenericWeaponsList,...ImperialWeaponsList].filter(onlyUnique),
     equipment:MechanicusEquipmentList,
-    ability:Shroudpsalm
+    ability:[Shroudpsalm]
 }

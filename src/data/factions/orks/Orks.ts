@@ -29,6 +29,6 @@ export const Orks : Faction =
     operativeNotes:["Your Leader must be a Nob, unless you’re running pure Grots for some reason."],
     weapons:[...OrkWeapons, ...GenericWeaponsList,...LootedImperialWeaponsList].filter(onlyUnique),
     equipment:OrkEquipment,
-    ability:Waaaagh
+    ability:[Waaaagh]
 }
 

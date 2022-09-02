@@ -27,5 +27,5 @@ export const Tau : Faction =
     operativeNotes:["Your Leader must be an Officer"],
     weapons:[...TauWeapons,...GenericWeaponsList].filter(onlyUnique),
     equipment:TauEquipment,
-    ability:TargetingPulse
+    ability:[TargetingPulse]
 }
