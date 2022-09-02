@@ -28,5 +28,5 @@ export const Astartes : Faction =
     operativeTypes:AstartesOperatives,
     weapons:[...AstartesWeaponList, ...GenericWeaponsList, ...ImperialWeaponsList].filter(onlyUnique),
     equipment:AstartesEquipmentList,
-    ability:BolterDiscipline
+    ability:[BolterDiscipline]
 }

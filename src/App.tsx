@@ -22,7 +22,7 @@ function App()
   return (
     <HashRouter basename="/">
       <Nav/>
-      <Container  className="p-3">
+      <Container className="p-3">
       <Routes>
         <Route path="/" element={<IntroductionPage/>}/>
         <Route path="/actions" element={<ActionsPage/>}/>

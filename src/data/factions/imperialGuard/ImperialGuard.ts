@@ -30,5 +30,5 @@ export const ImperialGuard : Faction =
     operativeNotes:["Your Leader must be an Officer"],
     weapons:[...ImperialGuardWeapons,...GenericWeaponsList,...ImperialWeaponsList].filter(onlyUnique),
     equipment:ImperialGuardEquipment,
-    ability:Orders
+    ability:[Orders]
 }

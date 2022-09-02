@@ -28,5 +28,5 @@ export const Necrons : Faction =
     operativeNotes:["Your Leader must be a Cryptek","Only Crypteks can select equipment"],
     weapons:[...NecronWeapons, ...GenericWeaponsList,].filter(onlyUnique),
     equipment:NecronEquipment,
-    ability:ReanimationProtocols
+    ability:[ReanimationProtocols]
 }

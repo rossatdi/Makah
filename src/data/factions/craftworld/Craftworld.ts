@@ -27,5 +27,5 @@ export const Craftworld : Faction =
     operativeTypes:CraftworldOperatives,
     weapons:[...CraftWorldWeapons, ...GenericWeaponsList].filter(onlyUnique),
     equipment:CraftworldEquipment,
-    ability:Bladestorm
+    ability:[Bladestorm]
 }

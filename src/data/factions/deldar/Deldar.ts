@@ -26,5 +26,5 @@ export const Deldar : Faction =
     operativeTypes:DeldarOperatives,
     weapons:[...DeldarWeapons, ...GenericWeaponsList].filter(onlyUnique),
     equipment:DeldarEquipment,
-    ability:PowerFromPain
+    ability:[PowerFromPain]
 }

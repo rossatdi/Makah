@@ -15,6 +15,6 @@ export type Faction =
     operativeNotes?:string[]
     weapons:Weapon[],
     equipment:Equipment[],
-    ability:FactionAbility
+    ability: [FactionAbility,...FactionAbility[]]
 }
 export default Faction;

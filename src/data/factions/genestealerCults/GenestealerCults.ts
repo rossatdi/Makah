@@ -28,5 +28,5 @@ export const GenestealerCults : Faction =
     operativeTypes:GenestealerCultOperatives,
     weapons:[...GenestealerCultsWeapons, ...ImperialWeaponsList, ...GenericWeaponsList].filter(onlyUnique),
     equipment:GenestealerCultEquipment,
-    ability:SeizeTheInitiative
+    ability:[SeizeTheInitiative]
 }

@@ -28,5 +28,5 @@ export const SistersOfBattle : Faction =
     operativeTypes:SistersOperatives,
     weapons:[...SistersWeapons, ...GenericWeaponsList, ...ImperialWeaponsList].filter(onlyUnique),
     equipment:SistersEquipmentList,
-    ability:ShieldOfFaith
+    ability:[ShieldOfFaith]
 }

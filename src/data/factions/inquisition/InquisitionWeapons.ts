@@ -4,13 +4,12 @@ import {
   NeedleRifle as ImpNeedleRifle,
 } from "../../weapons/ImperialWeapons";
 import {
-  Dangerous,
   IgnoresCover,
   Indirect,
   Torrent,
 } from "../../weapons/WeaponSpecialRules";
 import { Assault, Combat, Rifle } from "../../weapons/WeaponTypes";
-import {Webber as BaseWebber } from '../../weapons/BaseWeapons'
+import {Webber as BaseWebber, DeamonWeapon as BaseDeamonWeapon } from '../../weapons/BaseWeapons'
 
 
 const source : string = "Forces of the Inquisition"
@@ -63,17 +62,7 @@ export const NeedleRifle: Weapon = {
 };
 
 export const DeamonWeapon: Weapon = {
-  name: "Deamon Weapon",
-  profiles: [
-    {
-      types: [Combat],
-      attack: 3,
-      dam: "d6",
-      ap: -2,
-      special: [Dangerous],
-    },
-  ],
-  pt: 5,
+  ...BaseDeamonWeapon,
   source: source,
 };
 
