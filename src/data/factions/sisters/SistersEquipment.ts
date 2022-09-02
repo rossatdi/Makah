@@ -33,7 +33,7 @@ export const JumpPack : Equipment =
 export const DualPistolSpecialist : Equipment = 
 {
     name:"Dual Pistol Specialist",
-    effect:"Don't suffer the -1 to hit penalty of firing with two pistols as long as they’re the same.",
+    effect:"Don't suffer the -1 to hit penalty of firing with two pistols as long as they’re the same weapon.",
     pt:1
 }
 

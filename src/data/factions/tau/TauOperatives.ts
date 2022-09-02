@@ -21,7 +21,7 @@ export const KrootHound : OperativeBase =
     act:2,
     wnd:6,
     sv:6,
-    pt:9,
+    pt:8,
 }
 
 export const Krootox : OperativeBase =

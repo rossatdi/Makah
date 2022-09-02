@@ -10,7 +10,7 @@ export const IntegratedMissionAI : Equipment =
 export const ShieldDrone : Equipment = 
 {
     name:"Shield Drone",
-    effect:"Gain a 4+ Save that cannot be modified by AP. When a friendly operative within 3\" is targeted by a Shooting attack you may force yourself to be the target instead, but you may not evade. If choosing this option you immediately move to within 1\" of the original target.",
+    effect:"Gain a 4+ Save that cannot be modified by AP. When a friendly operative within 3\" is targeted by a Shooting attack you may force yourself to be the target instead, but you may not Evade. If choosing this option you immediately move to within 1\" of the original target.",
     pt:5
 }
 
@@ -24,7 +24,7 @@ export const CamouflageFields : Equipment =
 export const GravInhibitor : Equipment = 
 {
     name:"Grav inhibitor",
-    effect:"Enemy operatives completing a Charge within 2\" of this model are at -2\" movement.",
+    effect:"Enemy operatives attempting to complete a Charge within 2\" of this model are at -2\" movement.",
     pt:5
 }
 

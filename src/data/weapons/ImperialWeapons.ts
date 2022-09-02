@@ -11,9 +11,9 @@ import {
   Range,
   Rapid,
   Reach,
-  RerollOneToHit,
   SplitFire,
   Torrent,
+  Volley,
 } from "./WeaponSpecialRules";
 import { Assault, Combat, Heavy, Pistol, Rifle } from "./WeaponTypes";
 
@@ -153,7 +153,7 @@ export const Stormbolter: Weapon = {
       attack: 3,
       dam: 4,
       ap: 0,
-      special: [RerollOneToHit, Rapid],
+      special: [Volley(1), Rapid],
     },
   ],
 

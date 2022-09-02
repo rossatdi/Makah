@@ -56,6 +56,12 @@ export const Grenade : WeaponSpecialRule =
     effect:"All grenades are one use only and ignore cover in addition to other rules.",
 }
 
+export const Hallucination : WeaponSpecialRule =    
+{
+    name:"Hallucination",
+    effect:"An enemy Operative who is damaged by this weapon immediately makes an attack action at one of the three nearest Operatives to him (randomise the weapon and target). If the target is engaged, make a Fight action, otherwise make a Shoot action.",
+}
+
 export const Headshot : WeaponSpecialRule =    
 {
     name:"Headshot",
@@ -120,7 +126,7 @@ export function Only(x: string): WeaponSpecialRule
 {
     return {
         name:`${x} Only`,
-        effect:`This weapon may only be taken by ${x}`
+        effect:`May only be taken by named Operative type or Operative with named trait (e.g. Deamonic).`
     }
 }
 
@@ -148,7 +154,7 @@ export function Range(x: Variable): WeaponSpecialRule
 
 export const Rapid : WeaponSpecialRule = 
 {
-    name:"Rapid fire",
+    name:"RapidS",
     effect:"If the model does not Move in the same activation, they can take a second Shoot action (at -1 to Hit) targeting the same target or a target within 3\" of the original target.",
 }
 
@@ -168,12 +174,6 @@ export const Rending : WeaponSpecialRule =
 {
     name:"Rending",
     effect:"Rolls of 6 to hit gain -2 AP to the full attack.",
-}
-
-export const RerollOneToHit : WeaponSpecialRule =    
-{
-    name:"Re-roll 1s To Hit",
-    effect:"Re-roll 1s To Hit.",
 }
 
 export function Rot(x: Variable): WeaponSpecialRule  
@@ -200,6 +200,10 @@ export const Torrent : WeaponSpecialRule =
 {
     name:"Torrent",
     effect:"Use the flamer template to determine who is hit. You can split dice between targets under the template. You cannot place the template over friendly operatives.",
+}
+
+export function Volley(x:Variable) : WeaponSpecialRule{
+    return {...Rot(x), name:`Volley ${x}`} 
 }
 
 export const Small : WeaponSpecialRule  = 
@@ -237,4 +241,5 @@ export const WeaponSpecialRules : WeaponSpecialRule[] =
     Stun,
     Torrent,
     Viscous,
+    Volley("X")
 ]

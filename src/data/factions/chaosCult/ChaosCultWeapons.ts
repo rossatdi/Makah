@@ -1,5 +1,5 @@
 import Weapon from "../../../types/Weapon";
-import { Brutal, Only, Rapid, RerollOneToHit, SplitFire } from "../../weapons/WeaponSpecialRules";
+import { Brutal, Only, Rapid,  SplitFire, Volley } from "../../weapons/WeaponSpecialRules";
 import { Combat, Heavy, Rifle } from "../../weapons/WeaponTypes";
 import { DeamonWeapon as BaseDeamonWeapon } from '../../weapons/BaseWeapons'
 
@@ -14,7 +14,7 @@ export const CombiBolter: Weapon = {
       attack: 3,
       dam: 4,
       ap: 0,
-      special: [RerollOneToHit,Rapid],
+      special: [Volley(1),Rapid],
     },
   ],
   pt: 3,
