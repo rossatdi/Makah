@@ -23,7 +23,7 @@ svg{
     transform-origin: center;
 }
 
-.dropdown-menu {
+.mobile .dropdown-menu {
     height: 300px;
     overflow-y: scroll;
   }

@@ -3,6 +3,8 @@ import "./Nav.css";
 import { Factions } from "../../../data/factions/Factions";
 import { NavLink } from "react-router-dom";
 import Logo from "../../../Images/MakahLogo.svg";
+import useScreenSize from "../../../hooks/UseScreenSize";
+import ScreenSize from "../../../types/ScreenSize";
 
 const NavView = () => {
   const factionRoutes = Factions.map((o, i) => (
@@ -14,7 +16,7 @@ const NavView = () => {
       </Nav.Link>
     </NavDropdown.Item>
   ));
-
+  const screenSize = useScreenSize()
   return (
     <Navbar collapseOnSelect variant="dark" bg="dark" expand="sm" fixed="top">
       <Container>
@@ -34,6 +36,7 @@ const NavView = () => {
             <NavDropdown
               title="Factions"
               menuVariant="dark"
+              className={screenSize < ScreenSize.lg ? "mobile" : "pc"}
             >
               {factionRoutes}
             </NavDropdown>
