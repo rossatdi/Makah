@@ -1,5 +1,5 @@
 import Weapon from "../../../types/Weapon";
-import { Brutal, Only, RapidFire, RerollOneToHit, SplitFire } from "../../weapons/WeaponSpecialRules";
+import { Brutal, Only, Rapid, RerollOneToHit, SplitFire } from "../../weapons/WeaponSpecialRules";
 import { Combat, Heavy, Rifle } from "../../weapons/WeaponTypes";
 import { DeamonWeapon as BaseDeamonWeapon } from '../../weapons/BaseWeapons'
 
@@ -14,7 +14,7 @@ export const CombiBolter: Weapon = {
       attack: 3,
       dam: 4,
       ap: 0,
-      special: [RerollOneToHit,RapidFire],
+      special: [RerollOneToHit,Rapid],
     },
   ],
   pt: 3,
@@ -29,7 +29,7 @@ export const ReaperChainCannon: Weapon = {
         attack: 8,
         dam: 2,
         ap: 0,
-        special: [SplitFire,RapidFire],
+        special: [SplitFire,Rapid],
       },
     ],
     pt: 6,

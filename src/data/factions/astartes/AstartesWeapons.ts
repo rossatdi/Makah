@@ -1,6 +1,6 @@
 import Weapon from "../../../types/Weapon";
 import {
-  RapidFire,
+  Rapid,
   Aim,
   Headshot,
   Range,
@@ -19,7 +19,7 @@ export const BoltCarbine: Weapon = {
       attack: 3,
       dam: 4,
       ap: 0,
-      special: [RapidFire],
+      special: [Rapid],
     },
   ],
   pt: 2,
