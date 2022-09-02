@@ -1,5 +1,5 @@
 import Weapon from "../../../types/Weapon";
-import { NonLethal, Stun,Range, Aim, Inaccurate, Reckless, Rending, Brutal, Blast, Only } from "../../weapons/WeaponSpecialRules";
+import { NonLethal, Stun,Range, Aim, Inaccurate, Reckless, Rending, Brutal, Blast, Only, Headshot } from "../../weapons/WeaponSpecialRules";
 import { Combat, Grenade, Heavy, Pistol } from "../../weapons/WeaponTypes";
 import {Webber as BaseWebber } from '../../weapons/BaseWeapons'
 
@@ -73,7 +73,7 @@ export const WebPistol: Weapon = {
         attack:  3,
         dam: 4,
         ap: -1,
-        special: [Aim],
+        special: [Aim, Headshot],
       },
     ],
     pt: 5,
@@ -118,7 +118,7 @@ export const WebPistol: Weapon = {
         attack:  3,
         dam: 2,
         ap: 0,
-        special: [Only("Genestealer")],
+        special: [Only("Genestealers")],
       },
     ],
     pt: 0,
@@ -133,7 +133,7 @@ export const WebPistol: Weapon = {
         attack:  5,
         dam: 3,
         ap: -1,
-        special: [Reckless, Only("Genestealer")],
+        special: [Reckless, Only("Genestealers")],
       },
     ],
     pt: 5,
@@ -148,7 +148,7 @@ export const WebPistol: Weapon = {
         attack:  5,
         dam: 3,
         ap: -1,
-        special: [Reckless, Rending, Only("Genestealer")],
+        special: [Reckless, Rending, Only("Genestealers")],
       },
     ],
     pt: 7,
@@ -215,3 +215,5 @@ export const WebPistol: Weapon = {
     HeavyPowerWeapon,
     BlastingCharges
   ]
+
+  export default GenestealerCultsWeapons;

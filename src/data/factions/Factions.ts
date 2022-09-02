@@ -2,6 +2,7 @@ import Faction from "../../types/Faction";
 import { Astartes } from "./astartes/Astartes";
 import { Craftworld } from "./craftworld/Craftworld";
 import { Deldar } from "./deldar/Deldar";
+import { GenestealerCults } from "./genestealerCults/GenestealerCults";
 import { ImperialGuard } from "./imperialGuard/ImperialGuard";
 import { Inquisition } from "./inquisition/Inquisition";
 import { Mechanicus } from "./mechanicus/Mechanicus";
@@ -21,7 +22,8 @@ export const Factions : Faction[] =
     Craftworld,
     Deldar,
     Tau,
-    Necrons
+    Necrons, 
+    GenestealerCults
 ]
 
 export default Factions;
