@@ -152,7 +152,7 @@ export const Tireless : Skill =
 export const VoiceOfCommand : Skill = 
 {
     name:"Voice of command",
-    effect:"Unique action: Friendly operatives within 3\" Evade suppression tokens.",
+    effect:"Unique action: Friendly operatives within 3\" remove Evade tokens.",
     pt:5
 }
 
