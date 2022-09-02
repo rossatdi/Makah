@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Skills from "../../data/Skills";
 import { TileProps } from "../components/tile/Tile";
 import TileDisplay from "../components/tileDisplay/TileDisplay";
@@ -5,6 +6,9 @@ import TileDisplay from "../components/tileDisplay/TileDisplay";
 const skills: TileProps[] = [...Skills.map(o=>({skill:o,type:"Skill"}))]
 const SkillsPage = () => {
     return (<div>
+          <Helmet>
+            <title>Skills</title>
+          </Helmet>
      <h1>SKILLS</h1>
     <p>
       The following list of generic skills can be purchased during crew building

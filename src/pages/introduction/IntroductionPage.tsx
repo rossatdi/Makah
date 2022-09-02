@@ -1,6 +1,10 @@
+import { Helmet } from 'react-helmet';
 import './IntroductionPage.css'
 
 const page = () => <div>
+    <Helmet>
+        <title>Makah</title>
+    </Helmet>
     <h1>INTRODUCTION</h1>
     <hr/>
     <p>The Makah Incident was born out of a desire to play a 40k inspired skirmish game that was fast and balanced game and

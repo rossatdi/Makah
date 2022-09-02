@@ -5,6 +5,7 @@ import { Link  } from "react-router-dom";
 
 import './AllWeapons.css';
 import { WeaponTileProps } from './../components/weaponTIle/WeaponTile';
+import { Helmet } from "react-helmet";
 
 const weapons: WeaponTileProps[] = 
 [...Factions.flatMap(o=>o.weapons)]
@@ -18,6 +19,9 @@ const weapons: WeaponTileProps[] =
 
 const allWeapons = () => {
   return (<div>
+    <Helmet>
+      <title>Weapons</title>
+    </Helmet>
     <h1>WEAPONS</h1>
     <h5><Link to="/weapons/rules">Special Rules</Link></h5>
     <WeaponBlock items={weapons} showFilter={true} source={""}/>
