@@ -9,6 +9,8 @@ import { NoteIcons } from "../components/Notes";
 import TileDisplay from "../components/tileDisplay/TileDisplay";
 import { WeaponTileProps } from "../components/weaponTIle/WeaponTile";
 import { getKey } from "../../functions/keys";
+import {Helmet} from 'react-helmet'
+
 
 const OperativesView = (operatives: OperativeBase[]) => {
   const icons = [...NoteIcons]
@@ -67,6 +69,10 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
 
   return (
     <div className="factionView" style={{ backgroundImage:`url(${faction.background})`}}>
+      <Helmet>
+        <title>{faction.name}</title>
+      </Helmet>
+      
       <h1>{faction.name}</h1>
       <hr />
       {faction.quote.split("\n").map(o=><p key={getKey()} className="quote">{o}</p>)}

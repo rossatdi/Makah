@@ -8,6 +8,7 @@ import { Factions } from './../../data/factions/Factions';
 import './GlossaryView.css'
 import { TileProps } from "../components/tile/Tile";
 import TileDisplay from "../components/tileDisplay/TileDisplay";
+import { Helmet } from "react-helmet";
 
 const factionAbilities: TileProps[] = [...Factions.map(o=> ({skill:o.ability, background:o.background, type:"Faction Ability", faction:o.name}))]
 const factionEquipment: TileProps[] = [...Factions.flatMap(o=>o.equipment.map(p=> ({skill:p, background:o.background, type:"Equipment", faction:o.name})))]
@@ -19,6 +20,9 @@ const glossaryTerms : TileProps[] = [...terms, ...skill, ...factionEquipment, ..
 
 export const Page = () => {
   return (<Container className="glossary">
+            <Helmet>
+            <title>Glossary</title>
+        </Helmet>
     <h1>Glossary</h1>
     <TileDisplay items={glossaryTerms} showFilter={true}/>
     </Container>)}
