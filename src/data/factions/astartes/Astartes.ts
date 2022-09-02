@@ -15,7 +15,7 @@ const Name : string = "Adeptus Astartes"
 export const BolterDiscipline :FactionAbility =
 {
     name: "Bolter Discipline",
-    effect:"Once per game, immediately before rolling to see who goes first, you may enact Bolter Discipline. For that turn you may ignore the restriction of movement on the Rapid sFire pecial rule for Bolt weapons."
+    effect:"Once per game, immediately before rolling to see who goes first, you may enact Bolter Discipline. For that turn you may ignore the restriction of movement and target selection on the Rapid special rule for Bolt weapons."
 }
 
 export const Astartes : Faction =
