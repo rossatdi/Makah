@@ -96,6 +96,6 @@ export const GreyKnightS : Operative =
 }
 //TODO add all imperial operative, and special ordo units
 export const ImperialOperatatives : OperativeBase[] =
-[Inquisitor,Acolyte,Warrior, Deathwatch, GreyKnightH, GreyKnightS]
+[Inquisitor,Hound,Acolyte,Warrior, Deathwatch, GreyKnightH, GreyKnightS]
 
 export default ImperialOperatatives;
