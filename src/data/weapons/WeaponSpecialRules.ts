@@ -154,7 +154,7 @@ export function Range(x: Variable): WeaponSpecialRule
 
 export const Rapid : WeaponSpecialRule = 
 {
-    name:"RapidS",
+    name:"Rapid",
     effect:"If the model does not Move in the same activation, they can take a second Shoot action (at -1 to Hit) targeting the same target or a target within 3\" of the original target.",
 }
 
