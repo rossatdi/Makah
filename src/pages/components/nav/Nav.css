@@ -22,3 +22,8 @@ svg{
     transform: scale(-1, 1);
     transform-origin: center;
 }
+
+.dropdown-menu {
+    height: 300px;
+    overflow-y: scroll;
+  }
