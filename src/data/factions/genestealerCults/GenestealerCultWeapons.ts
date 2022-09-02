@@ -109,6 +109,21 @@ export const WebPistol: Weapon = {
     pt: 5,
     source: source,
   };
+  
+  export const KnifeAndClaws: Weapon = {
+    name: "Knife and claws",
+    profiles: [
+      {
+        types: [Combat],
+        attack:  3,
+        dam: 2,
+        ap: 0,
+        special: [],
+      },
+    ],
+    pt: 0,
+    source: source,
+  };
 
   export const FrontClaws: Weapon = {
     name: "Front Claws",
