@@ -5,17 +5,19 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../../Images/MakahLogo.svg";
 import useScreenSize from "../../../hooks/UseScreenSize";
 import ScreenSize from "../../../types/ScreenSize";
+import KofiButton from "kofi-button";
+
+const factionRoutes = Factions.map((o, i) => (
+  <NavDropdown.Item key={i}>
+    <Nav.Link eventKey="1" as={NavLink} to={`/factions/${o.slug}`}>
+      <div className="factionLink">
+       {o.name}<o.icon className={o.slug}/>
+      </div>
+    </Nav.Link>
+  </NavDropdown.Item>
+));
 
 const NavView = () => {
-  const factionRoutes = Factions.map((o, i) => (
-    <NavDropdown.Item key={i}>
-      <Nav.Link eventKey="1" as={NavLink} to={`/factions/${o.slug}`}>
-        <div className="factionLink">
-         {o.name}<o.icon className={o.slug}/>
-        </div>
-      </Nav.Link>
-    </NavDropdown.Item>
-  ));
   const screenSize = useScreenSize()
   return (
     <Navbar collapseOnSelect variant="dark" bg="dark" expand="sm" fixed="top">
@@ -48,7 +50,12 @@ const NavView = () => {
             <Nav.Link eventKey="1" as={NavLink} to="/crew">Crew</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Container>
+        {false &&  screenSize >= ScreenSize.lg && <Nav className="justify-content-end">
+                <Nav.Item >
+                    <KofiButton  color="#0a9396" title="Donate" kofiID="" />
+                </Nav.Item>
+              </Nav>} 
+      </Container>      
     </Navbar>
   );
 };

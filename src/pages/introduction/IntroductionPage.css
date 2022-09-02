@@ -7,3 +7,23 @@
     height: 50vh;
     box-shadow: 0 0 8px 8px white inset,0 0 8px 8px white inset;
 }
+
+.footer {
+    background-color: #F8F8F8;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spacer{
+    padding: 20px;
+    height: 60px;
+    width: 100%;
+}
