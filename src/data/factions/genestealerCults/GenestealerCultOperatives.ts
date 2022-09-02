@@ -59,5 +59,16 @@ export const Genestealer : OperativeBase =
     wnd:8,
     sv:4,
     pt:30,
-    notes:"Genestealer as Limited"
+    notes:"Genestealer as Limited, and may only equip Claws"
 }
+
+const GenestealerCultOperatives : OperativeBase[] =
+[
+    Acolyte,
+    Neophyte,
+    Aberrant,
+    Magus,
+    Genestealer
+]
+
+export default GenestealerCultOperatives;

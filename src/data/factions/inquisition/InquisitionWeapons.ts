@@ -7,12 +7,11 @@ import {
   Dangerous,
   IgnoresCover,
   Indirect,
-  NonLethal,
-  Range,
-  Stun,
   Torrent,
 } from "../../weapons/WeaponSpecialRules";
 import { Assault, Combat, Rifle } from "../../weapons/WeaponTypes";
+import {Webber as BaseWebber } from '../../weapons/BaseWeapons'
+
 
 const source : string = "Forces of the Inquisition"
 
@@ -23,17 +22,7 @@ export const NeedlePistol: Weapon = {
 };
 
 export const Webber: Weapon = {
-  name: "Webber",
-  profiles: [
-    {
-      types: [Assault],
-      attack: 4,
-      dam: 1,
-      ap: 0,
-      special: [Stun, NonLethal, Range(6)],
-    },
-  ],
-  pt: 1,
+  ...BaseWebber,
   source: source,
 };
 
