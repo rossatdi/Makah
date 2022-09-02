@@ -116,7 +116,7 @@ export const EnmiticDisintegrator: Weapon = {
         attack: 3,
         dam: 4,
         ap: -1,
-        special: [Gauss(1), Range(8)],
+        special: [Gauss(2), Range(8)],
       },
     ],
     pt: 2,

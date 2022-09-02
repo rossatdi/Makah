@@ -9,11 +9,11 @@ import {
   OneUse,
   Only,
   Range,
-  RapidFire,
+  Rapid,
   Reach,
-  RerollOneToHit,
   SplitFire,
   Torrent,
+  Volley,
 } from "./WeaponSpecialRules";
 import { Assault, Combat, Heavy, Pistol, Rifle } from "./WeaponTypes";
 
@@ -42,7 +42,7 @@ export const BoltPistol: Weapon = {
       attack: 3,
       dam: 4,
       ap: 0,
-      special: [Range(6), RapidFire],
+      special: [Range(6), Rapid],
     },
   ],
   pt: 1,
@@ -153,7 +153,7 @@ export const Stormbolter: Weapon = {
       attack: 3,
       dam: 4,
       ap: 0,
-      special: [RerollOneToHit, RapidFire],
+      special: [Volley(1), Rapid],
     },
   ],
 
@@ -169,7 +169,7 @@ export const Lasgun: Weapon = {
       attack: 2,
       dam: 3,
       ap: 0,
-      special: [RapidFire],
+      special: [Rapid],
     },
   ],
 
@@ -185,7 +185,7 @@ export const Bolter: Weapon = {
       attack: 3,
       dam: 4,
       ap: 0,
-      special: [RapidFire],
+      special: [Rapid],
     },
   ],
 
@@ -282,7 +282,7 @@ export const HeavyBolter: Weapon = {
       attack: 5,
       dam: 4,
       ap: 0,
-      special: [SplitFire, RapidFire],
+      special: [SplitFire, Rapid],
     },
   ],
 

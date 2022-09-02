@@ -7,7 +7,7 @@ import {
   IgnoresCover,
   Indirect,
   Range,
-  RapidFire,
+  Rapid,
   Reach,
   Reckless,
   Small,
@@ -57,22 +57,7 @@ export const Autogun: Weapon = {
       attack: 3,
       dam: 2,
       ap: 0,
-      special: [RapidFire],
-    },
-  ],
-  pt: 0,
-  source: source,
-};
-
-export const Shotgun: Weapon = {
-  name: "Shotgun",
-  profiles: [
-    {
-      types: [Assault],
-      attack: 2,
-      dam: 4,
-      ap: 0,
-      special: [Range(8)],
+      special: [Rapid],
     },
   ],
   pt: 0,
@@ -94,20 +79,22 @@ export const Flamer: Weapon = {
   source: source,
 };
 
-export const SniperRifle: Weapon = {
-  name: "Sniper Rifle",
+
+export const Shotgun: Weapon = {
+  name: "Shotgun",
   profiles: [
     {
-      types: [Heavy],
-      attack: 3,
+      types: [Assault],
+      attack: 2,
       dam: 4,
-      ap: -1,
-      special: [Headshot, Aim],
+      ap: 0,
+      special: [Range(8)],
     },
   ],
-  pt: 5,
+  pt: 0,
   source: source,
 };
+
 
 export const Autocannon: Weapon = {
   name: "Autocannon",
@@ -123,6 +110,7 @@ export const Autocannon: Weapon = {
   pt: 8,
   source: source,
 };
+
 export const MissileLauncher: Weapon = {
   name: "Missile Launcher",
   profiles: [
@@ -146,6 +134,7 @@ export const MissileLauncher: Weapon = {
   pt: 8,
   source: source,
 };
+
 export const Mortar: Weapon = {
   name: "Mortar",
   profiles: [
@@ -161,15 +150,30 @@ export const Mortar: Weapon = {
   source: source,
 };
 
-export const Knife: Weapon = {
-  name: "Knife",
+export const SniperRifle: Weapon = {
+  name: "Sniper Rifle",
+  profiles: [
+    {
+      types: [Heavy],
+      attack: 3,
+      dam: 4,
+      ap: -1,
+      special: [Headshot, Aim],
+    },
+  ],
+  pt: 5,
+  source: source,
+};
+
+export const Axe: Weapon = {
+  name: "Axe",
   profiles: [
     {
       types: [Combat],
       attack: 2,
-      dam: 2,
+      dam: 4,
       ap: 0,
-      special: [Small],
+      special: [],
     },
   ],
   pt: 0,
@@ -191,63 +195,33 @@ export const ClawsAndTeeth: Weapon = {
   source: source,
 };
 
-export const Sword: Weapon = {
-  name: "Sword",
+export const CombatShield: Weapon = {
+  name: "Combat Shield",
   profiles: [
     {
       types: [Combat],
       attack: 3,
-      dam: 3,
+      dam: 0,
       ap: 0,
-      special: [],
+      special: [Defensive],
     },
   ],
-  pt: 0,
+  pt: 3,
   source: source,
 };
 
-export const Axe: Weapon = {
-  name: "Axe",
+export const Knife: Weapon = {
+  name: "Knife",
   profiles: [
     {
       types: [Combat],
       attack: 2,
-      dam: 4,
-      ap: 0,
-      special: [],
-    },
-  ],
-  pt: 0,
-  source: source,
-};
-
-export const Spear: Weapon = {
-  name: "Spear",
-  profiles: [
-    {
-      types: [Combat],
-      attack: 3,
       dam: 2,
       ap: 0,
-      special: [Reach],
+      special: [Small],
     },
   ],
   pt: 0,
-  source: source,
-};
-
-export const PowerSword: Weapon = {
-  name: "Power Sword",
-  profiles: [
-    {
-      types: [Combat],
-      attack: 3,
-      dam: 3,
-      ap: -2,
-      special: [],
-    },
-  ],
-  pt: 5,
   source: source,
 };
 
@@ -281,18 +255,48 @@ export const PowerMaul: Weapon = {
   source: source,
 };
 
-export const CombatShield: Weapon = {
-  name: "Combat Shield",
+export const PowerSword: Weapon = {
+  name: "Power Sword",
   profiles: [
     {
       types: [Combat],
       attack: 3,
-      dam: 0,
-      ap: 0,
-      special: [Defensive],
+      dam: 3,
+      ap: -2,
+      special: [],
     },
   ],
-  pt: 3,
+  pt: 5,
+  source: source,
+};
+
+export const Spear: Weapon = {
+  name: "Spear",
+  profiles: [
+    {
+      types: [Combat],
+      attack: 3,
+      dam: 2,
+      ap: 0,
+      special: [Reach],
+    },
+  ],
+  pt: 0,
+  source: source,
+};
+
+export const Sword: Weapon = {
+  name: "Sword",
+  profiles: [
+    {
+      types: [Combat],
+      attack: 3,
+      dam: 3,
+      ap: 0,
+      special: [],
+    },
+  ],
+  pt: 0,
   source: source,
 };
 
@@ -345,21 +349,21 @@ export const GenericWeaponsList: Weapon[] = [
   Autopistol,
   Stubgun,
   Autogun,
-  Shotgun,
   Flamer,
-  SniperRifle,
+  Shotgun,
   Autocannon,
   MissileLauncher,
   Mortar,
-  Knife,
-  ClawsAndTeeth,
-  Sword,
+  SniperRifle,
   Axe,
-  Spear,
-  PowerSword,
+  ClawsAndTeeth,
+  CombatShield,
+  Knife,
   PowerAxe,
   PowerMaul,
-  CombatShield,
+  PowerSword,
+  Spear,
+  Sword,
   FragGrenade,
   KrakGrenade,
   StunGrenade,

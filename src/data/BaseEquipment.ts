@@ -34,6 +34,6 @@ export const ServoSkull: Equipment =
 export const MIU: Equipment =
 {
     name:"MIU",
-    effect:"Add to one pistol or assault weapon. That weapon can be fired as an additional Shoot action at Bs 5+ that neither costs actions or stops the Operative carrying out a normal Shoot. The weapon can be fired normally instead.",
+    effect:"Add to one pistol or assault weapon. That weapon can be fired as an additional Shoot action at Bs 5+ that neither costs an action or stops the Operative carrying out a normal Shoot. The weapon can be fired normally instead.",
     pt:5
 }

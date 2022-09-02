@@ -39,7 +39,7 @@ export const DefiledTrophies : Equipment =
 export const VeteranOfTheLongWar : Equipment =
 {
     name:"Veteran of the Long War",
-    effect:"Black Legion Only, Marine Only, This Operative can re-roll 1s to hit. When targeting Imperial faction Operatives, they ignore the -1 to hit effect of Rapid Fire.",
+    effect:"This Operative can re-roll 1s to hit. When targeting Imperial faction Operatives, they ignore the -1 to hit effect of Rapid. Black Legion Marines and Possessed can take this for 2 points.",
     pt:5
 }
 

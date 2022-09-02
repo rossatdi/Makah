@@ -1,0 +1,1 @@
+export const Limited : string= "This Operative is Limited."

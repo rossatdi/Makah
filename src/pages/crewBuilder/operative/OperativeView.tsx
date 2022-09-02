@@ -19,7 +19,7 @@ const leader : StatModifier = {
 const finalizeStats = (stats : Operative, modifiers : StatModifier[]) : Stats =>{
     return (
         {
-            mv: stats.mv + modifiers.map(o=>o?.mv ??0).reduce((a,b)=>a+b,0),
+            mv: stats.mv, //TODO this is all broke
             ws: stats.ws + modifiers.map(o=>o?.ws ??0).reduce((a,b)=>a+b,0),
             bs:stats.bs + modifiers.map(o=>o?.bs ??0).reduce((a,b)=>a+b,0),
             act:stats.act + modifiers.map(o=>o?.act ??0).reduce((a,b)=>a+b,0),

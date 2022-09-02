@@ -38,10 +38,17 @@ export const PowerArmor: Equipment =
     pt:5
 }
 
+export const HallucinogenRounds: Equipment =
+{
+    name:"Hallucinogen rounds",
+    effect:"Needle weapons only, Needle weapons can optionally add the Hallucination special rule but reduce damage by 1.",
+    pt:4
+}
+
 export const CarapaceArmor: Equipment =
 {...CarapaceArmorBase, pt:2} 
 
 export const InquisitionEquipment : Equipment[] =
-[ServoSkull,MIU,CombatStims,ArtificerWeapon,RefactorField,PowerArmor,CarapaceArmor]
+[ServoSkull,MIU,CombatStims,ArtificerWeapon,RefactorField,PowerArmor,CarapaceArmor, HallucinogenRounds]
 
 export default InquisitionEquipment;

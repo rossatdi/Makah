@@ -15,7 +15,7 @@ const Name : string = "Adeptus Mechanicus"
 export const Shroudpsalm: FactionAbility =
 {
     name: "Shroudpsalm",
-    effect:"Once per game, immediately before rolling to see who goes first, you can activate Shroudpsalm. That turn, all Shooting attacks targeting your Operative are at -1 to hit if they come from further than 6\" away."
+    effect:"Once per game, immediately before rolling to see who goes first, you can activate Shroudpsalm. That turn, all attacks targeting your Operative are at -1 to hit but your Operatives don't count as in cover"
 }
 
 export const Mechanicus : Faction =
