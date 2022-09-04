@@ -9,6 +9,7 @@ import GenestealerCultEquipment from "./GenestealerCultEquipment";
 import GenestealerCultOperatives from "./GenestealerCultOperatives";
 import GenestealerCultsWeapons from "./GenestealerCultWeapons";
 import ImperialWeaponsList from "../../weapons/ImperialWeapons";
+import GenestealCultPsychicPowers from "./GenestealerCultPsychic";
 const Name : string = "Genestealer Cults"
 
 export const SeizeTheInitiative:FactionAbility =
@@ -28,5 +29,6 @@ export const GenestealerCults : Faction =
     operativeTypes:GenestealerCultOperatives,
     weapons:[...GenestealerCultsWeapons, ...ImperialWeaponsList, ...GenericWeaponsList].filter(onlyUnique),
     equipment:GenestealerCultEquipment,
+    psychicPowers:GenestealCultPsychicPowers,
     ability:[SeizeTheInitiative]
 }

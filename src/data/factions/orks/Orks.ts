@@ -9,6 +9,7 @@ import OrkWeapons from "./OrkWeapons";
 
 import { ReactComponent as icon} from '../../../Images/factionIcons/Orks.svg'
 import background from '../../../Images/factionIcons/Orks.svg'
+import OrkPsychicPowers from "./OrkPsychic";
 
 const Name : string = "Orks"
 
@@ -29,6 +30,7 @@ export const Orks : Faction =
     operativeNotes:["Your Leader must be a Nob, unless you’re running pure Grots for some reason."],
     weapons:[...OrkWeapons, ...GenericWeaponsList,...LootedImperialWeaponsList].filter(onlyUnique),
     equipment:OrkEquipment,
+    psychicPowers: OrkPsychicPowers,
     ability:[Waaaagh]
 }
 

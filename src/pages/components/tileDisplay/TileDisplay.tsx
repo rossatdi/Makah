@@ -39,6 +39,7 @@ export const TileTable = ({items, showFilter}:{items:TileProps[], showFilter:boo
   const filtered = items.filter(o=>tileFilter(o,query))
   const showFactions = items.some(o=>o.faction);
   const showType = items.some(o=>o.type);
+  const showPt = items.some(o=>o.skill.pt);
 
   return(
     <>
@@ -48,7 +49,7 @@ export const TileTable = ({items, showFilter}:{items:TileProps[], showFilter:boo
         <tr key={getKey()} >
           <th>Skill</th>
           <th>Effect</th>
-          <th>Points</th>
+          {showPt && <th>Points</th>}
           {showType && <th>Type</th>}
           {showFactions && <th>Faction</th>}
         </tr>
@@ -57,7 +58,7 @@ export const TileTable = ({items, showFilter}:{items:TileProps[], showFilter:boo
         {filtered.map(o=><tr key={getKey()} >
         <td>{o.skill.name}</td>
         <td>{o.skill.effect}</td>
-        <td>{o.skill.pt ?? "-"}</td>
+        {showPt && <td>{o.skill.pt}</td>}
         {showType && <td>{o.type}</td>}
         {showFactions && <td>{o.faction}</td>}
         </tr>)}
