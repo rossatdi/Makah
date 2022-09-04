@@ -31,14 +31,16 @@ export const CombatStimms : Equipment =
 export const NewManOfBile : Equipment = 
 {
     name:"New man of Bile",
-    effect:"Marine Only, At the start of the game, roll a d6. On 1 this Operative is reduced to 2 Actions. On 2-3 add 1\" to Movement, on a 5 improve Ws by 1, on a 6 add 2 Wounds.",
+    effect:"At the start of the game, roll a d6. On 1 this Operative is reduced to 2 Actions. On 2-3 add 1\" to Movement, on a 5 improve Ws by 1, on a 6 add 2 Wounds.",
+    restrictons:"Marine Only",
     pt:4
 }
 
 export const Daemonic : Equipment = 
 {
     name:"Daemonic",
-    effect:"Daemonette Only, This Operative always counts as having an Evade token when Shot at.",
+    effect:"This Operative always counts as having an Evade token when Shot at.",
+    restrictons:"Daemonette Only",
     pt:0
 }
 

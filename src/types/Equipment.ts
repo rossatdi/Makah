@@ -7,6 +7,7 @@ export type Equipment = {
     effect:string
     modifier?:StatModifier,
     requirement?:StatRequirement
+    restrictons?:string
     pt:Point
 }
 

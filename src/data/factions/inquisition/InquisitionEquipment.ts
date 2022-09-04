@@ -41,7 +41,8 @@ export const PowerArmor: Equipment =
 export const HallucinogenRounds: Equipment =
 {
     name:"Hallucinogen rounds",
-    effect:"Needle weapons only, Needle weapons can optionally add the Hallucination special rule but reduce damage by 1.",
+    effect:"Needle weapons can optionally add the Hallucination special rule but reduce damage by 1.",
+    restrictons:"Needle weapons only",
     pt:4
 }
 

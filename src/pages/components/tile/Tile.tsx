@@ -24,6 +24,7 @@ const Tile = ({skill, type, background, faction}:TileProps) => {
                 </div>
                 </Card.Header>
         <Card.Body className="body" style={{backgroundImage: background ?`url(${background})`:"none"}} >
+            {skill.restrictons && <Card.Subtitle className="mb-2 text-muted">{skill.restrictons}</Card.Subtitle>}
             {handleText(skill.effect).map((o,i)=><Card.Text key={i}>{o}</Card.Text>)}
         </Card.Body>
     </Card>)
