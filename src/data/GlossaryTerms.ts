@@ -12,7 +12,7 @@ export const Evade : GlossaryTerm ={
 
 export const GlossaryTerms : GlossaryTerm[] =
 [
-    Limited
+    Limited, Evade
 ]
 
 export default GlossaryTerms;
