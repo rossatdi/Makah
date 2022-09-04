@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Makah/static/css/main.4f8f67c4.css",
-    "main.js": "/Makah/static/js/main.c09b0a00.js",
+    "main.js": "/Makah/static/js/main.f224ca94.js",
     "static/media/Astartes.svg": "/Makah/static/media/Astartes.be9ba7520029ce06a662b076938a1294.svg",
     "static/media/ChaosCults.svg": "/Makah/static/media/ChaosCults.fb99aed1fbe9e449cc9de5614d2e39c5.svg",
     "static/media/GenestealerCults.svg": "/Makah/static/media/GenestealerCults.1696d020fd606b27cecb125d9fa26875.svg",
@@ -10,6 +10,7 @@
     "static/media/Guard.svg": "/Makah/static/media/Guard.f03e2de26a4c304577500b3656004efa.svg",
     "static/media/Inquisition.svg": "/Makah/static/media/Inquisition.e520242134adbadcf0f1ec4498e13bf6.svg",
     "static/media/Sisters.svg": "/Makah/static/media/Sisters.81ae51c3cbb6085ac1dac7b2c1f06c9b.svg",
+    "static/media/Slaanesh.svg": "/Makah/static/media/Slaanesh.7b3366edd003ab3d7473a6e085af8ed6.svg",
     "static/media/Craftworld.svg": "/Makah/static/media/Craftworld.975d6b2389a8304a0bdf47b9f1b09391.svg",
     "static/media/Orks.svg": "/Makah/static/media/Orks.c91841c00600e361f4dce7e4b16832f0.svg",
     "static/media/MakahLogo.svg": "/Makah/static/media/MakahLogo.bbe38d77c5f0c6942ddb67ad48159782.svg",
@@ -17,10 +18,10 @@
     "static/media/Necrons.svg": "/Makah/static/media/Necrons.2a4a4d69ef0e691007eb431337543da2.svg",
     "index.html": "/Makah/index.html",
     "main.4f8f67c4.css.map": "/Makah/static/css/main.4f8f67c4.css.map",
-    "main.c09b0a00.js.map": "/Makah/static/js/main.c09b0a00.js.map"
+    "main.f224ca94.js.map": "/Makah/static/js/main.f224ca94.js.map"
   },
   "entrypoints": [
     "static/css/main.4f8f67c4.css",
-    "static/js/main.c09b0a00.js"
+    "static/js/main.f224ca94.js"
   ]
 }
