@@ -92,7 +92,10 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
       {faction.ability.map(o=><Tile key={getKey()} skill={o}/>)}
       
       <h3>Equipment</h3>
-      <TileDisplay items={faction.equipment.map(o=> {return{skill:o}})} showFilter={false}></TileDisplay>
+      <TileDisplay items={faction.equipment.map(o=> {return{skill:o}})} showFilter={false}/>
+      {faction.psychicPowers &&  <><h3>Psychic Powers</h3>
+      <TileDisplay items={faction.psychicPowers.map(o=> {return{skill:o}})} showFilter={false}/></>}
+      
       <h3>Weapons</h3>
       <WeaponBlock items={weapons} showFilter={true} source={faction.name}/>
     </div>

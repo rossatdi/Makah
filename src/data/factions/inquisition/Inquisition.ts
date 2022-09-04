@@ -9,6 +9,7 @@ import ImperialWeaponsList from './../../weapons/ImperialWeapons';
 
 import { ReactComponent as icon} from '../../../Images/factionIcons/Inquisition.svg'
 import background from '../../../Images/factionIcons/Inquisition.svg'
+import InquisitionPsychicPowers from "./InquisitionPsychic";
 const Name : string = "Forces of the Inquisition"
 
 export const UnrelentingHatred : FactionAbility =
@@ -28,6 +29,7 @@ export const Inquisition : Faction =
     operativeNotes:["Your Leader must be an Inquisitor","You must pick an Ordo for your faction."],
     weapons:[...InquisitionWeaponsList, ...GenericWeaponsList,...ImperialWeaponsList].filter(onlyUnique),
     equipment:InquisitionEquipment,
+    psychicPowers:InquisitionPsychicPowers,
     ability:[UnrelentingHatred]
 }
 

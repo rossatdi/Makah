@@ -7,7 +7,6 @@ TODO tyranids\
 TODO chaos cult\
 TODO khorne\
 TODO nurgle\
-TODO slaanesh\
 TODO tzeench\
 TODO Combined tile & weaponTile display for glossary\
 TODO limit operative stats to appropiate values\

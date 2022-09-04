@@ -1,6 +1,7 @@
 import Equipment from "./Equipment"
 import FactionAbility from "./FactionAbility"
 import OperativeBase from "./OperativeBase"
+import PsychicPower from "./PsychicPower"
 import Weapon from "./Weapon"
 
 export type Faction = 
@@ -15,6 +16,7 @@ export type Faction =
     operativeNotes?:string[]
     weapons:Weapon[],
     equipment:Equipment[],
+    psychicPowers?:PsychicPower[]
     ability: [FactionAbility,...FactionAbility[]]
 }
 export default Faction;

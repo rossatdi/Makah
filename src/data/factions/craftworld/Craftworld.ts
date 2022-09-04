@@ -8,6 +8,7 @@ import CraftworldEquipment from "./CraftworldEquipment";
 
 import { ReactComponent as icon} from '../../../Images/factionIcons/Craftworld.svg'
 import background from '../../../Images/factionIcons/Craftworld.svg'
+import CraftworldPsychicPowers from "./CraftworldPsychic";
 
 const Name : string = "Craftworld Eldar"
 
@@ -27,5 +28,6 @@ export const Craftworld : Faction =
     operativeTypes:CraftworldOperatives,
     weapons:[...CraftWorldWeapons, ...GenericWeaponsList].filter(onlyUnique),
     equipment:CraftworldEquipment,
+    psychicPowers:CraftworldPsychicPowers,
     ability:[Bladestorm]
 }

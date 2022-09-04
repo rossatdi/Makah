@@ -10,6 +10,7 @@ import CultOfExcessWeapons from "./CultOfExcessWeapons";
 import CultOfExcessEquipment from "./CultOfExcessEquipment";
 import ImperialWeaponsList from "../../weapons/ImperialWeapons";
 import ChaosCultWeapons from "../chaosCult/ChaosCultWeapons";
+import CultOfExcessPsychicPowers from "./CultOfExcessPsychic";
 
 const Name : string = "Cult of Excess"
 
@@ -30,5 +31,6 @@ export const CultOfExcess : Faction =
     operativeTypes:CultOfExcessOperatives,
     weapons:[...CultOfExcessWeapons, ...ImperialWeaponsList, ...ChaosCultWeapons, ...GenericWeaponsList].filter(onlyUnique),
     equipment:CultOfExcessEquipment,
+    psychicPowers:CultOfExcessPsychicPowers,
     ability:[ThePerfectBlow]
 }

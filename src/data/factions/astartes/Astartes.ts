@@ -9,6 +9,7 @@ import onlyUnique from './../../../functions/OnlyUnique';
 
 import { ReactComponent as icon} from '../../../Images/factionIcons/Astartes.svg'
 import background from '../../../Images/factionIcons/Astartes.svg'
+import AstartesPsychicPowers from "./AstartesPsychic"
 
 const Name : string = "Adeptus Astartes"
 
@@ -28,5 +29,6 @@ export const Astartes : Faction =
     operativeTypes:AstartesOperatives,
     weapons:[...AstartesWeaponList, ...GenericWeaponsList, ...ImperialWeaponsList].filter(onlyUnique),
     equipment:AstartesEquipmentList,
+    psychicPowers: AstartesPsychicPowers,
     ability:[BolterDiscipline]
 }

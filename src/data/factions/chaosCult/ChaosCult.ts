@@ -8,6 +8,7 @@ import ChaosCultWeapons from './ChaosCultWeapons'
 import ChaosCultEquipment from './ChaosCultEquipment'
 import { ReactComponent as icon} from '../../../Images/factionIcons/ChaosCults.svg'
 import background from '../../../Images/factionIcons/ChaosCults.svg'
+import ChaosCultPsychicPowers from "./ChaosCultPsychic";
 
 const Name : string = "Chaos Cult"
 
@@ -42,5 +43,6 @@ export const ChaosCult : Faction =
     operativeTypes:ChaosCultOperatives,
     weapons:[...ChaosCultWeapons, ...GenericWeaponsList, ...ImperialWeaponsList].filter(onlyUnique),
     equipment:ChaosCultEquipment,
+    psychicPowers:ChaosCultPsychicPowers,
     ability:[SacrificeToTheDarkGods,TerrorAndDissent,IronWithinIronWithout]
 }
