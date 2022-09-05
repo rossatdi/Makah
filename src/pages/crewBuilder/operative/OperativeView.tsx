@@ -63,7 +63,7 @@ return (
                 </Row>
                 <Row>
                     <table><tr><th>Weapons</th></tr></table>
-                    <WeaponBlock items={weapons} showFilter={false} source={""}/>
+                    <WeaponBlock items={weapons} showFilter={false} showToggles={false}  source={""}/>
                 </Row>
             </Container>
                 <ListGroup variant="flush">
