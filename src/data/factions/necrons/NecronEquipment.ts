@@ -3,7 +3,7 @@ import Equipment from "../../../types/Equipment";
 export const Atavindicator: Equipment =
 {
     name:"Atavindicator",
-    effect:"Unique action: Pick a visible enemy Operative with an Evade token. On a 4+ they take d3 Damage.",
+    effect:"Unique action: Pick a visible enemy Operative with an #Evade# token. On a 4+ they take d3 Damage.",
     pt:8
 }
 
@@ -17,7 +17,7 @@ export const PhotonicTranssubjector: Equipment =
 export const MindshackleScarabs: Equipment =
 {
     name:"Mindshackle Scarabs",
-    effect:"Unique action: Pick a visible enemy Operative within 8\". Both players roll a d6. If you equal or beat their score, immediately make a Shoot or Fight action with that Operative. If you get a lower score, you take an Evade token.",
+    effect:"Unique action: Pick a visible enemy Operative within 8\". Both players roll a d6. If you equal or beat their score, immediately make a Shoot or Fight action with that Operative. If you get a lower score, you take an #Evade# token.",
     pt:10
 }
 

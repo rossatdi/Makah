@@ -15,7 +15,7 @@ export const MentalOnslaught : PsychicPower =
 export const MindControl : PsychicPower =
 {
     name:"Mind Control",
-    effect:"You can only use this power if your opponent has at least two Operatives left to activate. Pick a visible enemy operative and guess which initiative card belongs to it. If you guess correctly, you can immediately make that Operative do one Action. Ignore Evade tokens on this Operative. The Operative activates as normal when it’s their Activation."
+    effect:"You can only use this power if your opponent has at least two Operatives left to activate. Pick a visible enemy operative and guess which initiative card belongs to it. If you guess correctly, you can immediately make that Operative do one Action. Ignore #Evade# tokens on this Operative. The Operative activates as normal when it’s their Activation."
 }
 
 const GenestealCultPsychicPowers : PsychicPower[] =

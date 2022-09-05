@@ -5,14 +5,14 @@ import { MediKit } from "../../BaseEquipment";
 export const LaudHailer : Equipment = 
 {
     name:"Laud Hailer",
-    effect:"Friendly operatives within 4\" can carry out 1 mission actions per activation for free as long as this operative doesn’t have an Evade token.",
+    effect:"Friendly operatives within 4\" can carry out 1 mission actions per activation for free as long as this operative doesn’t have an #Evade# token.",
     pt:4
 }
 
 export const BlessedRelic : Equipment = 
 {
     name:"Blessed Relic",
-    effect:"This Operative can make Evade saves without a token but cannot Dash. When the Shield of Faith is activated Evade rolls are passed on a 4+.",
+    effect:"This Operative can make #Evade# saves without a token but cannot #Dash# When the Shield of Faith is activated #Evade# rolls are passed on a 4+.",
     pt:6
 }
 

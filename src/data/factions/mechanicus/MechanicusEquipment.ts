@@ -11,7 +11,7 @@ export const DataTether: Equipment =
 export const Omnispex: Equipment =
 {
     name:"Omnispex",
-    effect:"Targets chosen by this Operative can only Evade on a 6+.",
+    effect:"Targets chosen by this Operative can only #Evade# on a 6+.",
     pt:4
 }
 

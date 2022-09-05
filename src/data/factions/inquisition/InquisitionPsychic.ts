@@ -3,7 +3,7 @@ import PsychicPower from "../../../types/PsychicPower";
 export const ManifestFaith : PsychicPower =
 {
     name:"Manifest Faith",
-    effect:"For the rest of this turn, this character counts as having an Evade token for the purpose of Shooting."
+    effect:"For the rest of this turn, this character counts as having an #Evade# token for the purpose of Shooting."
 }
 
 export const Hammerhand : PsychicPower =
@@ -16,7 +16,7 @@ export const Hammerhand : PsychicPower =
 export const NullZone : PsychicPower =
 {
     name:"Null Zone",
-    effect:"All enemy Operatives within 6\" get -1 to their Evade rolls.",
+    effect:"All enemy Operatives within 6\" get -1 to their #Evade# rolls.",
     restrictons:"Ordo Malleus Only"
 }
 

@@ -20,7 +20,7 @@ export function Blast(x: Variable): WeaponSpecialRule
 {
     return {
         name:`Blast ${x}"`,
-        effect:`Resolve hits against other models within ${x}", reducing the Attack dice by 1. Each model potentially hit has the opportunity to Evade.`
+        effect:`Resolve hits against other models within ${x}", reducing the Attack dice by 1. Each model potentially hit has the opportunity to #Evade#`
     }
 }
 
@@ -101,7 +101,7 @@ export function Brutal(x:Variable) : WeaponSpecialRule{
 export const Markerlight : WeaponSpecialRule =    
 {
     name:"Markerlight",
-    effect:"For each hit that is not evaded, place a Markerlight token next to the target. Friendly Operatives shooting at a target with a Markerlight token can discard one to gain +1 to hit or cause -1 to Evade rolls. Multiple tokens can be discarded and their effects are cumulative.",
+    effect:"For each hit that is not evaded, place a Markerlight token next to the target. Friendly Operatives shooting at a target with a Markerlight token can discard one to gain +1 to hit or cause -1 to #Evade# rolls. Multiple tokens can be discarded and their effects are cumulative.",
 }
 
 export const MoreDakka : WeaponSpecialRule =    
@@ -193,7 +193,7 @@ export const SplitFire : WeaponSpecialRule =
 export const Stun : WeaponSpecialRule =    
 {
     name:"Stun",
-    effect:"If hit the target gains a Evade Token. If this token is granted during a Fight action, it isn’t removed the end of the Fight action.",
+    effect:"If hit the target gains a #Evade# Token. If this token is granted during a Fight action, it isn’t removed the end of the Fight action.",
 }
 
 export const Torrent : WeaponSpecialRule =    

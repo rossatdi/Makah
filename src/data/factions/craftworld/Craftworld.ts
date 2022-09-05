@@ -15,7 +15,7 @@ const Name : string = "Craftworld Eldar"
 export const Bladestorm:FactionAbility =
 {
     name: "Bladestorm",
-    effect:"Once per game, immediately before rolling to see who goes first, you can activate Bladestorm. For that turn, Shuriken weapons trigger the effect of Rending on a 4+ and add 1” to their Dash."
+    effect:"Once per game, immediately before rolling to see who goes first, you can activate Bladestorm. For that turn, Shuriken weapons trigger the effect of Rending on a 4+ and add 1” to their #Dash#"
 }
 
 export const Craftworld : Faction =

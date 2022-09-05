@@ -1,6 +1,5 @@
 TODO make action page ledgible\
 TODO rules page\
-TODO inquisition sister special operative\
 TODO inquisition ordo details\
 TODO tyranids\
 TODO khorne\

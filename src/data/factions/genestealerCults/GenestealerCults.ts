@@ -15,7 +15,7 @@ const Name : string = "Genestealer Cults"
 export const SeizeTheInitiative:FactionAbility =
 {
     name: "Seize the Initiative",
-    effect:"Once per game, immediately before rolling to see who goes first, you can activate Power from Pain. For that turn, +2 on Injury Rolls and the ‘Winded’ result doesn’t confer an Evade token and leaves the Operative on d3 wounds. In addition, for that turn the value of all Poison is increased by 1."
+    effect:"Once per game, immediately before rolling to see who goes first, you can activate Power from Pain. For that turn, +2 on Injury Rolls and the ‘Winded’ result doesn’t confer an #Evade# token and leaves the Operative on d3 wounds. In addition, for that turn the value of all Poison is increased by 1."
 }
 
 export const GenestealerCults : Faction =

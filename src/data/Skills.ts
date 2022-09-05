@@ -10,14 +10,14 @@ export const Assassin : Skill =
 export const BlindingSpeed : Skill = 
 {
     name:"Blinding Speed",
-    effect:"Dash is increased to 5\".",
+    effect:"#Dash# is increased to 5\".",
     pt:2
 }
 
 export const Bodyguard : Skill = 
 {
     name:"Bodyguard",
-    effect:"When your Leader is within 3\" and is targeted by a Shooting attack you may force yourself to be the target instead, but you may not Evade If choosing this option you immediately move to base to base contact with the Leader.",
+    effect:"When your Leader is within 3\" and is targeted by a Shooting attack you may force yourself to be the target instead, but you may not #Evade# If choosing this option you immediately move to base to base contact with the Leader.",
     pt:5
 }
 
@@ -138,7 +138,7 @@ export const ShieldBash : Skill =
 export const ShockTrooper : Skill = 
 {
     name:"Shock Trooper",
-    effect:"When Shooting an Assault weapon using the free action after Dashing, do not -1 to hit.",
+    effect:"When Shooting an Assault weapon using the free action after using #Dash# do not -1 to hit.",
     pt:3
 }
 

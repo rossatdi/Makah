@@ -16,7 +16,7 @@ const Name : string = "Chaos Cult"
 export const SacrificeToTheDarkGods :FactionAbility =
 {
     name: "Sacrifice to the Dark Gods",
-    effect:"Pick a friendly Operative, immediately make an injury roll for them. The give every enemy Operative that can see them an Evade token.",
+    effect:"Pick a friendly Operative, immediately make an injury roll for them. The give every enemy Operative that can see them an #Evade# token.",
     restrictons:"Black Legion / Word Bearer Only"
 }
 
