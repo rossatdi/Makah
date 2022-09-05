@@ -19,6 +19,7 @@ export const ArtificerWeapon: Equipment =
 {
     name:"Artificer Weapon",
     effect:"Chosen weapon gains +1 Damage or -1 AP.",
+    restrictons:"Inquisitor only",
     pt:2
 }
 
@@ -41,7 +42,7 @@ export const PowerArmor: Equipment =
 export const HallucinogenRounds: Equipment =
 {
     name:"Hallucinogen rounds",
-    effect:"Needle weapons can optionally add the Hallucination special rule but reduce damage by 1.",
+    effect:"Needle weapons can optionally add the #Hallucination# special rule but reduce damage by 1.",
     restrictons:"Needle weapons only",
     pt:4
 }

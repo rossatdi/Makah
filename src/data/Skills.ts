@@ -3,7 +3,7 @@ import Skill from "../types/Skill"
 export const Assassin : Skill = 
 {
     name:"Assassin",
-    effect:"If Fighting an Operative with an Evade token, re-roll 1s to hit and +1 Damage.",
+    effect:"If Fighting an Operative with an #Evade# token, re-roll 1s to hit and +1 Damage.",
     pt:4
 }
 
@@ -17,14 +17,14 @@ export const BlindingSpeed : Skill =
 export const Bodyguard : Skill = 
 {
     name:"Bodyguard",
-    effect:"When your Leader is within 3\" and is targeted by a Shooting attack you may force yourself to be the target instead, but you may not Evade. If choosing this option you immediately move to base to base contact with the Leader.",
+    effect:"When your Leader is within 3\" and is targeted by a Shooting attack you may force yourself to be the target instead, but you may not Evade If choosing this option you immediately move to base to base contact with the Leader.",
     pt:5
 }
 
 export const CommsOfficer : Skill = 
 {
     name:"Comms officer",
-    effect:"Unique action: Friendly operative discards a Evade token.",
+    effect:"Unique action: Friendly operative discards a #Evade# token.",
     pt:4
 }
 
@@ -82,7 +82,7 @@ export const Gunslinger : Skill =
 export const JumpUp : Skill = 
 {
     name:"Jump Up",
-    effect:"When this Operative activates with a Evade token, on a 4+ the Evade token is discarded without losing an action.",
+    effect:"When this Operative activates with a #Evade# token, on a 4+ the #Evade# token is discarded without losing an action.",
     pt:5
 }
 
@@ -110,7 +110,7 @@ export const Rage : Skill =
 export const Relentless : Skill = 
 {
     name:"Relentless",
-    effect:"Reduce the damage suffered by each attack by 1 (total, not per hit) but can never take Evade tokens.",
+    effect:"Reduce the damage suffered by each attack by 1 (total, not per hit) but can never take #Evade# tokens.",
     pt:3
 }
 
@@ -131,7 +131,7 @@ export const Scout : Skill =
 export const ShieldBash : Skill = 
 {
     name:"Shield Bash",
-    effect:"Defensive combat weapons gain +2 Damage.",
+    effect:"#Defensive# combat weapons gain +2 Damage.",
     pt:2
 }
 
@@ -152,7 +152,7 @@ export const Tireless : Skill =
 export const VoiceOfCommand : Skill = 
 {
     name:"Voice of command",
-    effect:"Unique action: Friendly operatives within 3\" remove Evade tokens.",
+    effect:"Unique action: Friendly operatives within 3\" remove #Evade# tokens.",
     pt:5
 }
 
