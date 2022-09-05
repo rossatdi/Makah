@@ -17,14 +17,14 @@ export const Pistol : WeaponType =
 export const Heavy : WeaponType = 
 {
     name:"Heavy",
-    effect:"Heavy weapons cannot be used in the same activation that an operative also takes a Movement action, however they can Dash.",
+    effect:"Heavy weapons cannot be used in the same activation that an operative also takes a Movement action, however they can #Dash#",
     ordering:4
 }
 
 export const Assault : WeaponType = 
 {
     name:"Assault",
-    effect:"Operatives with an Assault weapon can immediately make a Shoot action for free after making a Dash action. This Shoot action has -1 to Hit.",
+    effect:"Operatives with an Assault weapon can immediately make a Shoot action for free after making a #Dash# action. This Shoot action has -1 to Hit.",
     ordering:2
 }
 

@@ -12,7 +12,7 @@ export const VoxRelay : Equipment =
 export const Commissar : Equipment =
 {
     name:"Commissar",
-    effect:"Gains a Bolt Pistol and a 4+ save. If this Operative does not have an Evade token, when other friendly visible Operatives activate, on a 6+ they do not lose an action for discarding their Evade token. This Operative may use the Finish Off action against friendly Operatives.",
+    effect:"Gains a Bolt Pistol and a 4+ save. If this Operative does not have an #Evade# token, when other friendly visible Operatives activate, on a 6+ they do not lose an action for discarding their #Evade# token. This Operative may use the Finish Off action against friendly Operatives.",
     pt:5,
     modifier:{sv:1}
 }

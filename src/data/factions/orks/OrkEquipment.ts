@@ -11,7 +11,7 @@ export const CyborkBody : Equipment =
 export const BreakinHeads : Equipment = 
 {
     name:"Breakin' Heads",
-    effect:"When this model is activated they may choose a friendly visible operative with an Evade token. That operative loses the token and takes d3 damage.",
+    effect:"When this model is activated they may choose a friendly visible operative with an #Evade# token. That operative loses the token and takes d3 damage.",
     pt:3
 }
 

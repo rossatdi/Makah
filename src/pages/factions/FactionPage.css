@@ -45,7 +45,7 @@ li {
    box-shadow:none !important;
  }
  .accordion-button:not(.collapsed){
-   color: darkslategray;
+   color: darkred !important;
  }
 
 .accordion-header {

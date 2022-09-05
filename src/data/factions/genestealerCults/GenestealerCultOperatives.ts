@@ -46,6 +46,7 @@ export const Magus : OperativeBase =
     wnd:8,
     sv:5,
     pt:30,
+    isPsyker:true,
     notes:"Magus are Psykers"
 }
 

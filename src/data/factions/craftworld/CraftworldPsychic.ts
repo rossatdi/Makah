@@ -9,7 +9,7 @@ export const Mindwar : PsychicPower =
 export const Doom : PsychicPower =
 {
     name:"Doom",
-    effect:"Pick a visible enemy operative, place three Doom tokens next to them. Each time a friendly Operative targets them they can remove a Doom token to re-roll one dice. Operatives with a Doom token are at -1 to Evade."
+    effect:"Pick a visible enemy operative, place three Doom tokens next to them. Each time a friendly Operative targets them they can remove a Doom token to re-roll one dice. Operatives with a Doom token are at -1 to #Evade#"
 }
 
 const CraftworldPsychicPowers : PsychicPower[] =

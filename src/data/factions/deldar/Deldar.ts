@@ -13,7 +13,7 @@ const Name : string = "Dark Eldar"
 export const PowerFromPain:FactionAbility =
 {
     name: "Power from Pain",
-    effect:"Once per game, immediately before rolling to see who goes first, you can activate Power from Pain. For that turn, +2 on Injury Rolls and the ‘Winded’ result doesn’t confer an Evade token and leaves the Operative on d3 wounds. In addition, for that turn the value of all Poison is increased by 1."
+    effect:"Once per game, immediately before rolling to see who goes first, you can activate Power from Pain. For that turn, +2 on Injury Rolls and the ‘Winded’ result doesn’t confer an #Evade# token and leaves the Operative on d3 wounds. In addition, for that turn the value of all Poison is increased by 1."
 }
 
 export const Deldar : Faction =

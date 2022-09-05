@@ -34,6 +34,7 @@ export const Weirdboy : OperativeBase =
     wnd:9,
     sv:6,
     pt:23,
+    isPsyker:true,
     notes:"Weirdboys are psykers."
 }
 

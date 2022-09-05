@@ -39,7 +39,7 @@ export const NewManOfBile : Equipment =
 export const Daemonic : Equipment = 
 {
     name:"Daemonic",
-    effect:"This Operative always counts as having an Evade token when Shot at.",
+    effect:"This Operative always counts as having an #Evade# token when Shot at.",
     restrictons:"Daemonette Only",
     pt:0
 }

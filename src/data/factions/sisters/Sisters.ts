@@ -15,7 +15,7 @@ const Name : string = "Sisters of Battle"
 export const ShieldOfFaith : FactionAbility = 
 {
     name:"Shield of Faith",
-    effect:"Once per game, immediately before rolling to see who goes first, you can activate Shield of Faith. That turn all of your Operatives can Evade without an Evade token. This does not remove Evade tokens in play."
+    effect:"Once per game, immediately before rolling to see who goes first, you can activate Shield of Faith. That turn all of your Operatives can #Evade# without an #Evade# token. This does not remove #Evade# tokens in play."
 }
 
 export const SistersOfBattle : Faction =

@@ -19,7 +19,7 @@ export const MediKit: Equipment =
 export const CamoCloak : Equipment = 
 {
     name:"Camo Cloak",
-    effect:"Re-roll 1s when making Evade rolls.",
+    effect:"Re-roll 1s when making #Evade# rolls.",
     pt:3
 }
 
@@ -27,7 +27,7 @@ export const CamoCloak : Equipment =
 export const ServoSkull: Equipment =
 {
     name:"Servo Skull",
-    effect:"When Shooting a target with a Evade token roll a dice, on a 4+ they cannot Evade.",
+    effect:"When Shooting a target with a #Evade# token roll a dice, on a 4+ they cannot #Evade#",
     pt:4
 }
 

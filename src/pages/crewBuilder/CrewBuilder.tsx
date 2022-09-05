@@ -22,8 +22,8 @@ const example : Operative =
     isPsyker:false,
     name:"Geoff",
     weapons:[Knife, Stormbolter, StormShield],
-    skills: [...Deathwatch.skills],
-    equipment:[...Deathwatch.equipment, ServoSkull]
+    skills: [...(Deathwatch.skills??[])],
+    equipment:[...(Deathwatch?.equipment??[]), ServoSkull]
 }
 
 const example2 : Operative =

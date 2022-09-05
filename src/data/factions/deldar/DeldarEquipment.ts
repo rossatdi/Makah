@@ -19,7 +19,7 @@ export const GrislyTrophies : Equipment =
 export const Dodge : Equipment = 
 {
     name:"Dodge",
-    effect:"This Operative can always make an unmodifiable save of 6+ against Shooting attacks and 4+ against Combat attacks. This replaces a normal save but is in addition to Evade.",
+    effect:"This Operative can always make an unmodifiable save of 6+ against Shooting attacks and 4+ against Combat attacks. This replaces a normal save but is in addition to #Evade#",
     pt:4
 }
 
