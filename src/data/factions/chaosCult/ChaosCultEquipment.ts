@@ -27,7 +27,7 @@ export const ObliteratorMutation : Equipment =
 {
     name:"Obliterator mutation",
     effect:"Swap Ws and Bs, reduce Movement to 5\" and gain the Tireless skill. Whenever this model activates, choose one Imperial or Chaos Cult weapon that costs 8 points or less – they are equipped with that weapon until their next activation.",
-    restrictons:"Iron Warriors Only, Possessed Only",
+    restrictons:"Iron Warriors Possessed Only",
     pt:13
 }
 
@@ -50,7 +50,7 @@ export const Saboteur : Equipment =
 {
     name:"Saboteur",
     effect:"This Operative gains the Scout and Assassin or Kill Shot skills. For an additional 5 points, a Marine Saboteur may purchase Special Issue Ammo from the Adeptus Astartes faction.",
-    restrictons:"Alpha Legion Only, Marine or Cultist Only",
+    restrictons:"Alpha Legion Marine or Cultist Only",
     pt:5
 }
 

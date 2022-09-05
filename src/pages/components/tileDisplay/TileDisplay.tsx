@@ -15,6 +15,7 @@ export const tileFilter = (a:TileProps, str:string) : boolean => {
       if(compare(a.skill.name,s)) ret = true;
       if(compare(a.skill.effect,s)) ret = true;
       if(a.skill.pt && compare(a.skill.pt.toString(),s)) ret = true;
+      if(a.skill.restrictons && compare(a.skill.restrictons.toString(),s)) ret = true;
       if(a.type && compare(a.type,s)) ret = true;
       if(a.faction && compare(a.faction,s)) ret = true;
       return ret;
