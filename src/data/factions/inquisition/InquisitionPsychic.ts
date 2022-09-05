@@ -30,7 +30,7 @@ export const DesecrateTheVanquished : PsychicPower =
 export const TestOfPurity : PsychicPower =
 {
     name:"Test of Purity",
-    effect:"OPick a visible enemy Operative, roll a dice equal to their remaining Wounds. For each 5+, deal one Damage.",
+    effect:"Pick a visible enemy Operative, roll a dice equal to their remaining Wounds. For each 5+, deal one Damage.",
     restrictons:"Ordo Hereticus Only"
 
 }

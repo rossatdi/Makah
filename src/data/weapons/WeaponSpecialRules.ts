@@ -19,7 +19,7 @@ export const Viscous : WeaponSpecialRule = {...Arc,name:"Viscous"}
 export function Blast(x: Variable): WeaponSpecialRule  
 {
     return {
-        name:`Blast ${x}`,
+        name:`Blast ${x}"`,
         effect:`Resolve hits against other models within ${x}", reducing the Attack dice by 1. Each model potentially hit has the opportunity to Evade.`
     }
 }
@@ -147,7 +147,7 @@ export const PsykerOnly : WeaponSpecialRule =
 export function Range(x: Variable): WeaponSpecialRule  
 {
     return {
-        name:`Range ${x}`,
+        name:`Range ${x}"`,
         effect:`The range of this weapon is limited to ${x}".`
     }
 }

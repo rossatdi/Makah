@@ -2,7 +2,7 @@ import Faction from "../../types/Faction";
 import { OperativeBase } from "../../types/OperativeBase";
 import Tile from "../components/tile/Tile";
 import WeaponBlock from "../components/weaponsBlock/WeaponsBlock";
-import { Table } from 'react-bootstrap';
+import { Accordion, Table } from 'react-bootstrap';
 import Note from "../../types/Note";
 import './FactionPage.css'
 import { NoteIcons } from "../components/Notes";
@@ -79,25 +79,55 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
       {faction.attribution && (
           <i>-{faction.attribution}</i>
       )}
-      <h3>Operatives</h3>
-      {OperativesView(faction.operativeTypes)}
-      {faction.operativeNotes && (
-        <ul>
-          {faction.operativeNotes.map((o) => (
-            <li key={getKey()} >{o}</li>
-          ))}
-        </ul>
-      )}
-      <h3>Faction Ability</h3>
-      {faction.ability.map(o=><Tile key={getKey()} skill={o}/>)}
-      
-      <h3>Equipment</h3>
-      <TileDisplay items={faction.equipment.map(o=> {return{skill:o}})} showFilter={false}/>
-      {faction.psychicPowers &&  <><h3>Psychic Powers</h3>
-      <TileDisplay items={faction.psychicPowers.map(o=> {return{skill:o}})} showFilter={false}/></>}
-      
-      <h3>Weapons</h3>
-      <WeaponBlock items={weapons} showFilter={true} source={faction.name}/>
+      <Accordion flush alwaysOpen>
+      <Accordion.Item eventKey="0">
+          <Accordion.Header>
+            <h3>Operatives</h3>
+          </Accordion.Header>
+          <Accordion.Body>
+          {OperativesView(faction.operativeTypes)}
+          {faction.operativeNotes && (
+            <ul>
+              {faction.operativeNotes.map((o) => (
+                <li key={getKey()} >{o}</li>
+              ))}
+            </ul>
+          )}
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>
+            <h3>Faction Ability</h3>
+          </Accordion.Header>
+          <Accordion.Body>
+            {faction.ability.map(o=><Tile key={getKey()} skill={o}/>)}
+            </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="2">
+          <Accordion.Header>
+            <h3>Equipment</h3>
+          </Accordion.Header>
+          <Accordion.Body>
+          <TileDisplay items={faction.equipment.map(o=> {return{skill:o}})} showFilter={false}/>
+          </Accordion.Body>
+        </Accordion.Item>
+        {faction.psychicPowers && <Accordion.Item eventKey="3">
+          <Accordion.Header>
+            <h3>Psychic Powers</h3>
+          </Accordion.Header>
+          <Accordion.Body>
+            <TileDisplay items={faction.psychicPowers.map(o=> {return{skill:o}})} showFilter={false}/>
+          </Accordion.Body>
+        </Accordion.Item>}
+        <Accordion.Item eventKey="4">
+          <Accordion.Header>
+            <h3>Weapons</h3>
+          </Accordion.Header>
+          <Accordion.Body>
+            <WeaponBlock items={weapons} showFilter={true} source={faction.name}/>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
     </div>
   );
 };
