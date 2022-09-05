@@ -124,7 +124,7 @@ const FactionView = ({ faction }: {faction: Faction; }) => {
             <h3>Weapons</h3>
           </Accordion.Header>
           <Accordion.Body>
-            <WeaponBlock items={weapons} showFilter={true} source={faction.name}/>
+            <WeaponBlock items={weapons} showFilter={true} showToggles={true}  source={faction.name}/>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

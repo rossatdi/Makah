@@ -1,15 +1,32 @@
 import Weapon from "../../../types/Weapon"
 import  GlossaryOverlay  from "./../GlossaryOverlay"
 import './WeaponsBlock.css'
-import React, {useState} from "react";
+import React, {ChangeEvent, FormEvent, useState} from "react";
 import compare from "../../../functions/CaseIndifferentStringCompare";
-import { Col, Row, Table, Container } from "react-bootstrap";
+import { Col, Row, Table, Container, Form } from "react-bootstrap";
 import Note from "../../../types/Note";
 import { NoteIcons } from "../Notes";
 import WeaponTile, { WeaponTileProps } from "../weaponTIle/WeaponTile";
 import useScreenSize from '../../../hooks/UseScreenSize'
 import ScreenSize from '../../../types/ScreenSize'
 import {getKey} from '../../../functions/keys'
+import onlyUnique from "../../../functions/OnlyUnique";
+
+
+
+const Selector = ({weapons, state, setFn}:{weapons:Weapon[], state:{ [key: string] : boolean }, setFn(source:string):void}) => {
+    return (<Form>
+        {weapons.map(o=>o.source).filter(onlyUnique).map(o=><Form.Check 
+            type="switch"
+            id={`switch-${o}`}
+            label={o}
+            inline
+            checked={state[o]=== undefined || state[o]}
+            onChange={(e: FormEvent<HTMLInputElement>) => { setFn(o) }}
+        />)}
+    
+      </Form>)
+}
 
 function clamp(val:number, min:number, max:number): number {
     return val > max ? max : val < min ? min : val;
@@ -106,11 +123,17 @@ export function weaponMap(weapon:Weapon, index:number, bold:boolean, addNote:(st
     }
 }
 
-export const WeaponBlock = ({items, showFilter, source}:{items:WeaponTileProps[], showFilter:boolean, source:string}) => {
+export const WeaponBlock = ({items, showFilter, showToggles, source}:{items:WeaponTileProps[], showFilter:boolean, showToggles:boolean, source:string}) => {
         const size = useScreenSize();
+        const [query, setFilter] = useState("")
+        const [sources, setSources] = useState<{ [key: string] : boolean }>({})
+        const filtered = items.filter(o=>weaponTileFilter(o,query)).filter(o=>sources[o.weapon.source] === undefined || sources[o.weapon.source] ).sort(weaponSorting)
+        const setFn = (source:string) : void =>{ setSources({...sources, [source]:!sources[source]})}
         return (<div>
-            {size < ScreenSize.lg &&<WeaponTileGrid items={items} showFilter={showFilter}/>}
-            {size >= ScreenSize.lg &&<WeaponTable items={items} showFilter={showFilter} source={source}/>}
+            {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
+            {showToggles && <Selector weapons={items.map(o=>o.weapon)} state={sources} setFn={setFn} />}
+            {size < ScreenSize.lg &&<WeaponTileGrid items={filtered} />}
+            {size >= ScreenSize.lg &&<WeaponTable items={filtered} source={source}/>}
             </div>)
       
 }
@@ -118,23 +141,19 @@ export const WeaponBlock = ({items, showFilter, source}:{items:WeaponTileProps[]
 export default WeaponBlock
 
 
-export const WeaponTileGrid = ({items, showFilter}:{items:WeaponTileProps[], showFilter:boolean}) => {
-    const [query, setFilter] = useState("")
-    const filtered = items.filter(o=>weaponTileFilter(o,query)).sort(weaponSorting)
+export const WeaponTileGrid = ({items}:{items:WeaponTileProps[]}) => {
     return(
       <Container>
-      {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
       <Row>
-        {filtered.map((o) => (
+        {items.map((o) => (
           <Col key={getKey()} xs={12} md={6} lg={4}><WeaponTile key={o.weapon.name} weapon={o.weapon} background={o.background} type={o.type} /></Col>))}
       </Row>
       </Container>)
   }
 
-  export const WeaponTable = ({items, showFilter, source}:{items:WeaponTileProps[], showFilter:boolean, source:string}) => {
+  export const WeaponTable = ({items, source}:{items:WeaponTileProps[], source:string}) => {
     const icons = [...NoteIcons]
     const noteMap : Note[] = []
-    const [query, setFilter] = useState("")
     const addNote = (str :string) => { 
         let note = noteMap.find(o=>o.text === str)
         if(!note){
@@ -143,10 +162,8 @@ export const WeaponTileGrid = ({items, showFilter}:{items:WeaponTileProps[], sho
             noteMap.push(note)
         }
         return note}
-    const filtered = items.filter(o=>weaponTileFilter(o,query)).sort(weaponSorting)
     return(
       <Container>
-            {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
             <Table striped responsive key={getKey()} >
                 <thead key={getKey()} >
                 <tr key={getKey()} >
@@ -161,7 +178,7 @@ export const WeaponTileGrid = ({items, showFilter}:{items:WeaponTileProps[], sho
                 </tr>
                 </thead>
                 <tbody>
-                    {filtered.map((x, index)=> weaponMap(x.weapon, index, x.weapon.source === source, addNote))}
+                    {items.map((x, index)=> weaponMap(x.weapon, index, x.weapon.source === source, addNote))}
                 </tbody>
             </Table>
             <ul>

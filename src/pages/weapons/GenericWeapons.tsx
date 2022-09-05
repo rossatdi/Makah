@@ -9,7 +9,7 @@ const genericWeapons = () => <div>
         <h1>GENERIC WEAPONS</h1>
         <p>Equivalents of these weapons are available to any faction and represent low quality or fundamentally pervasive weapons
 designs. Don't mistake ubiquity for inefficiency however, some things are popular for a reason.</p>
-        <WeaponBlock items={items} showFilter={true} source={""}/>
+        <WeaponBlock items={items} showFilter={true} showToggles={false}  source={""}/>
     </div>
 
 

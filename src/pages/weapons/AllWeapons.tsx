@@ -24,7 +24,7 @@ const allWeapons = () => {
     </Helmet>
     <h1>WEAPONS</h1>
     <h5><Link to="/weapons/rules">Special Rules</Link></h5>
-    <WeaponBlock items={weapons} showFilter={true} source={""}/>
+    <WeaponBlock items={weapons} showFilter={true} showToggles={false}  source={""}/>
 
   </div>
 )};
