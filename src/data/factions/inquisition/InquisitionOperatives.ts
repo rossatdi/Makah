@@ -1,9 +1,10 @@
 import Operative from "../../../types/Operative"
 import OperativeBase from "../../../types/OperativeBase"
-import { Killshot } from "../../Skills"
+import { Bodyguard, Killshot, Relentless } from "../../Skills"
 import { Bolter, ForceHalberd, ForceSword } from "../../weapons/ImperialWeapons"
 import { SpecialIssueAmmo } from "../astartes/AstartesEquipment"
 import { SpaceMarine } from "../astartes/AstartesOperatives"
+import { Celestian } from "../sisters/SistersOperatives"
 import { Stormbolter } from "../sisters/SistersWeapons"
 import { Limited } from './../../CommonNotes';
 
@@ -94,8 +95,22 @@ export const GreyKnightS : Operative =
     isPsyker:true,
     pt:56
 }
+
+export const CelestianSacresant : Operative =
+{
+    name:"",
+    ...Celestian,
+    type:"Celestian Sacresant",
+    weapons:[],
+    skills:[Bodyguard, Relentless],
+    equipment:[],
+    isLeader:false,
+    isPsyker:false,
+    pt:38
+}
+
 //TODO add all imperial operative, and special ordo units
 export const ImperialOperatatives : OperativeBase[] =
-[Inquisitor,Hound,Acolyte,Warrior, Deathwatch, GreyKnightH, GreyKnightS]
+[Inquisitor,Hound,Acolyte,Warrior, Deathwatch, GreyKnightH, GreyKnightS, CelestianSacresant]
 
 export default ImperialOperatatives;

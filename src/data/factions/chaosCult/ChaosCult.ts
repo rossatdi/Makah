@@ -16,19 +16,22 @@ const Name : string = "Chaos Cult"
 export const SacrificeToTheDarkGods :FactionAbility =
 {
     name: "Sacrifice to the Dark Gods",
-    effect:"Black Legion / Word Bearer Only, Pick a friendly Operative, immediately make an injury roll for them. The give every enemy Operative that can see them an Evade token."
+    effect:"Pick a friendly Operative, immediately make an injury roll for them. The give every enemy Operative that can see them an Evade token.",
+    restrictons:"Black Legion / Word Bearer Only"
 }
 
 export const TerrorAndDissent :FactionAbility =
 {
     name: "Terror and Dissent",
-    effect:"Alpha Legion / Night Lords Only, Pick three enemy Operative initiative cards and look at them. Put them back in any order."
+    effect:"Pick three enemy Operative initiative cards and look at them. Put them back in any order.",
+    restrictons:"Alpha Legion / Night Lords Only"
 }
 
 export const IronWithinIronWithout :FactionAbility =
 {
     name: "Iron Within, Iron Without",
-    effect:"Iron Warrior Only, Ignore the AP of enemy weapons this round."
+    effect:"Ignore the AP of enemy weapons this round.",
+    restrictons:"Iron Warrior Only"
 }
 
 

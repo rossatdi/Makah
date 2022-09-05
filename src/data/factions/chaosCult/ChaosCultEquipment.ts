@@ -18,21 +18,24 @@ export const TaintedWeapon : Equipment =
 export const Operator : Equipment =
 {
     name:"Operator",
-    effect:"Cultist only, Gain +1 Ws or Bs.",
+    effect:"Gain +1 Ws or Bs.",
+    restrictons:"Cultist only",
     pt:4
 }
 
 export const ObliteratorMutation : Equipment =
 {
     name:"Obliterator mutation",
-    effect:"Iron Warriors Only, Possessed Only, Swap Ws and Bs, reduce Movement to 5\" and gain the Tireless skill. Whenever this model activates, choose one Imperial or Chaos Cult weapon that costs 8 points or less – they are equipped with that weapon until their next activation.",
+    effect:"Swap Ws and Bs, reduce Movement to 5\" and gain the Tireless skill. Whenever this model activates, choose one Imperial or Chaos Cult weapon that costs 8 points or less – they are equipped with that weapon until their next activation.",
+    restrictons:"Iron Warriors Possessed Only",
     pt:13
 }
 
 export const DefiledTrophies : Equipment =
 {
     name:"Defiled trophies",
-    effect:"Night Lords Only, Gain the Relentless skill. Enemy Operatives within 4\" of this model can never hit on better than a 4+.",
+    effect:"Gain the Relentless skill. Enemy Operatives within 4\" of this model can never hit on better than a 4+.",
+    restrictons:"Night Lords Only",
     pt:6
 }
 
@@ -46,7 +49,8 @@ export const VeteranOfTheLongWar : Equipment =
 export const Saboteur : Equipment =
 {
     name:"Saboteur",
-    effect:"Alpha Legion Only, Marine or Cultist Only, This Operative gains the Scout and Assassin or Kill Shot skills. For an additional 5 points, a Marine Saboteur may purchase Special Issue Ammo from the Adeptus Astartes faction.",
+    effect:"This Operative gains the Scout and Assassin or Kill Shot skills. For an additional 5 points, a Marine Saboteur may purchase Special Issue Ammo from the Adeptus Astartes faction.",
+    restrictons:"Alpha Legion Marine or Cultist Only",
     pt:5
 }
 

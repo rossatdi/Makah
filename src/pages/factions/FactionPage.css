@@ -14,6 +14,7 @@ li {
     background-position: center;
     background-attachment: fixed;
     background-size: contain;
+    min-height:89vh;
  }
 
  h3{
@@ -26,4 +27,33 @@ li {
 
  .skillTile {
     width: 100%;
+ }
+
+ .accordion {
+   background-color: transparent !important;
+   background: transparent !important;
+   --bs-accordion-bg: transparent !important;
+   --bs-accordion-border-color: none !important;
+ }
+
+ .accordion-button {
+   background-color: transparent !important;
+   background: transparent !important;
+   display: inline-block !important;
+ }
+ .accordion-button:focus{
+   box-shadow:none !important;
+ }
+ .accordion-button:not(.collapsed){
+   color: darkslategray;
+ }
+
+.accordion-header {
+   border: none !important;
+}
+.accordion-body {
+   border: none !important;
+}
+ .accordion-item {
+   border: none !important;
  }

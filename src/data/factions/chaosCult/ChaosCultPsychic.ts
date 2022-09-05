@@ -15,13 +15,15 @@ export const WarpTime : PsychicPower =
 export const Possession : PsychicPower =
 {
     name:"Possession",
-    effect:"Word Bearer Only, One use only. Choose a visible Cultist or Mutant. Replace them with a Daemonic Operative that has already been removed from the board or an Injured on full wounds. That Daemon cannot cost more than 20 points."
+    effect:"One use only. Choose a visible Cultist or Mutant. Replace them with a Daemonic Operative that has already been removed from the board or an Injured on full wounds. That Daemon cannot cost more than 20 points.",
+    restrictons:"Word Bearer Only"
 }
 
 export const InfernalInvigoration : PsychicPower =
 {
     name:"Infernal invigoration",
-    effect:"Word Bearer Only, Pick a friendly Daemonic Operative. Roll a number of dice equal to its Wound characteristic, for each 3+ that Operative regains a wound."
+    effect:"Pick a friendly Daemonic Operative. Roll a number of dice equal to its Wound characteristic, for each 3+ that Operative regains a wound.",
+    restrictons:"Word Bearer Only"
 }
 
 const ChaosCultPsychicPowers : PsychicPower[] =

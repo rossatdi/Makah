@@ -3,7 +3,8 @@ import Equipment from "../../../types/Equipment";
 export const IntegratedMissionAI : Equipment = 
 {
     name:"Integrated Mission AI",
-    effect:"Drone Only - Remove Limited",
+    effect:"Remove Limited",
+    restrictons:"Drone Only",
     pt:2
 }
 
