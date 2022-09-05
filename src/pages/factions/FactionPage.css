@@ -39,7 +39,15 @@ li {
  .accordion-button {
    background-color: transparent !important;
    background: transparent !important;
+   display: inline-block !important;
  }
+ .accordion-button:focus{
+   box-shadow:none !important;
+ }
+ .accordion-button:not(.collapsed){
+   color: darkslategray;
+ }
+
 .accordion-header {
    border: none !important;
 }
