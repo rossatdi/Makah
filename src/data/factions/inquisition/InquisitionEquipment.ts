@@ -19,6 +19,7 @@ export const ArtificerWeapon: Equipment =
 {
     name:"Artificer Weapon",
     effect:"Chosen weapon gains +1 Damage or -1 AP.",
+    restrictons:"Inquisitor only",
     pt:2
 }
 
