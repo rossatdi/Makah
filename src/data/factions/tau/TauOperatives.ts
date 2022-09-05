@@ -1,4 +1,6 @@
 import OperativeBase from "../../../types/OperativeBase";
+import { Flying } from "../../Skills";
+import { CamouflageFields, StabilisationSystem } from "./TauEquipment";
 
 export const Kroot : OperativeBase =
 {
@@ -83,6 +85,7 @@ export const StealthSuit : OperativeBase =
     wnd:10,
     sv:3,
     pt:38,
+    equipment:[CamouflageFields],
     notes:"Stealth suits include: Camouflage Fields."
 }
 
@@ -96,7 +99,9 @@ export const CrisisSuit : OperativeBase =
     wnd:14,
     sv:3,
     pt:55,
-    notes:"Crisis suits include: Jetpack (flying) and Stabilisation Systems. You can only include one Crisis suit in a team."
+    equipment:[StabilisationSystem],
+    skills:[Flying],
+    notes:"Crisis suits include: Jetpack (flying) and Stabilisation Systems. Limit 1"
 }
 
 export const Ethereal : OperativeBase =

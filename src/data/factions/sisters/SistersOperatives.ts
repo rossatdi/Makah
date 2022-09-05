@@ -1,4 +1,5 @@
 import OperativeBase from "../../../types/OperativeBase";
+import { Relentless } from "../../Skills";
 
 
 export const Celestian : OperativeBase =
@@ -60,6 +61,7 @@ export const Repentia : OperativeBase =
     wnd:8,
     sv:6,
     pt:13,
+    skills:[Relentless],
     notes:"Repentia have Relentless"
 }
 

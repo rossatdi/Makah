@@ -1,4 +1,3 @@
-import Operative from "../../../types/Operative"
 import OperativeBase from "../../../types/OperativeBase"
 import { Bodyguard, Killshot, Relentless } from "../../Skills"
 import { Bolter, ForceHalberd, ForceSword } from "../../weapons/ImperialWeapons"
@@ -58,53 +57,45 @@ export const Warrior : OperativeBase =
     pt:15
 }
 
-export const Deathwatch : Operative =
+export const Deathwatch : OperativeBase =
 {
-    name:"",
     ...SpaceMarine,
     type:"Deathwatch Veteren",
     weapons:[Bolter],
     skills:[Killshot],
     equipment:[SpecialIssueAmmo],
-    isLeader:false,
     isPsyker:false,
     pt:46
 }
 
-export const GreyKnightH : Operative =
+export const GreyKnightH : OperativeBase =
 {
-    name:"",
     ...SpaceMarine,
     type:"Grey Knight w/Halberd",
     weapons:[ForceHalberd, Stormbolter],
     skills:[],
     equipment:[],
-    isLeader:false,
     isPsyker:true,
     pt:56
 }
-export const GreyKnightS : Operative =
+export const GreyKnightS : OperativeBase =
 {
-    name:"",
     ...SpaceMarine,
     type:"Grey Knight w/Sword",
     weapons:[ForceSword, Stormbolter],
     skills:[],
     equipment:[],
-    isLeader:false,
     isPsyker:true,
     pt:56
 }
 
-export const CelestianSacresant : Operative =
+export const CelestianSacresant : OperativeBase =
 {
-    name:"",
     ...Celestian,
     type:"Celestian Sacresant",
     weapons:[],
     skills:[Bodyguard, Relentless],
     equipment:[],
-    isLeader:false,
     isPsyker:false,
     pt:38
 }

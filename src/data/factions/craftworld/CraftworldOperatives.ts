@@ -59,6 +59,7 @@ export const Warlock : OperativeBase =
     wnd:9,
     sv:4,
     pt:35,
+    isPsyker:true,
     notes:"A Warlock is a Psyker and their Save cannot be modified."
 }
 
