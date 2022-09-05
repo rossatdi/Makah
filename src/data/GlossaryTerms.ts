@@ -7,7 +7,7 @@ export const Limited : GlossaryTerm ={
 
 export const Evade : GlossaryTerm ={
     name:"Evade",
-    effect:"If an operative has a Evade token, the next time they activate they lose one action and discard it. Evade tokens are not cleared automatically between Turns. You can’t have more than one Evade token per Operative."
+    effect:"Once and operative becomes the target of a Shooting attack they may choose to Evade, if they do so place an Evade token next to them. If an Operative has an Evade token when hit by a Shooting attack, they can roll a dice for each Hit. On a 5+, the Hit is cancelled. An Operative with an Evade token cannot Fight Back. If an operative has a Evade token, the next time they activate they lose one action and discard it. Evade tokens are not cleared automatically between Turns. You can’t have more than one Evade token per Operative."
 }
 
 export const Dash : GlossaryTerm ={
