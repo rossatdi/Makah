@@ -8,10 +8,6 @@ import { applyGlossaryOverlay } from '../GlossaryOverlay'
 import Tile, { TileProps } from '../tile/Tile'
 import './TileDisplay.css'
 
-const handleText = (text: string) : string[] =>{
-  return text.split('•')
-}
-
 export const tileFilter = (a:TileProps, str:string) : boolean => {
   return str.split(",").every(s=>{
       s=s.trim()
