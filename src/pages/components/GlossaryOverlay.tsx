@@ -1,12 +1,23 @@
 import { OverlayTrigger, Popover } from "react-bootstrap"
 import GlossaryTerms from "../../data/GlossaryTerms";
+import { Skills } from "../../data/Skills";
+import { WeaponSpecialRules } from "../../data/weapons/WeaponSpecialRules";
 import { getKey } from "../../functions/keys";
+import onlyUnique from "../../functions/OnlyUnique";
 import IGlossaryItem from "../../interfaces/IGlossaryItem"
 
+const wsr: IGlossaryItem[] = [...WeaponSpecialRules]
+const skill: IGlossaryItem[] = [...Skills]
+const terms: IGlossaryItem[] = [...GlossaryTerms]
+
+
+const glossaryTerms : IGlossaryItem[] = [...terms, ...skill, ...wsr]
+.filter(onlyUnique)
+
 const mapOverlay = (value: string): JSX.Element =>{
-    for (const term of GlossaryTerms){
+    for (const term of glossaryTerms){
         if(value === term.name){
-            return <GlossaryOverlay skill={term} item={<span>{value}</span>} />
+            return <GlossaryOverlay skill={term} item={<i>{value}</i>} />
         }
     }
     return <>{value}</>
