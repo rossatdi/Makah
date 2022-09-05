@@ -1,7 +1,7 @@
 import Weapon from "../../../types/Weapon"
 import  GlossaryOverlay  from "./../GlossaryOverlay"
 import './WeaponsBlock.css'
-import React, {ChangeEvent, FormEvent, useState} from "react";
+import React, {FormEvent, useState} from "react";
 import compare from "../../../functions/CaseIndifferentStringCompare";
 import { Col, Row, Table, Container, Form } from "react-bootstrap";
 import Note from "../../../types/Note";
