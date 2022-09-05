@@ -4,8 +4,13 @@ import compare from '../../../functions/CaseIndifferentStringCompare'
 import { getKey } from '../../../functions/keys'
 import useScreenSize from '../../../hooks/UseScreenSize'
 import ScreenSize from '../../../types/ScreenSize'
+import { applyGlossaryOverlay } from '../GlossaryOverlay'
 import Tile, { TileProps } from '../tile/Tile'
 import './TileDisplay.css'
+
+const handleText = (text: string) : string[] =>{
+  return text.split('•')
+}
 
 export const tileFilter = (a:TileProps, str:string) : boolean => {
   return str.split(",").every(s=>{
@@ -58,7 +63,7 @@ export const TileTable = ({items, showFilter}:{items:TileProps[], showFilter:boo
       <tbody>
         {filtered.map(o=><tr key={getKey()} >
         <td>{o.skill.name}</td>
-        <td>{o.skill.restrictons && <b>{o.skill.restrictons} </b>}{o.skill.effect}</td>
+        <td>{o.skill.restrictons && <b>{o.skill.restrictons} </b>}{applyGlossaryOverlay(o.skill.effect)}</td>
         {showPt && <td>{o.skill.pt}</td>}
         {showType && <td>{o.type}</td>}
         {showFactions && <td>{o.faction}</td>}

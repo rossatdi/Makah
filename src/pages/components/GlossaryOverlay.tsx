@@ -16,8 +16,8 @@ const glossaryTerms : IGlossaryItem[] = [...terms, ...skill, ...wsr]
 
 const mapOverlay = (value: string): JSX.Element =>{
     for (const term of glossaryTerms){
-        if(value === term.name){
-            return <GlossaryOverlay skill={term} item={<i>{value}</i>} />
+        if(value === '#'+term.name+'#'){
+            return <GlossaryOverlay skill={term} item={<i>{term.name}</i>} />
         }
     }
     return <>{value}</>
