@@ -11,9 +11,9 @@ const Fight = () => <Container className="fight">
             <li>Fight Back; the target carries out Step 3 with -1Ws. Compare the number of Hits, the operative who got the most Hits wins and deals Hits equal to the difference, with no Saves allowed. In the case of a draw, no damage is dealt.</li>
             <li>After the Action is resolved, the defender discards any Evade tokens.</li>
         </ol>
-    <p>Multiple weapons – If you have two combat weapons, you gain +1 attack when Fighting or Fighting Back. A pistol can grant this bonus too.</p>
-    <p>Outnumbered – When Fighting or Fighting Back, each friendly operative within 1" of the target (or attacker if Fighting Back) grants +1 Attack Dice.</p>
-    <p>Knife – Even if not equipped with a combat weapon, an Operative can always fight with 2 Attack Dice and 2 Damage.</p>
+    <p><b>Multiple weapons</b> – If you have two combat weapons, you gain +1 attack when Fighting or Fighting Back. A pistol can grant this bonus too.</p>
+    <p><b>Outnumbered</b> – When Fighting or Fighting Back, each friendly operative within 1" of the target (or attacker if Fighting Back) grants +1 Attack Dice.</p>
+    <p><b>Knife</b> – Even if not equipped with a combat weapon, an Operative can always fight with 2 Attack Dice and 2 Damage.</p>
 </Container>
 
 export default Fight;

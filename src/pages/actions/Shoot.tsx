@@ -11,9 +11,9 @@ const Shoot = () => <Container className="shoot">
             <li>The target then rolls a dice for each remaining hit. Each roll that equals or beats their Save cancels a Hit.</li>
             <li>Each remaining Hit deals Damage according to the weapon.</li>
         </ol>
-    <p>Range – Unless otherwise indicated, all weapons have infinite range.</p>
-    <p>Cover – If the target is at least 25%+ obscured, -1 to Hit.</p>
-    <p>Shooting into combat - You can shoot at Engaged models. Choose a target and randomise between that Operative and all other Operatives engaged with them equally. Cover is determined by the chosen target.</p>
+    <p><b>Range</b> – Unless otherwise indicated, all weapons have infinite range.</p>
+    <p><b>Cover</b> – If the target is at least 25%+ obscured, -1 to Hit.</p>
+    <p><b>Shooting into combat</b> - You can shoot at Engaged models. Choose a target and randomise between that Operative and all other Operatives engaged with them equally. Cover is determined by the chosen target.</p>
 </Container>
 
 export default Shoot;
