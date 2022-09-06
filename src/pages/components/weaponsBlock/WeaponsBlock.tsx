@@ -129,7 +129,7 @@ export const WeaponBlock = ({items, showFilter, showToggles, source}:{items:Weap
         const [sources, setSources] = useState<{ [key: string] : boolean }>({})
         const filtered = items.filter(o=>weaponTileFilter(o,query)).filter(o=>sources[o.weapon.source] === undefined || sources[o.weapon.source] ).sort(weaponSorting)
         const setFn = (source:string) : void =>{ setSources({...sources, [source]:!sources[source]})}
-        return (<div>
+        return (<div className="weaponsBlock">
             {showFilter && <input placeholder="Filter" onChange={e=>setFilter(e.target.value)}/>}
             {showToggles && <Selector weapons={items.map(o=>o.weapon)} state={sources} setFn={setFn} />}
             {size < ScreenSize.lg &&<WeaponTileGrid items={filtered} />}
