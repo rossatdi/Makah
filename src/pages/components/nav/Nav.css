@@ -27,3 +27,8 @@ svg{
     height: 300px;
     overflow-y: scroll;
   }
+
+.pc .dropdown-menu {
+    height: 600px;
+    overflow-y: scroll;
+  }
