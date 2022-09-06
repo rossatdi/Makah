@@ -14,6 +14,11 @@ export const Dash : GlossaryTerm ={
     name:"Dash",
     effect:"Action - 3\" move. This cannot be used to move into or out of Engagement range. It can be used before or after a Movement action."
 }
+
+export const Engaged : GlossaryTerm ={
+    name:"Engaged",
+    effect:"An operative is Engaged with all enemies within 1\"."
+}
 export const GlossaryTerms : GlossaryTerm[] =
 [
     Limited, Evade, Dash

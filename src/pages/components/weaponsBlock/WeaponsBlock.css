@@ -12,9 +12,9 @@
     text-align: center;
 }
 
-ul {
+.weaponsBlock ul {
     list-style-type: none;
    }
-li {
+.weaponsBlock li {
     text-align: left;
 }
