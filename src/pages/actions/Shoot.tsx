@@ -1,8 +1,10 @@
 import { Container } from "react-bootstrap";
+import { Engaged } from "../../data/GlossaryTerms";
+import GlossaryOverlay from "../components/GlossaryOverlay";
 import './Shoot.css'
 
 const Shoot = () => <Container className="shoot">
-    <p>An Operative can’t make a Shoot action if they’re Engaged or made a Fall Back move.</p>
+    <p>An Operative can’t make a Shoot action if they’re <GlossaryOverlay skill={Engaged} item={<i>Engaged</i>}/> or made a Fall Back move.</p>
     <ol>
             <li>Pick one of the Operative’s weapons and a target in range that can be seen (torso and/or head).</li>
             <li>Once the target of the attack is declared but before rolling to hit, the Operative can choose to Evade. If they do so, place an Evade token next to them.</li>
@@ -13,7 +15,7 @@ const Shoot = () => <Container className="shoot">
         </ol>
     <p><b>Range</b> – Unless otherwise indicated, all weapons have infinite range.</p>
     <p><b>Cover</b> – If the target is at least 25%+ obscured, -1 to Hit.</p>
-    <p><b>Shooting into combat</b> - You can shoot at Engaged models. Choose a target and randomise between that Operative and all other Operatives engaged with them equally. Cover is determined by the chosen target.</p>
+    <p><b>Shooting into combat</b> - You can shoot at <GlossaryOverlay skill={Engaged} item={<i>Engaged</i>}/> models. Choose a target and randomise between that Operative and all other Operatives engaged with them equally. Cover is determined by the chosen target.</p>
 </Container>
 
 export default Shoot;

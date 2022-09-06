@@ -1,8 +1,10 @@
 import { Container } from "react-bootstrap";
+import { Engaged } from "../../data/GlossaryTerms";
+import GlossaryOverlay from "../components/GlossaryOverlay";
 import './Fight.css'
 
 const Fight = () => <Container className="fight">
-    <p>An operative must be engaged to fight.</p>
+    <p>An operative must be  <GlossaryOverlay skill={Engaged} item={<i>Engaged</i>}/> to fight.</p>
     <ol>
             <li>Pick one of the Operative’s Combat weapons and a target within 1". Ignore intervening terrain.</li>
             <li>Once the target of the attack is declared but before rolling to hit, the target can choose to Defend or Fight Back. A target operative with an Evade token cannot Fight Back.</li>

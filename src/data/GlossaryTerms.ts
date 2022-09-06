@@ -21,7 +21,7 @@ export const Engaged : GlossaryTerm ={
 }
 export const GlossaryTerms : GlossaryTerm[] =
 [
-    Limited, Evade, Dash
+    Limited, Evade, Dash, Engaged
 ]
 
 export default GlossaryTerms;
