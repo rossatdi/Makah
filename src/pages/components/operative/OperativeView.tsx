@@ -1,4 +1,4 @@
-import { Card, Container, Table } from "react-bootstrap";
+import { Card, Table } from "react-bootstrap";
 import Operative from "../../../types/Operative"
 import TileDisplay from "../tileDisplay/TileDisplay";
 import WeaponBlock from "../weaponsBlock/WeaponsBlock";
