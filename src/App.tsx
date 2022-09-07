@@ -3,7 +3,6 @@ import SkillsPage from './pages/skills/Skills'
 import GlossaryPage from './pages/glossary/GlossaryView'
 import GenericWeaponsPage from './pages/weapons/GenericWeapons'
 import ImperialWeaponsPage from './pages/weapons/ImperialWeapons'
-import CrewPage from './pages/crewBuilder/CrewBuilder'
 import './App.css';
 import Nav from "./pages/components/nav/Nav";
 import { Container } from "react-bootstrap";
@@ -34,7 +33,6 @@ function App()
         <Route path="/skills" element={<SkillsPage/>}/>
         <Route path="/equipment" element={<EquipmentPage/>}/>
         <Route path="/glossary" element={<GlossaryPage/>}/>
-        <Route path="/crew" element={<CrewPage/>}/>
         <Route path="/campaign" element={<CampaignPage/>}/>
         {factionRoutes}
       </Routes>

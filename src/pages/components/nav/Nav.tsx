@@ -47,7 +47,6 @@ const NavView = () => {
             <Nav.Link eventKey="1" as={NavLink} to="/actions">Actions</Nav.Link>
             <Nav.Link eventKey="1" as={NavLink} to="/weapons/all">Weapons</Nav.Link>
             <Nav.Link eventKey="1" as={NavLink} to="/glossary">Glossary</Nav.Link>
-            <Nav.Link eventKey="1" as={NavLink} to="/crew">Crew</Nav.Link>
             {/*<Nav.Link eventKey="1" as={NavLink} to="/campaign">Campaign</Nav.Link>*/}
           </Nav>
         </Navbar.Collapse>
