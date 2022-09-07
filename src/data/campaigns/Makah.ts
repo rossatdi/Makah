@@ -7,7 +7,7 @@ const Makah : Campaign =
     rounds: [
         {
             name:"this is the beginning",
-            blurb:"",
+            blurb:"beinning",
             scenarios:[
                 {
                     name:"Scenario1",
@@ -37,7 +37,7 @@ const Makah : Campaign =
         },
         {
             name:"and this is the end",
-            blurb:"",
+            blurb:"end",
             scenarios:[
                 {
                     name:"Scenario3",

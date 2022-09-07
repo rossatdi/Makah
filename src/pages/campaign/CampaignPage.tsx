@@ -9,6 +9,7 @@ const h = Campaigns
 export const Page = () => {
     const [campaign, setCampaign] = useState<number>(-1);
     const [round, setRound] = useState<number>(-1);
+    const [scenario, setScenario] = useState<number>(-1);
     return (<Container className="campaign">
               <Helmet>
               <title>Campaign</title>
@@ -21,19 +22,23 @@ export const Page = () => {
                     </option>
                     {h.map((o,i)=><option key={i} value={i}>{o.name}</option>)}
                 </Form.Control>
-                {campaign != -1 && <Form.Control as="select" value={round} onChange={e=>setRound(parseInt(e.target.value))} size="lg">
+                {campaign !== -1 && <> 
+                    <p>{h[campaign].blurb}</p>
+                <Form.Control as="select" value={round} onChange={e=>setRound(parseInt(e.target.value))} size="lg">
                     <option className="d-none" value="">
                          Select Option
                     </option>
                     {h[campaign].rounds.map((o,i)=><option key={i} value={i}>{o.name}</option>)}
-                </Form.Control>}
-                {round != -1 && <Form.Control as="select" size="lg">
+                </Form.Control></>}
+                {campaign !== -1 && round !== -1 && <>
+                    <p>{h[campaign].rounds[round].blurb}</p>
+                <Form.Control as="select" value={scenario} onChange={e=>setScenario(parseInt(e.target.value))} size="lg">
                     <option className="d-none" value="">
                          Select Option
                     </option>
-                    {h[campaign].rounds[round].scenarios.map((o,i)=><option key={i} value={i}>{o.name}</option>)}
-                </Form.Control>}
-                
+                    {h[campaign].rounds[round].scenarios.map((o,i)=><option key={i} value={i}>{o.name} - {o.scenarioType}</option>)}
+                </Form.Control></>}  
+                {campaign !== -1 && round !== -1 && scenario !== -1 && <p>{JSON.stringify(h[campaign].rounds[round].scenarios[scenario])}</p>}
             </Form.Group>
       </Container>)}
   
