@@ -3,7 +3,7 @@ import CampaignRound from "./CampaignRound";
 export type Campaign = 
 {
     name:string
-    blurb:string
+    blurb:JSX.Element
     rounds:CampaignRound[]
 }
 

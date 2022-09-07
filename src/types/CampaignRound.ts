@@ -3,7 +3,7 @@ import Scenario from "./Scenario";
 export type CampaignRound = 
 {
     name:string
-    blurb:string
+    blurb:JSX.Element
     scenarios:Scenario[]
 }
 
