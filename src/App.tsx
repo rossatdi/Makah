@@ -14,6 +14,7 @@ import ActionsPage from './pages/actions/ActionsPage'
 import IntroductionPage from "./pages/introduction/IntroductionPage";
 import AllWeaponsPage from './pages/weapons/AllWeapons';
 import EquipmentPage from "./pages/equipment/EquipmentPage";
+import CampaignPage from "./pages/campaign/CampaignPage";
 
 function App() 
 {
@@ -34,6 +35,7 @@ function App()
         <Route path="/equipment" element={<EquipmentPage/>}/>
         <Route path="/glossary" element={<GlossaryPage/>}/>
         <Route path="/crew" element={<CrewPage/>}/>
+        <Route path="/campaign" element={<CampaignPage/>}/>
         {factionRoutes}
       </Routes>
       </Container>

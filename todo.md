@@ -1,4 +1,3 @@
-TODO make action page ledgible\
 TODO rules page\
 TODO inquisition ordo details\
 TODO tyranids\

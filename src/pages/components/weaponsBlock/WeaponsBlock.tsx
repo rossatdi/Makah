@@ -16,7 +16,7 @@ import onlyUnique from "../../../functions/OnlyUnique";
 
 const Selector = ({weapons, state, setFn}:{weapons:Weapon[], state:{ [key: string] : boolean }, setFn(source:string):void}) => {
     return (<Form>
-        {weapons.map(o=>o.source).filter(onlyUnique).map(o=><Form.Check 
+        {weapons.map(o=>o.source).filter(onlyUnique).map(o=><Form.Check key={getKey()}
             type="switch"
             id={`switch-${o}`}
             label={o}
