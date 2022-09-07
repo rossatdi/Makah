@@ -18,3 +18,7 @@
 .weaponsBlock li {
     text-align: left;
 }
+
+.weaponsBlock .container {
+    padding: 0;
+}

@@ -7,3 +7,7 @@
  .tile {
     width: 100%;
  }
+
+ .tileDisplay .container {
+   padding: 0;
+}
