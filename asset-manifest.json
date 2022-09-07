@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Makah/static/css/main.9e694937.css",
-    "main.js": "/Makah/static/js/main.ef3c17e9.js",
+    "main.css": "/Makah/static/css/main.80ae484d.css",
+    "main.js": "/Makah/static/js/main.55fe1fc1.js",
     "static/media/Astartes.svg": "/Makah/static/media/Astartes.be9ba7520029ce06a662b076938a1294.svg",
     "static/media/ChaosCults.svg": "/Makah/static/media/ChaosCults.fb99aed1fbe9e449cc9de5614d2e39c5.svg",
     "static/media/GenestealerCults.svg": "/Makah/static/media/GenestealerCults.1696d020fd606b27cecb125d9fa26875.svg",
@@ -17,11 +17,11 @@
     "static/media/Tau.svg": "/Makah/static/media/Tau.7f3f88fea5a7eb36326832fc11ad69d2.svg",
     "static/media/Necrons.svg": "/Makah/static/media/Necrons.2a4a4d69ef0e691007eb431337543da2.svg",
     "index.html": "/Makah/index.html",
-    "main.9e694937.css.map": "/Makah/static/css/main.9e694937.css.map",
-    "main.ef3c17e9.js.map": "/Makah/static/js/main.ef3c17e9.js.map"
+    "main.80ae484d.css.map": "/Makah/static/css/main.80ae484d.css.map",
+    "main.55fe1fc1.js.map": "/Makah/static/js/main.55fe1fc1.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e694937.css",
-    "static/js/main.ef3c17e9.js"
+    "static/css/main.80ae484d.css",
+    "static/js/main.55fe1fc1.js"
   ]
 }
