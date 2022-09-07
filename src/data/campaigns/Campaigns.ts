@@ -5,3 +5,5 @@ const Campaigns : Campaign[] =
 [
     Makah
 ]
+
+export default Campaigns;
