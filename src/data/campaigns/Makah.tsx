@@ -1,4 +1,7 @@
+import OperativeView from "../../pages/components/operative/OperativeView";
 import Campaign from "../../types/Campaign";
+import { BlastPistol } from "../factions/deldar/DeldarWeapons";
+import { PowerAxe } from "../weapons/GenericWeapons";
 
 const Makah : Campaign = 
 {
@@ -76,7 +79,7 @@ const Makah : Campaign =
                     missionSpecialRule:{ name:"The Escort", effect:"Magos Drax is treated an Operative in the Escort player’s crew. Drax cannot be targeted from more than 4” away, as the Attacking player is shooting to wound. The Escort player can give one of their crew the Bodyguard rule for the scenario, but it triggers on the Escort not their leader."},
                     winCondition:"If the Escort player completes the Escape mission action, they win. If they do not, they lose.",
                     postGame:"The winner of this scenario gets to automatically choose to go first or second on the first                     turn of their next game, regardless of scenario rules.",
-                    MiscItems:[{name:"Magos Drax",item:<p>TODO MAKE OPERATIVE TILE AND ASSIGN DRAX</p>}]
+                    MiscItems:[{name:"Magos Drax",item:<OperativeView operative={{name:"Magos Drax", type:"Magos", mv:5,ws:4,bs:3,act:2,wnd:8,sv:3, pt:"-", isLeader:false, isPsyker:false, weapons:[PowerAxe, BlastPistol], skills:[], equipment:[]}}/>}]
                 }
             ]
         },

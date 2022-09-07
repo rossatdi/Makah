@@ -71,9 +71,10 @@ export const TileTable = ({items, showFilter}:{items:TileProps[], showFilter:boo
 
 const TileDisplay = ({items, showFilter}:{items:TileProps[], showFilter:boolean}) => {
   const size = useScreenSize();
+  if(!Array.isArray(items) || !items.length) return <></>
   return (<div>
-      {size < ScreenSize.lg &&<TileGrid items={items} showFilter={true}/>}
-      {size >= ScreenSize.lg &&<TileTable items={items} showFilter={true}/>}
+      {size < ScreenSize.lg &&<TileGrid items={items} showFilter={showFilter}/>}
+      {size >= ScreenSize.lg &&<TileTable items={items} showFilter={showFilter}/>}
       </div>)
 }
 
