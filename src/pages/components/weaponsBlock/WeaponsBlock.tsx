@@ -11,6 +11,7 @@ import useScreenSize from '../../../hooks/UseScreenSize'
 import ScreenSize from '../../../types/ScreenSize'
 import {getKey} from '../../../functions/keys'
 import onlyUnique from "../../../functions/OnlyUnique";
+import { Attacks, Damage, AP } from "../../../data/GlossaryTerms";
 
 
 
@@ -169,9 +170,9 @@ export const WeaponTileGrid = ({items}:{items:WeaponTileProps[]}) => {
                 <tr key={getKey()} >
                     <th>Name</th>
                     <th>Type</th>
-                    <th>Atk</th>
-                    <th>Dam</th>
-                    <th>AP</th>
+                    <GlossaryOverlay skill={Attacks} item={<th>Atk</th>}/>
+                    <GlossaryOverlay skill={Damage} item={<th>Dam</th>}/>
+                    <GlossaryOverlay skill={AP} item={<th>AP</th>}/>
                     <th>Special</th>
                     <th>Points</th>
                     <th>Source</th>

@@ -19,9 +19,25 @@ export const Engaged : GlossaryTerm ={
     name:"Engaged",
     effect:"An operative is Engaged with all enemies within 1\"."
 }
+
+export const Attacks : GlossaryTerm ={
+    name:"Attacks",
+    effect:"The number of dice rolled when Shooting or Fighting."
+}
+
+export const Damage : GlossaryTerm ={
+    name:"Damage",
+    effect:"The damage done by each unsaved hit."
+}
+
+export const AP : GlossaryTerm ={
+    name:"Armour Penetration",
+    effect:"Reduce the target’s Save by this amount."
+}
+
 export const GlossaryTerms : GlossaryTerm[] =
 [
-    Limited, Evade, Dash, Engaged
+    Limited, Evade, Dash, Engaged, Attacks,Damage,AP
 ]
 
 export default GlossaryTerms;

@@ -4,6 +4,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap'
 import GlossaryOverlay from '../GlossaryOverlay'
 import { getKey } from '../../../functions/keys'
 import React from 'react'
+import { Attacks, Damage, AP } from "../../../data/GlossaryTerms";
 
 export interface WeaponTileProps 
 {
@@ -27,9 +28,9 @@ const WeaponTile = ({weapon, type, background, faction}:WeaponTileProps) => {
                     <React.Fragment key={getKey()}>
                         <Row key={getKey()}>
                             <Col>Type</Col>
-                            <Col>Atk</Col>
-                            <Col>Dam</Col>
-                            <Col>AP</Col>
+                            <GlossaryOverlay skill={Attacks} item={<Col>Atk</Col>}/>
+                            <GlossaryOverlay skill={Damage} item={<Col>Dam</Col>}/>
+                            <GlossaryOverlay skill={AP} item={<Col>AP</Col>}/>
                         </Row>
                         <Row key={getKey()}>
                             <Col>{o.types.map((p,j)=>GlossaryOverlay({ skill:p, item:<p key={getKey()} >{p.name}</p>}))}</Col>
