@@ -176,7 +176,7 @@ export const Axe: Weapon = {
       special: [],
     },
   ],
-  pt: 0,
+  pt: 1,
   source: source,
 };
 
@@ -281,7 +281,7 @@ export const Spear: Weapon = {
       special: [Reach],
     },
   ],
-  pt: 0,
+  pt: 1,
   source: source,
 };
 
@@ -296,7 +296,7 @@ export const Sword: Weapon = {
       special: [],
     },
   ],
-  pt: 0,
+  pt: 1,
   source: source,
 };
 
