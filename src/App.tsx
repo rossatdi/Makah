@@ -8,12 +8,15 @@ import Nav from "./pages/components/nav/Nav";
 import { Container } from "react-bootstrap";
 import FactionView from "./pages/factions/FactonPage";
 import { Factions } from "./data/factions/Factions";
-import  WeaponSpecialRules  from "./pages/weapons/WeaponSpecialRules";
+import WeaponSpecialRules  from "./pages/weapons/WeaponSpecialRules";
+import WeaponTypeRules  from "./pages/weapons/WeaponTypesRules";
 import ActionsPage from './pages/actions/ActionsPage'
 import IntroductionPage from "./pages/introduction/IntroductionPage";
 import AllWeaponsPage from './pages/weapons/AllWeapons';
 import EquipmentPage from "./pages/equipment/EquipmentPage";
 import CampaignPage from "./pages/campaign/CampaignPage";
+import CrewBuildingRules from './pages/crewBuildingRules/CrewBuildingRulesPage'
+
 
 function App() 
 {
@@ -26,10 +29,12 @@ function App()
       <Routes>
         <Route path="/" element={<IntroductionPage/>}/>
         <Route path="/actions" element={<ActionsPage/>}/>
+        <Route path="/crewBuildingRules" element={<CrewBuildingRules/>}/>
         <Route path="/weapons/all" element={<AllWeaponsPage/>}/>
         <Route path="/weapons/generic" element={<GenericWeaponsPage/>}/>
         <Route path="/weapons/imperial" element={<ImperialWeaponsPage/>}/>
         <Route path="/weapons/rules" element={<WeaponSpecialRules/>}/>
+        <Route path="/weapons/types" element={<WeaponTypeRules/>}/>
         <Route path="/skills" element={<SkillsPage/>}/>
         <Route path="/equipment" element={<EquipmentPage/>}/>
         <Route path="/glossary" element={<GlossaryPage/>}/>

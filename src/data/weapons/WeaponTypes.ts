@@ -41,3 +41,15 @@ export const Grenade : WeaponType =
     effect:"Grenades are one use only and ignore cover in addition to other rules.",
     ordering:6
 }
+
+const WeaponTypes : WeaponType[] =
+[
+    Pistol, 
+    Assault,
+    Rifle,
+    Heavy,
+    Combat,
+    Grenade
+]
+
+export default WeaponTypes;
