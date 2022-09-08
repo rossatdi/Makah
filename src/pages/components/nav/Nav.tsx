@@ -42,10 +42,10 @@ const NavView = () => {
             >
               {factionRoutes}
             </NavDropdown>
+            <Nav.Link eventKey="1" as={NavLink} to="/rules">Rules</Nav.Link>
+            <Nav.Link eventKey="1" as={NavLink} to="/actions">Actions</Nav.Link>
             <Nav.Link eventKey="1" as={NavLink} to="/skills">Skills</Nav.Link>
             <Nav.Link eventKey="1" as={NavLink} to="/equipment">Equipment</Nav.Link>
-            <Nav.Link eventKey="1" as={NavLink} to="/actions">Actions</Nav.Link>
-            <Nav.Link eventKey="1" as={NavLink} to="/crewBuildingRules">Crew</Nav.Link>
             <Nav.Link eventKey="1" as={NavLink} to="/weapons/all">Weapons</Nav.Link>
             <Nav.Link eventKey="1" as={NavLink} to="/glossary">Glossary</Nav.Link>
             {/*<Nav.Link eventKey="1" as={NavLink} to="/campaign">Campaign</Nav.Link>*/}
