@@ -14,6 +14,8 @@ import IntroductionPage from "./pages/introduction/IntroductionPage";
 import AllWeaponsPage from './pages/weapons/AllWeapons';
 import EquipmentPage from "./pages/equipment/EquipmentPage";
 import CampaignPage from "./pages/campaign/CampaignPage";
+import CrewBuildingRules from './pages/crewBuildingRules/CrewBuildingRulesPage'
+
 
 function App() 
 {
@@ -26,6 +28,7 @@ function App()
       <Routes>
         <Route path="/" element={<IntroductionPage/>}/>
         <Route path="/actions" element={<ActionsPage/>}/>
+        <Route path="/crewBuildingRules" element={<CrewBuildingRules/>}/>
         <Route path="/weapons/all" element={<AllWeaponsPage/>}/>
         <Route path="/weapons/generic" element={<GenericWeaponsPage/>}/>
         <Route path="/weapons/imperial" element={<ImperialWeaponsPage/>}/>
