@@ -8,7 +8,8 @@ import Nav from "./pages/components/nav/Nav";
 import { Container } from "react-bootstrap";
 import FactionView from "./pages/factions/FactonPage";
 import { Factions } from "./data/factions/Factions";
-import  WeaponSpecialRules  from "./pages/weapons/WeaponSpecialRules";
+import WeaponSpecialRules  from "./pages/weapons/WeaponSpecialRules";
+import WeaponTypeRules  from "./pages/weapons/WeaponTypesRules";
 import ActionsPage from './pages/actions/ActionsPage'
 import IntroductionPage from "./pages/introduction/IntroductionPage";
 import AllWeaponsPage from './pages/weapons/AllWeapons';
@@ -33,6 +34,7 @@ function App()
         <Route path="/weapons/generic" element={<GenericWeaponsPage/>}/>
         <Route path="/weapons/imperial" element={<ImperialWeaponsPage/>}/>
         <Route path="/weapons/rules" element={<WeaponSpecialRules/>}/>
+        <Route path="/weapons/types" element={<WeaponTypeRules/>}/>
         <Route path="/skills" element={<SkillsPage/>}/>
         <Route path="/equipment" element={<EquipmentPage/>}/>
         <Route path="/glossary" element={<GlossaryPage/>}/>
