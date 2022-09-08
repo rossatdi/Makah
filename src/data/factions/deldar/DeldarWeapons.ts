@@ -57,7 +57,7 @@ export const SplinterPistol: Weapon = {
         attack: 4,
         dam: 2,
         ap: 0,
-        special: [Poison(4)],
+        special: [Poison(2)],
       },
     ],
     pt: 2,
