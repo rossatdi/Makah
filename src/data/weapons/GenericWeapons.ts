@@ -107,7 +107,7 @@ export const Autocannon: Weapon = {
       special: [SplitFire],
     },
   ],
-  pt: 8,
+  pt: 6,
   source: source,
 };
 
