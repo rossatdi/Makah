@@ -286,7 +286,7 @@ export const HeavyBolter: Weapon = {
     },
   ],
 
-  pt: 8,
+  pt: 6,
   source: source,
 };
 

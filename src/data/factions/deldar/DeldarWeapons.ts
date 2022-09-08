@@ -135,7 +135,7 @@ export const SplinterPistol: Weapon = {
         special: [Poison(2), SplitFire],
       },
     ],
-    pt: 8,
+    pt: 6,
     source: source,
   };
       
