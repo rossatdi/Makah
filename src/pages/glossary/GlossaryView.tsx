@@ -9,6 +9,7 @@ import './GlossaryView.css'
 import { TileProps } from "../components/tile/Tile";
 import TileDisplay from "../components/tileDisplay/TileDisplay";
 import { Helmet } from "react-helmet";
+import WeaponTypes from "../../data/weapons/WeaponTypes";
 
 const factionAbilities: TileProps[] = [...Factions.flatMap(o=> o.ability.map(p=>({skill:p, background:o.background, type:"Faction", faction:o.name})) )]
 const factionEquipment: TileProps[] = [...Factions.flatMap(o=>o.equipment.map(p=> ({skill:p, background:o.background, type:"Eqp", faction:o.name})))]
@@ -17,9 +18,9 @@ const factionPsychic: TileProps[] = [...Factions.flatMap(o=>o.psychicPowers?.map
 const wsr: TileProps[] = [...WeaponSpecialRules.map(o=>({skill:o,type:"WSR"}))]
 const skill: TileProps[] = [...Skills.map(o=>({skill:o,type:"Skill"}))]
 const terms: TileProps[] = [...GlossaryTerms.map(o=>({skill:o,type:"Term"}))]
+const weaponTypes : TileProps[] = [...WeaponTypes.map(o=>({skill:o,type:"WT"}))]
 
-
-const glossaryTerms : TileProps[] = [...terms, ...skill, ...factionEquipment, ...wsr, ...factionAbilities, ...factionPsychic]
+const glossaryTerms : TileProps[] = [...terms, ...skill, ...factionEquipment, ...weaponTypes, ...wsr, ...factionAbilities, ...factionPsychic]
 .filter(onlyUnique)
 
 export const Page = () => {
