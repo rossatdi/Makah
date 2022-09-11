@@ -102,7 +102,7 @@ export const SplinterPistol: Weapon = {
         attack: 6,
         dam: 1,
         ap: 0,
-        special: [Torrent, IgnoresCover,Poison(2)],
+        special: [Torrent, Poison(2)],
       },
     ],
     pt: 5,
@@ -159,7 +159,7 @@ export const SplinterPistol: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 3,
+        attack: 4,
         dam: 2,
         ap: -1,
         special: [Poison(3)],
@@ -174,7 +174,7 @@ export const SplinterPistol: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 3,
+        attack: 4,
         dam: 3,
         ap: 0,
         special: [],
@@ -189,7 +189,7 @@ export const SplinterPistol: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 4,
+        attack: 5,
         dam: 2,
         ap: -1,
         special: [],
@@ -204,7 +204,7 @@ export const SplinterPistol: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 4,
+        attack: 5,
         dam: 3,
         ap: 0,
         special: [Poison(2)],
@@ -219,7 +219,7 @@ export const SplinterPistol: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 3,
+        attack: 4,
         dam: 1,
         ap: -1,
         special: [Stun],
@@ -234,7 +234,7 @@ export const SplinterPistol: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 4,
+        attack: 5,
         dam: 3,
         ap: -2,
         special: [Brutal(1), Only('Incubi')],
