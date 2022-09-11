@@ -170,7 +170,7 @@ export const Axe: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 2,
+      attack: 3,
       dam: 4,
       ap: 0,
       special: [],
@@ -185,7 +185,7 @@ export const ClawsAndTeeth: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 4,
+      attack: 5,
       dam: 2,
       ap: 0,
       special: [Reckless],
@@ -200,7 +200,7 @@ export const CombatShield: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 0,
       ap: 0,
       special: [Defensive],
@@ -215,10 +215,10 @@ export const Knife: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 2,
+      attack: 3,
       dam: 2,
       ap: 0,
-      special: [Small],
+      special: [],
     },
   ],
   pt: 0,
@@ -230,7 +230,7 @@ export const PowerAxe: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 2,
+      attack: 3,
       dam: 4,
       ap: -2,
       special: [],
@@ -245,7 +245,7 @@ export const PowerMaul: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 4,
       ap: -1,
       special: [],
@@ -260,7 +260,7 @@ export const PowerSword: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 3,
       ap: -2,
       special: [],
@@ -275,7 +275,7 @@ export const Spear: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 2,
       ap: 0,
       special: [Reach],
@@ -290,7 +290,7 @@ export const Sword: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 3,
       ap: 0,
       special: [],
