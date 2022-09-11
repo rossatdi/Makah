@@ -19,7 +19,7 @@ export const RipperGun: Weapon = {
     {
       name: "Knife",
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 4,
       ap: 0,
       special: [Only('Ogryns')],
@@ -40,7 +40,7 @@ export const LongKnife: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 3,
       ap: 0,
       special: [],
