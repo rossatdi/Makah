@@ -71,7 +71,7 @@ export const PhaseBlade: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 3,
       ap: -4,
       special: [],
