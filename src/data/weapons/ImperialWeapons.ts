@@ -201,10 +201,11 @@ export const HotshotLasgun: Weapon = {
       attack: 2,
       dam: 3,
       ap: -1,
-      special: [],
+      special: [Rapid],
     },
   ],
 
+  notes: "Gains [Dangerous] when using Rapid.",
   pt: 1,
   source: source,
 };
@@ -311,7 +312,7 @@ export const Chainsword: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 4,
       ap: 0,
       special: [],
@@ -327,7 +328,7 @@ export const StormShield: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 4,
+      attack: 5,
       dam: 0,
       ap: 0,
       special: [Defensive],
@@ -343,7 +344,7 @@ export const PowerFist: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 4,
       ap: -2,
       special: [],
@@ -359,7 +360,7 @@ export const ForceSword: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: "d3+2",
       ap: -2,
       special: [Only('Psykers')],
@@ -375,7 +376,7 @@ export const ForceHalberd: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: "d3+2",
       ap: -1,
       special: [Only('Psykers'), Reach],
