@@ -24,7 +24,7 @@ export const Bodyguard : Skill =
 export const CommsOfficer : Skill = 
 {
     name:"Comms officer",
-    effect:"Unique action: Friendly operative discards a #Evade# token.",
+    effect:"Unique action: Friendly operative discards an #Evade# token.",
     pt:4
 }
 
@@ -41,13 +41,13 @@ export const Elite : Skill =
     effect:"Increase Actions characteristic to 3.",
     modifier:{act:1},
     requirement:{act:2},
-    pt:12
+    pt:10
 }
 
 export const ExpertMarksman : Skill = 
 {
     name:"Expert Marksman",
-    effect:"When aiming with a weapon with the headshot rule, you can trigger that effect on a 5+ instead of gaining +1 to hit",
+    effect:"When aiming with a weapon with the headshot rule, you trigger the effect on a 5+.",
     pt:3
 }
 
@@ -96,7 +96,7 @@ export const Killshot : Skill =
 export const Patient : Skill = 
 {
     name:"Patient",
-    effect:"When chosen to activate, this operative can instead be placed at the end of the player's initiative track. Activate the next operative as normal.",
+    effect:"When chosen to activate, this operative can instead be placed at the end of the player's initiative track. Activate the next Operative as normal.",
     pt:3
 }
 
@@ -117,14 +117,14 @@ export const Relentless : Skill =
 export const Rifleman : Skill = 
 {
     name:"Rifleman",
-    effect:"When aiming with a rifle, do not suffer -1 to hit for the target being in cover",
+    effect:"When aiming with a rifle, do not suffer -1 to hit for the target being in cover.",
     pt:3
 }
 
 export const Scout : Skill = 
 {
     name:"Scout",
-    effect:"When deploying, this Operative must be set up last and can be set up anywhere on the board at least 9\" from an enemy operative.",
+    effect:"When deploying, this Operative must be set up last and can be set up anywhere on the board at least 8\" from an enemy operative.",
     pt:6
 }
 
