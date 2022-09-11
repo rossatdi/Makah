@@ -190,7 +190,7 @@ export const TaserGoad: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 3,
+        attack: 4,
         dam: 2,
         ap: -1,
         special: [Stun],
@@ -220,7 +220,7 @@ export const TransonicRazor: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 3,
+        attack: 4,
         dam: 3,
         ap: -1,
         special: [Irradiate(1)],
@@ -235,7 +235,7 @@ export const TransonicBlades: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 3,
+        attack: 4,
         dam: 4,
         ap: -2,
         special: [Irradiate(2), Reckless],
@@ -250,7 +250,7 @@ export const OmnissianAxe: Weapon = {
     profiles: [
       {
         types: [Combat],
-        attack: 2,
+        attack: 3,
         dam: 5,
         ap: -2,
         special: [],
