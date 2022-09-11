@@ -32,7 +32,7 @@ export const MarineCombatKnife: Weapon = {
     {
       types: [Combat],
       attack: 3,
-      dam: 2,
+      dam: 3,
       ap: 0,
       special: [Only('Space Marines and Scouts')],
     },
