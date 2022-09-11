@@ -70,7 +70,7 @@ export const AnointedHalberd: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 4,
       ap: -1,
       special: [Reach],
@@ -100,7 +100,7 @@ export const Eviscerator: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 2,
+      attack: 3,
       dam: 5,
       ap: -2,
       special: [Reckless],
@@ -115,7 +115,7 @@ export const HallowedMace: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 3,
+      attack: 4,
       dam: 4,
       ap: -1,
       special: [Stun],
@@ -130,7 +130,7 @@ export const SacresantShield: Weapon = {
   profiles: [
     {
       types: [Combat],
-      attack: 4,
+      attack: 5,
       dam: 0,
       ap: 0,
       special: [Defensive],
